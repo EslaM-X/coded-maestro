@@ -51,7 +51,7 @@ export function useTypewriter(words: readonly string[], speed = 70, hold = 1600)
   const [deleting, setDeleting] = useState(false);
 
   useEffect(() => {
-    const current = words[index % words.length];
+    const current = words[index % words.length] ?? "";
     if (!deleting && text === current) {
       const t = setTimeout(() => setDeleting(true), hold);
       return () => clearTimeout(t);
