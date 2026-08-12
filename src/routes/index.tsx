@@ -6,8 +6,10 @@ import {
   Contact,
   Experience,
   Footer,
+  Horizons,
   Impact,
   Projects,
+  Spotlight,
   Recognition,
   Skills,
 } from "@/components/sections";
@@ -74,7 +76,9 @@ function Index() {
         <Hero />
         <About />
         <Skills />
+        <Horizons />
         <Experience />
+        <Spotlight />
         <Impact />
         <Projects />
         <Recognition />

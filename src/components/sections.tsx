@@ -430,3 +430,138 @@ export function Footer() {
     </footer>
   );
 }
+
+const HORIZON_ICONS = {
+  cpu: Cpu,
+  file: FileCode2,
+  scale: Scale,
+  search: Search,
+  bot: Bot,
+  brain: BrainCircuit,
+} as const;
+
+export function Horizons() {
+  const { t } = useLang();
+  return (
+    <section id="horizons" className="relative overflow-hidden py-24 sm:py-28">
+      <div
+        className="absolute inset-x-0 top-0 h-px opacity-70"
+        style={{ backgroundImage: "var(--gradient-gold)" }}
+        aria-hidden="true"
+      />
+      <div className={shell}>
+        <SectionHeading
+          index="03"
+          title={t(COPY.sections.horizons.en, COPY.sections.horizons.ar)}
+          kicker={t(COPY.kickers.horizons.en, COPY.kickers.horizons.ar)}
+        />
+        <div className="grid gap-5 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {HORIZONS.map((h, i) => {
+            const Icon = HORIZON_ICONS[h.icon as keyof typeof HORIZON_ICONS] ?? Cpu;
+            const c = t(h.en, h.ar);
+            return (
+              <Reveal key={h.icon} delay={(i % 3) * 90}>
+                <article className="surface-panel group relative h-full overflow-hidden rounded-2xl p-6 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/60 sm:p-7">
+                  <div
+                    className="absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-25"
+                    style={{ background: "var(--gradient-gold)" }}
+                    aria-hidden="true"
+                  />
+                  <span className="relative flex h-11 w-11 items-center justify-center rounded-xl border border-primary/30 bg-primary/5 text-primary">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="relative mt-5 font-display text-lg leading-snug text-foreground">
+                    {c.title}
+                  </h3>
+                  <span className="gold-rule mt-4 block w-full opacity-60" />
+                  <p className="relative mt-4 text-sm leading-relaxed text-muted-foreground">
+                    {c.desc}
+                  </p>
+                </article>
+              </Reveal>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function Spotlight() {
+  const { t } = useLang();
+  const c = t(SPOTLIGHT.en, SPOTLIGHT.ar);
+  return (
+    <section className="relative py-16 sm:py-20">
+      <div className={shell}>
+        <Reveal>
+          <div className="surface-panel relative overflow-hidden rounded-3xl p-7 sm:p-10">
+            <div
+              className="absolute -left-24 -top-24 h-64 w-64 rounded-full opacity-20 blur-[100px]"
+              style={{ background: "var(--gradient-gold)" }}
+              aria-hidden="true"
+            />
+            <div className="relative grid gap-8 lg:grid-cols-[1.4fr_0.6fr] lg:items-center">
+              <div className="min-w-0">
+                <span className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-[10px] uppercase tracking-[0.28em] text-primary">
+                  <Sparkles className="h-3.5 w-3.5" />
+                  {c.kicker}
+                </span>
+                <h3 className="mt-5 font-display text-[clamp(1.5rem,3.6vw,2.4rem)] leading-tight font-bold">
+                  <span className="text-gilded">{c.title}</span>
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
+                  {c.body}
+                </p>
+                <p className="mt-6 border-s-2 border-primary/60 ps-4 text-sm italic text-foreground/90">
+                  {c.quote}
+                </p>
+                <div className="mt-8 flex flex-wrap gap-3">
+                  <a
+                    href={SPOTLIGHT.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    onClick={(ev) => {
+                      ev.preventDefault();
+                      openExternal(SPOTLIGHT.href);
+                    }}
+                    className="inline-flex items-center gap-2 rounded-full px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary-foreground transition-transform hover:-translate-y-0.5"
+                    style={{ backgroundImage: "var(--gradient-gold)" }}
+                  >
+                    <SocialIcon name="medium" className="h-3.5 w-3.5" />
+                    {c.cta}
+                  </a>
+                  <a
+                    href={SPOTLIGHT.prHref}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    onClick={(ev) => {
+                      ev.preventDefault();
+                      openExternal(SPOTLIGHT.prHref);
+                    }}
+                    className="inline-flex items-center gap-2 rounded-full border border-primary/40 px-6 py-3 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary transition-all hover:bg-primary/10"
+                  >
+                    {c.cta2}
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+              </div>
+              <div className="relative mx-auto hidden w-40 lg:block">
+                <div
+                  className="absolute inset-0 rounded-full opacity-40 blur-3xl animate-[halo-pulse_6s_ease-in-out_infinite]"
+                  style={{ background: "var(--gradient-gold)" }}
+                  aria-hidden="true"
+                />
+                <img
+                  src={logo}
+                  alt=""
+                  aria-hidden="true"
+                  className="relative w-full rounded-3xl border border-primary/30 object-cover opacity-90"
+                />
+              </div>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
