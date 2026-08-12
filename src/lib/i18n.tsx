@@ -16,7 +16,7 @@ type Ctx = {
   setLang: (l: Lang) => void;
   toggle: () => void;
   /** pick a value by active language */
-  t: <T>(en: T, ar: T) => T;
+  t: <A, B>(en: A, ar: B) => A | B;
 };
 
 const LangContext = createContext<Ctx | null>(null);
