@@ -11,7 +11,7 @@ export const PROFILE = {
     "FULL-STACK · AI SYSTEMS",
   ],
   headline:
-    "Lead Technical Architect · Business Operations Executive · Web3 & Cyber Security",
+    "Lead Technical Architect · Business Operations Manager · Web3 & Cyber Security",
   tagline:
     "Most people play within the rules. I write the code that defines them.",
 };
@@ -306,6 +306,7 @@ export const RECOMMENDATIONS = [
 export const NAV = [
   { label: "About", id: "about" },
   { label: "Skills", id: "skills" },
+  { label: "Horizons", id: "horizons" },
   { label: "Experience", id: "experience" },
   { label: "Impact", id: "impact" },
   { label: "Projects", id: "projects" },
