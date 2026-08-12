@@ -112,6 +112,27 @@ export function useLang(): Ctx {
 
 /** Opens external links reliably, even inside embedded preview frames. */
 export function openExternal(href: string) {
+  if (typeof window === "undefined") return;
+  try {
+    const a = document.createElement("a");
+    a.href = href;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.style.display = "none";
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    return;
+  } catch {
+    /* fall through */
+  }
   const w = window.open(href, "_blank", "noopener,noreferrer");
-  if (!w) window.location.href = href;
+  if (!w) {
+    try {
+      (window.top ?? window).location.href = href;
+    } catch {
+      window.location.href = href;
+    }
+  }
 }
+
