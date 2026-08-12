@@ -17,7 +17,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-center overflow-hidden pt-28 pb-16"
+      className="relative flex min-h-[100svh] items-center overflow-hidden pt-24 pb-14 sm:pt-28 sm:pb-16"
     >
       <div className="hairline-grid absolute inset-0 opacity-60" aria-hidden="true" />
       <div
