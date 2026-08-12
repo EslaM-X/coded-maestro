@@ -115,6 +115,12 @@ export default function Hero() {
             src={portrait}
             alt="Portrait of EslaM HeshAM, Lead Technical Architect"
             className="relative z-10 w-full animate-[float-slow_7s_ease-in-out_infinite] drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, #000 0%, #000 82%, transparent 99%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, #000 0%, #000 82%, transparent 99%)",
+            }}
             loading="eager"
           />
           <img
