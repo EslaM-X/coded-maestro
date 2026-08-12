@@ -3,6 +3,7 @@ import {
   CERTS,
   COPY,
   HORIZONS,
+  RESEARCH_TRACKS,
   SPOTLIGHT,
   EXPERIENCE,
   IMPACT,
@@ -27,6 +28,9 @@ import {
   Search,
   Bot,
   BrainCircuit,
+  Blocks,
+  Bug,
+  Lock,
   Sparkles,
 } from "lucide-react";
 import { useState } from "react";
@@ -395,9 +399,9 @@ export function Contact() {
                     ev.preventDefault();
                     openExternal(s.href);
                   }}
-                  className="flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-[11px] uppercase tracking-[0.22em] text-muted-foreground transition-all hover:-translate-y-1 hover:border-primary/60 hover:text-primary"
+                  className="flex items-center gap-2.5 rounded-full border border-primary/25 bg-secondary/30 px-6 py-3 text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground transition-all hover:-translate-y-1 hover:border-primary/60 hover:text-primary"
                 >
-                  <SocialIcon name={s.icon} className="h-3.5 w-3.5" />
+                  <SocialIcon name={s.icon} className="h-5 w-5" />
                   {s.label}
                 </a>
               </li>
@@ -561,6 +565,66 @@ export function Spotlight() {
             </div>
           </div>
         </Reveal>
+      </div>
+    </section>
+  );
+}
+
+const RESEARCH_ICONS = {
+  blocks: Blocks,
+  file: FileCode2,
+  shield: ShieldCheck,
+  bug: Bug,
+  lock: Lock,
+} as const;
+
+export function Research() {
+  const { t } = useLang();
+  return (
+    <section id="research" className="relative py-24 sm:py-28">
+      <div className={shell}>
+        <SectionHeading
+          index="02"
+          title={t(COPY.sections.research.en, COPY.sections.research.ar)}
+          kicker={t(COPY.kickers.research.en, COPY.kickers.research.ar)}
+        />
+        <div className="grid gap-5 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {RESEARCH_TRACKS.map((r, i) => {
+            const Icon = RESEARCH_ICONS[r.icon as keyof typeof RESEARCH_ICONS] ?? Blocks;
+            const c = t(r.en, r.ar);
+            return (
+              <Reveal key={r.icon} delay={(i % 3) * 90}>
+                <article className="surface-panel group relative h-full overflow-hidden rounded-2xl p-6 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/60 sm:p-7">
+                  <div
+                    className="absolute -left-16 -top-16 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-25"
+                    style={{ background: "var(--gradient-gold)" }}
+                    aria-hidden="true"
+                  />
+                  <div className="relative grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4">
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-primary/30 bg-primary/5 text-primary">
+                      <Icon className="h-6 w-6" />
+                    </span>
+                    <div className="min-w-0">
+                      <div className="font-display text-3xl font-bold text-gilded" dir="ltr">
+                        {r.years}+
+                      </div>
+                      <div className="text-[10px] uppercase tracking-[0.26em] text-muted-foreground">
+                        {c.unit}
+                      </div>
+                    </div>
+                  </div>
+                  <h3 className="relative mt-5 font-display text-lg leading-snug text-foreground">
+                    {c.title}
+                  </h3>
+                  <span className="gold-rule mt-4 block w-full opacity-60" />
+                  <p className="relative mt-4 text-sm leading-relaxed text-muted-foreground">
+                    {c.desc}
+                  </p>
+                </article>
+              </Reveal>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

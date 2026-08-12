@@ -104,9 +104,9 @@ export default function Hero() {
                     openExternal(s.href);
                   }}
                   aria-label={s.label}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted-foreground transition-all hover:-translate-y-1 hover:border-primary/60 hover:text-primary"
+                  className="flex h-14 w-14 items-center justify-center rounded-full border border-primary/25 bg-secondary/30 text-foreground shadow-[0_8px_30px_-12px_rgba(0,0,0,0.8)] transition-all hover:-translate-y-1 hover:border-primary/60 hover:text-primary"
                 >
-                  <SocialIcon name={s.icon} className="h-4 w-4" />
+                  <SocialIcon name={s.icon} className="h-6 w-6" />
                 </a>
               </li>
             ))}

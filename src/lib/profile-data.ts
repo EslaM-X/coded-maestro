@@ -50,6 +50,80 @@ export const STATS = [
   },
 ];
 
+/** Long-horizon research tracks — years of depth per domain. */
+export const RESEARCH_TRACKS = [
+  {
+    icon: "blocks",
+    years: 15,
+    en: {
+      title: "Blockchain Research",
+      unit: "years",
+      desc: "Studying and researching distributed ledgers, consensus and cryptoeconomics since the earliest Bitcoin era — from block structure and mempool dynamics to BFT consensus and protocol governance.",
+    },
+    ar: {
+      title: "أبحاث البلوك تشين",
+      unit: "عامًا",
+      desc: "دراسة وبحث في السجلات الموزعة والإجماع واقتصاديات التشفير منذ عصر البيتكوين المبكر — من بنية الكتل وديناميكيات الـ mempool إلى إجماع BFT وحوكمة البروتوكولات.",
+    },
+  },
+  {
+    icon: "file",
+    years: 8,
+    en: {
+      title: "Smart Contract Engineering",
+      unit: "years",
+      desc: "Designing, writing and auditing on-chain contracts: storage-slot safety, reentrancy classes, invariant and fuzz testing, formal verification and upgrade-path risk.",
+    },
+    ar: {
+      title: "هندسة العقود الذكية",
+      unit: "سنوات",
+      desc: "تصميم وكتابة وتدقيق العقود على السلسلة: أمان خانات التخزين، وفئات إعادة الدخول، واختبار الثوابت والتشويش، والتحقق الصوري، ومخاطر مسارات الترقية.",
+    },
+  },
+  {
+    icon: "shield",
+    years: 14,
+    en: {
+      title: "Cyber Security · Red Team & Blue Team",
+      unit: "years",
+      desc: "White-hat ethical hacker. Offensive research (red team) and defensive engineering (blue team): exploitation, vulnerability research, intrusion analysis, digital forensics and cybercrime investigation.",
+    },
+    ar: {
+      title: "الأمن السيبراني · الفريق الأحمر والأزرق",
+      unit: "عامًا",
+      desc: "هاكر أخلاقي (قبعة بيضاء). أبحاث هجومية (Red Team) وهندسة دفاعية (Blue Team): الاستغلال، وأبحاث الثغرات، وتحليل الاختراقات، والأدلة الجنائية الرقمية، والتحقيق في الجرائم الإلكترونية.",
+    },
+  },
+  {
+    icon: "bug",
+    years: 15,
+    en: {
+      title: "Malware & Virus Research",
+      unit: "years",
+      desc: "Deep study of virus families, payload construction, propagation, persistence and damage models — plus sandboxed reverse engineering, detection engineering and countermeasures.",
+    },
+    ar: {
+      title: "أبحاث الفيروسات والبرمجيات الخبيثة",
+      unit: "عامًا",
+      desc: "دراسة معمّقة لعائلات الفيروسات وتركيب الحمولات والانتشار والبقاء ونماذج الضرر — مع الهندسة العكسية في بيئات معزولة، وهندسة الكشف، وسبل المكافحة.",
+    },
+  },
+  {
+    icon: "lock",
+    years: 11,
+    en: {
+      title: "Cryptography & Cryptanalysis",
+      unit: "years",
+      desc: "Encryption in depth: symmetric and asymmetric schemes, hashing, key management, full-disk and end-to-end encryption, zero-knowledge primitives and decryption/cryptanalysis research.",
+    },
+    ar: {
+      title: "التشفير وتحليل الشيفرات",
+      unit: "عامًا",
+      desc: "تعمّق في التشفير: الأنظمة المتماثلة وغير المتماثلة، والتجزئة، وإدارة المفاتيح، والتشفير الكامل والطرف-إلى-طرف، وبدائيات المعرفة الصفرية، وأبحاث فك التشفير وتحليل الشيفرات.",
+    },
+  },
+] as const;
+
 export const SKILL_GROUPS = [
   {
     title: "Web3 & Blockchain",
@@ -62,6 +136,20 @@ export const SKILL_GROUPS = [
       "DeFi Mechanics",
       "Pi SDK",
       "Tokenomics",
+      "EVM Internals",
+      "Hardhat",
+      "Rust / Anchor",
+      "Layer-2 & Rollups",
+      "Bridges & Interop",
+      "Account Abstraction",
+      "Oracles (Chainlink)",
+      "IPFS / Arweave",
+      "MEV Awareness",
+      "Zero-Knowledge Proofs",
+      "The Graph",
+      "Wallet & Key Custody",
+      "DAO Governance",
+      "x402 Machine Payments",
     ],
   },
   {
@@ -78,6 +166,21 @@ export const SKILL_GROUPS = [
       "Docker",
       "Go",
       "Python",
+      "NestJS",
+      "Express",
+      "GraphQL",
+      "tRPC",
+      "Redis",
+      "Prisma / Drizzle",
+      "REST & WebSockets",
+      "Kubernetes",
+      "CI/CD (GitHub Actions)",
+      "Cloudflare Workers",
+      "Vercel Edge",
+      "Microservices",
+      "System Design",
+      "Testing (Vitest / Playwright)",
+      "Observability",
     ],
   },
   {
@@ -89,6 +192,18 @@ export const SKILL_GROUPS = [
       "Embodied Robotics",
       "Sim-to-Sim (MuJoCo)",
       "Trading Automation",
+      "Multi-Agent Systems",
+      "RAG Pipelines",
+      "Vector Databases",
+      "Prompt Engineering",
+      "Fine-Tuning / LoRA",
+      "Computer Vision",
+      "PyTorch",
+      "Reinforcement Learning",
+      "PyBullet / ROS",
+      "Physical AI",
+      "MLOps",
+      "Speech & TTS",
     ],
   },
   {
@@ -100,6 +215,37 @@ export const SKILL_GROUPS = [
       "Invariant Testing",
       "Penetration Testing",
       "Cryptography",
+      "Red Team Operations",
+      "Blue Team Defense",
+      "Digital Forensics",
+      "Malware Analysis",
+      "Reverse Engineering",
+      "Incident Response",
+      "OSINT",
+      "Blockchain Forensics",
+      "Exploit Development",
+      "Fuzzing",
+      "Burp Suite / Metasploit",
+      "Wireshark / Ghidra",
+      "SIEM & Detection",
+      "Kali / Linux Hardening",
+      "MITRE ATT&CK (TTPs)",
+      "Post-Quantum Awareness",
+    ],
+  },
+  {
+    title: "Machines, Robotics & Embedded",
+    items: [
+      "Real-Time OS",
+      "Embedded Systems",
+      "Sensor Fusion",
+      "Motion Control",
+      "IVI / Automotive Systems",
+      "Machine Economy Payments",
+      "Humanoid & Multi-Task Robots",
+      "Digital Twins",
+      "Edge Inference",
+      "CAN Bus / Telemetry",
     ],
   },
   {
@@ -111,9 +257,16 @@ export const SKILL_GROUPS = [
       "Brand Launch",
       "Supply & Inventory",
       "Executive Coordination",
+      "Financial Modeling",
+      "Cost Control",
+      "Product Strategy",
+      "Go-To-Market",
+      "Process Automation",
+      "Technical Leadership",
     ],
   },
 ];
+
 
 export const EXPERIENCE = [
   {
@@ -305,6 +458,7 @@ export const RECOMMENDATIONS = [
 
 export const NAV = [
   { label: "About", id: "about" },
+  { label: "Research", id: "research" },
   { label: "Skills", id: "skills" },
   { label: "Horizons", id: "horizons" },
   { label: "Experience", id: "experience" },
@@ -410,6 +564,7 @@ export const SPOTLIGHT = {
 /** Arabic labels for the primary navigation. */
 export const NAV_AR: Record<string, string> = {
   about: "نبذة",
+  research: "عمق البحث",
   skills: "المهارات",
   horizons: "آفاق متقدمة",
   experience: "المسيرة",
@@ -440,11 +595,17 @@ export const COPY = {
     projects: { en: "Selected Works", ar: "أعمال مختارة" },
     recognition: { en: "Recognition", ar: "التقدير" },
     contact: { en: "Contact", ar: "تواصل" },
+    research: { en: "Depth of Research", ar: "عمق البحث" },
   },
   kickers: {
+    research: {
+      en: "Decades of sustained research across chains, contracts, adversaries and ciphers.",
+      ar: "عقود من البحث المتواصل في السلاسل والعقود والخصوم والشيفرات.",
+    },
     skills: {
       en: "The stack behind protocol design, enterprise systems and adversarial security work.",
       ar: "الأدوات خلف تصميم البروتوكولات وأنظمة المؤسسات والعمل الأمني الهجومي.",
+
     },
     horizons: {
       en: "Where physics, autonomous machines, cryptographic law and digital justice converge.",

@@ -11,6 +11,7 @@ import {
   Projects,
   Spotlight,
   Recognition,
+  Research,
   Skills,
 } from "@/components/sections";
 
@@ -75,6 +76,7 @@ function Index() {
       <main>
         <Hero />
         <About />
+        <Research />
         <Skills />
         <Horizons />
         <Experience />
