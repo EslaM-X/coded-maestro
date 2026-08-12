@@ -229,7 +229,7 @@ export const SKILL_GROUPS = [
       "Wireshark / Ghidra",
       "SIEM & Detection",
       "Kali / Linux Hardening",
-      "MITRE ATT&CK (TTPs)ation",
+      "MITRE ATT&CK (TTPs)",
       "Post-Quantum Awareness",
     ],
   },
