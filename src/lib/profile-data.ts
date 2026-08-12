@@ -458,6 +458,7 @@ export const RECOMMENDATIONS = [
 
 export const NAV = [
   { label: "About", id: "about" },
+  { label: "Research", id: "research" },
   { label: "Skills", id: "skills" },
   { label: "Horizons", id: "horizons" },
   { label: "Experience", id: "experience" },
@@ -563,6 +564,7 @@ export const SPOTLIGHT = {
 /** Arabic labels for the primary navigation. */
 export const NAV_AR: Record<string, string> = {
   about: "نبذة",
+  research: "عمق البحث",
   skills: "المهارات",
   horizons: "آفاق متقدمة",
   experience: "المسيرة",
