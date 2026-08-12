@@ -63,10 +63,14 @@ export function Counter({
   const n = useCountUp(value, visible);
   return (
     <div ref={ref} className="text-center">
-      <div className="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-gilded">
-        {n.toLocaleString()}
+      <div
+        dir="ltr"
+        className="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-gilded"
+      >
+        {n.toLocaleString("en-US")}
         {suffix}
       </div>
+
       <div className="mt-1 text-[10px] uppercase tracking-[0.26em] text-muted-foreground">
         {label}
       </div>
