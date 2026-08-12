@@ -3,7 +3,7 @@ export const PROFILE = {
   alias: "MR-X",
   handle: "EslaM-X",
   location: "Cairo, Egypt · Remote Worldwide",
-  email: "eslamhesham.x@gmail.com",
+  email: "eslam.kora60@gmail.com",
   roles: [
     "SOVEREIGN ENGINEER",
     "WEB3 & PROTOCOL ARCHITECT",
@@ -34,10 +34,20 @@ export const SOCIALS = [
 ] as const;
 
 export const STATS = [
-  { value: 44000, suffix: "+", label: "Contributions this year" },
-  { value: 7, suffix: " yrs", label: "Engineering in Web3" },
-  { value: 60, suffix: "+", label: "Repositories shipped" },
-  { value: 4, suffix: "", label: "Global orgs contributed to" },
+  {
+    value: 44000,
+    suffix: "+",
+    label: "Contributions this year",
+    labelAr: "مساهمة برمجية هذا العام",
+  },
+  { value: 7, suffix: " yrs", label: "Engineering in Web3", labelAr: "سنوات في الويب 3" },
+  { value: 60, suffix: "+", label: "Repositories shipped", labelAr: "مستودع تم إطلاقه" },
+  {
+    value: 5,
+    suffix: "",
+    label: "Global orgs contributed to",
+    labelAr: "مؤسسات عالمية ساهمت فيها",
+  },
 ];
 
 export const SKILL_GROUPS = [
