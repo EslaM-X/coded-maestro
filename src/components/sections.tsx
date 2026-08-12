@@ -149,16 +149,16 @@ export function Experience() {
                   style={{ backgroundImage: "var(--gradient-gold)" }}
                 />
                 <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-primary">
-                  {e.period}
+                  {t(e.period, e.periodAr)}
                 </p>
                 <h3 className="mt-2 font-display text-xl text-foreground sm:text-2xl">
-                  {e.role}
+                  {t(e.role, e.roleAr)}
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  {e.org} · {e.place}
+                  {t(e.org, e.orgAr)} · {t(e.place, e.placeAr)}
                 </p>
                 <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
-                  {e.points.map((p) => (
+                  {t(e.points, e.pointsAr).map((p) => (
                     <li key={p} className="flex gap-3">
                       <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-primary" />
                       {p}

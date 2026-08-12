@@ -271,67 +271,118 @@ export const SKILL_GROUPS = [
 export const EXPERIENCE = [
   {
     role: "Lead Technical Architect",
+    roleAr: "كبير المهندسين المعماريين التقنيين",
     org: "Map of Pi",
+    orgAr: "Map of Pi",
     period: "Feb 2026 — Present",
+    periodAr: "فبراير 2026 — حتى الآن",
     place: "United States · Remote",
+    placeAr: "الولايات المتحدة · عن بُعد",
     points: [
       "Leading architectural design of high-scale MERN systems for Map of Pi v2.0.",
       "Integrating AI neural networks into a self-evolving Web3 commerce ecosystem.",
       "Implementing military-grade encryption and security layers for millions of users.",
     ],
+    pointsAr: [
+      "قيادة التصميم المعماري لأنظمة MERN عالية النطاق في Map of Pi v2.0.",
+      "دمج الشبكات العصبية للذكاء الاصطناعي داخل منظومة تجارة Web3 ذاتية التطوّر.",
+      "تطبيق طبقات تشفير وحماية بمستوى عسكري لخدمة ملايين المستخدمين.",
+    ],
   },
   {
     role: "Web3 Core Systems Contributor & Cyber Security Vanguard",
+    roleAr: "مساهم في أنظمة Web3 الأساسية ورائد أمن سيبراني",
     org: "Pi Network Ecosystem",
+    orgAr: "منظومة Pi Network",
     period: "2019 — Present",
+    periodAr: "2019 — حتى الآن",
     place: "Remote",
+    placeAr: "عن بُعد",
     points: [
       "Authored PiRC protocol standards; proposals reviewed and endorsed by Pi Network's founder.",
       "Adversarial threat modeling, BFT consensus research and cryptographic state-machine design.",
       "Zero-knowledge validation vectors and formal verification for mission-critical contracts.",
     ],
+    pointsAr: [
+      "تأليف معايير بروتوكول PiRC؛ ومراجعة المقترحات واعتمادها من مؤسس Pi Network.",
+      "نمذجة التهديدات العدائية، وأبحاث إجماع BFT، وتصميم آلات الحالة التشفيرية.",
+      "متجهات تحقق بدون معرفة (ZK) وتحقق شكلي للعقود بالغة الأهمية.",
+    ],
   },
   {
     role: "Business Operations Manager — Office of the CEO & Board",
+    roleAr: "مدير العمليات — مكتب الرئيس التنفيذي ومجلس الإدارة",
     org: "S.I.G — El-Sharbatly International Group",
+    orgAr: "S.I.G — مجموعة الشربتلي الدولية",
     period: "Feb 2026 — Present",
+    periodAr: "فبراير 2026 — حتى الآن",
     place: "New Cairo, Egypt",
+    placeAr: "القاهرة الجديدة، مصر",
     points: [
       "Working directly with the CEO and Board on strategic operations and executive decisions.",
       "Leading KPI monitoring, cross-functional performance and operational excellence.",
       "Led design and development of the S.I.G corporate digital presence.",
     ],
+    pointsAr: [
+      "العمل مباشرة مع الرئيس التنفيذي ومجلس الإدارة في العمليات الاستراتيجية والقرارات التنفيذية.",
+      "قيادة متابعة مؤشرات الأداء والأداء متعدد الأقسام والتميّز التشغيلي.",
+      "قيادة تصميم وتطوير الحضور الرقمي لمجموعة S.I.G.",
+    ],
   },
   {
     role: "Business Operations Manager · Founding Team",
+    roleAr: "مدير العمليات · الفريق المؤسس",
     org: "Steinheim",
+    orgAr: "Steinheim",
     period: "Feb 2026 — Present",
+    periodAr: "فبراير 2026 — حتى الآن",
     place: "Cairo, Egypt · Hybrid",
+    placeAr: "القاهرة، مصر · هجين",
     points: [
       "Launched a premium sanitaryware brand in Egypt from the ground up.",
       "Built invoicing, inventory, reporting and audit systems used daily across the business.",
       "Owned stock control, product database, sales processes and go-to-market readiness.",
     ],
+    pointsAr: [
+      "إطلاق علامة فاخرة للأدوات الصحية في مصر من الصفر.",
+      "بناء أنظمة الفوترة والمخزون والتقارير والتدقيق المستخدمة يوميًا في الشركة.",
+      "إدارة مراقبة المخزون وقاعدة بيانات المنتجات وعمليات البيع والجاهزية للسوق.",
+    ],
   },
   {
     role: "Founder",
+    roleAr: "المؤسس",
     org: "PiEat-Me",
+    orgAr: "PiEat-Me",
     period: "May 2025 — Feb 2026",
+    periodAr: "مايو 2025 — فبراير 2026",
     place: "Remote · Worldwide",
+    placeAr: "عن بُعد · عالميًا",
     points: [
       "Founded and shipped a consumer product inside the Pi Network ecosystem.",
+    ],
+    pointsAr: [
+      "تأسيس وإطلاق منتج استهلاكي داخل منظومة Pi Network.",
     ],
   },
   {
     role: "Cost Controller & Data Systems",
+    roleAr: "مراقب تكاليف وأنظمة بيانات",
     org: "Orascom Construction PLC",
+    orgAr: "أوراسكوم للإنشاءات",
     period: "2021 — Jan 2026",
+    periodAr: "2021 — يناير 2026",
     place: "Cairo, Egypt",
+    placeAr: "القاهرة، مصر",
     points: [
       "Cost control, financial data pipelines and reporting for large-scale construction operations.",
     ],
+    pointsAr: [
+      "مراقبة التكاليف وخطوط البيانات المالية والتقارير لعمليات إنشاءات واسعة النطاق.",
+    ],
   },
 ];
+
 
 export const IMPACT = [
   {
