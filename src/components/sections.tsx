@@ -1,6 +1,9 @@
 import { Reveal, SectionHeading, Counter } from "@/components/primitives";
 import {
   CERTS,
+  COPY,
+  HORIZONS,
+  SPOTLIGHT,
   EXPERIENCE,
   IMPACT,
   PROFILE,
@@ -11,64 +14,64 @@ import {
   STATS,
 } from "@/lib/profile-data";
 import { SocialIcon } from "@/components/icons";
-import { ExternalLink, Quote, ShieldCheck, Copy, Check } from "lucide-react";
+import { openExternal, useLang } from "@/lib/i18n";
+import {
+  ExternalLink,
+  Quote,
+  ShieldCheck,
+  Copy,
+  Check,
+  Cpu,
+  FileCode2,
+  Scale,
+  Search,
+  Bot,
+  BrainCircuit,
+  Sparkles,
+} from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/x-crown-logo.jpg";
 
 const shell = "mx-auto max-w-7xl px-6 sm:px-8";
 
 export function About() {
+  const { t } = useLang();
   return (
     <section id="about" className="relative py-28">
       <div className={shell}>
-        <SectionHeading index="01" title="The Architect" />
+        <SectionHeading index="01" title={t(COPY.sections.about.en, COPY.sections.about.ar)} />
         <div className="grid gap-10 lg:grid-cols-[1.25fr_0.75fr]">
           <Reveal>
             <p className="font-display text-xl leading-relaxed text-foreground sm:text-2xl">
-              “{PROFILE.tagline}”
+              “{t(
+                PROFILE.tagline,
+                "معظم الناس يلعبون داخل القواعد. أنا أكتب الشيفرة التي تضعها.",
+              )}”
             </p>
             <div className="mt-7 space-y-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
-              <p>
-                I am a Lead Technical Architect and Business Operations Executive
-                operating at the intersection of Web3, artificial intelligence and
-                cyber security. I do not merely inhabit technology — I shape it:
-                designing decentralized ecosystems, hardening them with
-                military-grade cryptography, and translating deep engineering into
-                measurable business growth.
-              </p>
-              <p>
-                On the engineering side I build high-scale MERN and Next.js systems,
-                author protocol standards, audit smart contracts down to storage-slot
-                collisions and invariant testing, and integrate neural intelligence
-                into self-evolving products. On the business side I sit in the Office
-                of the CEO &amp; Board, run operations for a live retail brand, and turn
-                strategy into systems that people use every single day.
-              </p>
-              <p className="text-foreground">
-                Excellence without compromise. My code is my law. My vision is my compass.
-              </p>
+              <p>{t(COPY.aboutP1.en, COPY.aboutP1.ar)}</p>
+              <p>{t(COPY.aboutP2.en, COPY.aboutP2.ar)}</p>
+              <p className="text-foreground">{t(COPY.aboutP3.en, COPY.aboutP3.ar)}</p>
             </div>
           </Reveal>
 
           <Reveal delay={140}>
             <div className="surface-panel rounded-2xl p-7">
               <p className="text-[10px] uppercase tracking-[0.32em] text-primary">
-                Creed
+                {t(COPY.creedTitle.en, COPY.creedTitle.ar)}
               </p>
               <ul className="mt-5 space-y-4 text-sm text-muted-foreground">
-                {[
-                  ["Empire Architect", "Blockchain ecosystems and the foundations of trust."],
-                  ["Shadow Guardian", "Anticipating threats before they emerge."],
-                  ["Data Oracle", "Turning raw data into strategic power."],
-                  ["Operator", "Systems that scale a business, not just a codebase."],
-                ].map(([t, d]) => (
-                  <li key={t} className="flex gap-3">
-                    <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    <span>
-                      <span className="text-foreground">{t}</span> — {d}
-                    </span>
-                  </li>
-                ))}
+                {COPY.creed.map((c) => {
+                  const [title, desc] = t(c.en, c.ar);
+                  return (
+                    <li key={title} className="flex gap-3">
+                      <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                      <span>
+                        <span className="text-foreground">{title}</span> — {desc}
+                      </span>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </Reveal>
@@ -76,7 +79,12 @@ export function About() {
 
         <div className="mt-20 grid grid-cols-2 gap-8 border-y border-border/60 py-10 lg:grid-cols-4">
           {STATS.map((s) => (
-            <Counter key={s.label} value={s.value} suffix={s.suffix} label={s.label} />
+            <Counter
+              key={s.label}
+              value={s.value}
+              suffix={s.suffix}
+              label={t(s.label, s.labelAr)}
+            />
           ))}
         </div>
       </div>
@@ -85,13 +93,14 @@ export function About() {
 }
 
 export function Skills() {
+  const { t } = useLang();
   return (
     <section id="skills" className="relative py-28">
       <div className={shell}>
         <SectionHeading
           index="02"
-          title="Arsenal"
-          kicker="The stack behind protocol design, enterprise systems and adversarial security work."
+          title={t(COPY.sections.skills.en, COPY.sections.skills.ar)}
+          kicker={t(COPY.kickers.skills.en, COPY.kickers.skills.ar)}
         />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {SKILL_GROUPS.map((g, i) => (
@@ -119,16 +128,20 @@ export function Skills() {
 }
 
 export function Experience() {
+  const { t } = useLang();
   return (
     <section id="experience" className="relative py-28">
       <div className={shell}>
-        <SectionHeading index="03" title="Trajectory" />
-        <div className="relative ml-1 border-l border-border/70 pl-8 sm:ml-4 sm:pl-12">
+        <SectionHeading
+          index="04"
+          title={t(COPY.sections.experience.en, COPY.sections.experience.ar)}
+        />
+        <div className="timeline-rail relative ml-1 border-l border-border/70 ps-8 sm:ml-4 sm:ps-12">
           {EXPERIENCE.map((e, i) => (
             <Reveal key={e.role + e.org} delay={i * 70}>
               <div className="relative pb-14">
                 <span
-                  className="absolute -left-[41px] top-1.5 h-3 w-3 rounded-full ring-4 ring-background sm:-left-[57px]"
+                  className="absolute -start-[41px] top-1.5 h-3 w-3 rounded-full ring-4 ring-background sm:-start-[57px]"
                   style={{ backgroundImage: "var(--gradient-gold)" }}
                 />
                 <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-primary">
@@ -158,13 +171,14 @@ export function Experience() {
 }
 
 export function Impact() {
+  const { t } = useLang();
   return (
     <section id="impact" className="relative py-28">
       <div className={shell}>
         <SectionHeading
-          index="04"
-          title="Open-Source Impact"
-          kicker="Contributions to protocols used by millions — reviewed by the people who built them."
+          index="05"
+          title={t(COPY.sections.impact.en, COPY.sections.impact.ar)}
+          kicker={t(COPY.kickers.impact.en, COPY.kickers.impact.ar)}
         />
         <div className="grid gap-6 lg:grid-cols-3">
           {IMPACT.map((m, i) => (
@@ -200,13 +214,14 @@ export function Impact() {
 }
 
 export function Projects() {
+  const { t } = useLang();
   return (
     <section id="projects" className="relative py-28">
       <div className={shell}>
         <SectionHeading
-          index="05"
-          title="Selected Works"
-          kicker="Real systems in production — enterprise operations, robotics payments, protocol tooling and Web3 products."
+          index="06"
+          title={t(COPY.sections.projects.en, COPY.sections.projects.ar)}
+          kicker={t(COPY.kickers.projects.en, COPY.kickers.projects.ar)}
         />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {PROJECTS.map((p, i) => {
@@ -257,7 +272,7 @@ export function Projects() {
               rel="noreferrer noopener"
               className="inline-flex items-center gap-2 rounded-full border border-primary/40 px-7 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-primary transition-all hover:bg-primary/10"
             >
-              Explore all repositories
+              {t(COPY.exploreRepos.en, COPY.exploreRepos.ar)}
               <ExternalLink className="h-3.5 w-3.5" />
             </a>
           </div>
@@ -268,10 +283,14 @@ export function Projects() {
 }
 
 export function Recognition() {
+  const { t } = useLang();
   return (
     <section className="relative py-28">
       <div className={shell}>
-        <SectionHeading index="06" title="Recognition" />
+        <SectionHeading
+          index="07"
+          title={t(COPY.sections.recognition.en, COPY.sections.recognition.ar)}
+        />
         <div className="grid gap-6 lg:grid-cols-2">
           {RECOMMENDATIONS.map((r, i) => (
             <Reveal key={r.author} delay={i * 120}>
@@ -290,7 +309,9 @@ export function Recognition() {
         </div>
 
         <Reveal delay={100}>
-          <h3 className="mt-20 font-display text-lg text-foreground">Certifications</h3>
+          <h3 className="mt-20 font-display text-lg text-foreground">
+            {t(COPY.certifications.en, COPY.certifications.ar)}
+          </h3>
           <span className="gold-rule mt-4 block w-full opacity-60" />
         </Reveal>
         <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -311,6 +332,7 @@ export function Recognition() {
 }
 
 export function Contact() {
+  const { t } = useLang();
   const [copied, setCopied] = useState(false);
   const copy = async () => {
     await navigator.clipboard.writeText(PROFILE.email);
@@ -333,20 +355,21 @@ export function Contact() {
       <div className={`${shell} relative text-center`}>
         <Reveal>
           <p className="font-mono text-[11px] uppercase tracking-[0.42em] text-primary">
-            07 — Contact
+            08 — {t(COPY.sections.contact.en, COPY.sections.contact.ar)}
           </p>
           <h2 className="mt-6 font-display text-[clamp(2.2rem,6vw,4.4rem)] leading-[1.05] font-bold">
-            <span className="text-gilded">Build something legendary</span>
+            <span className="text-gilded">
+              {t(COPY.contactTitle.en, COPY.contactTitle.ar)}
+            </span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-            If you seek a worker, look elsewhere. If you seek a partner in greatness —
-            you have arrived.
+            {t(COPY.contactBody.en, COPY.contactBody.ar)}
           </p>
 
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <a
               href={`mailto:${PROFILE.email}`}
-              className="rounded-full px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.24em] text-primary-foreground transition-transform hover:-translate-y-0.5"
+              className="keep-mono break-all rounded-full px-6 py-3.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary-foreground sm:px-8 sm:text-xs transition-transform hover:-translate-y-0.5"
               style={{ backgroundImage: "var(--gradient-gold)" }}
             >
               {PROFILE.email}
@@ -357,7 +380,7 @@ export function Contact() {
               className="inline-flex items-center gap-2 rounded-full border border-primary/40 px-6 py-3.5 text-xs font-semibold uppercase tracking-[0.24em] text-primary transition-all hover:bg-primary/10"
             >
               {copied ? <Check className="h-3.5 w-3.5" /> : <Copy className="h-3.5 w-3.5" />}
-              {copied ? "Copied" : "Copy"}
+              {copied ? t(COPY.copied.en, COPY.copied.ar) : t(COPY.copy.en, COPY.copy.ar)}
             </button>
           </div>
 
@@ -368,6 +391,10 @@ export function Contact() {
                   href={s.href}
                   target="_blank"
                   rel="noreferrer noopener"
+                  onClick={(ev) => {
+                    ev.preventDefault();
+                    openExternal(s.href);
+                  }}
                   className="flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-[11px] uppercase tracking-[0.22em] text-muted-foreground transition-all hover:-translate-y-1 hover:border-primary/60 hover:text-primary"
                 >
                   <SocialIcon name={s.icon} className="h-3.5 w-3.5" />
@@ -383,6 +410,7 @@ export function Contact() {
 }
 
 export function Footer() {
+  const { t } = useLang();
   return (
     <footer className="border-t border-border/60 py-12">
       <div className={`${shell} flex flex-col items-center gap-5 text-center`}>
@@ -391,12 +419,12 @@ export function Footer() {
           alt="EslaM-X emblem"
           className="h-16 w-16 rounded-2xl border border-primary/30 object-cover opacity-90"
         />
-        <p className="font-display text-sm tracking-[0.5em] text-gilded">ESLAM-X</p>
+        <p className="keep-latin font-display text-sm tracking-[0.5em] text-gilded">ESLAM-X</p>
         <p className="text-[11px] uppercase tracking-[0.26em] text-muted-foreground">
-          Sovereign Engineer · Blockchain Titan · Cyber Authority
+          {t(COPY.footerTag.en, COPY.footerTag.ar)}
         </p>
         <p className="text-[11px] text-muted-foreground/70">
-          © {new Date().getFullYear()} EslaM HeshAM. Rare. Unseen. Unstoppable.
+          © {new Date().getFullYear()} EslaM HeshAM. {t(COPY.footerRights.en, COPY.footerRights.ar)}
         </p>
       </div>
     </footer>
