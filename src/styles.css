@@ -231,3 +231,55 @@
     transform: none;
   }
 }
+
+/* ---- Arabic / RTL support -------------------------------------------- */
+
+html[dir="rtl"] {
+  font-family: "Tajawal", "Sora", ui-sans-serif, system-ui, sans-serif;
+}
+
+html[dir="rtl"] body {
+  letter-spacing: 0;
+}
+
+/* Arabic doesn't tolerate wide latin tracking — neutralize it in RTL. */
+html[dir="rtl"] :is(h1, h2, h3, p, span, li, a, button, div) {
+  letter-spacing: normal;
+}
+
+html[dir="rtl"] .font-display,
+html[dir="rtl"] .font-mono {
+  font-family: "Tajawal", "Sora", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Keep latin-only brand marks in their original faces. */
+html[dir="rtl"] .keep-latin {
+  font-family: "Cinzel", ui-serif, Georgia, serif;
+  letter-spacing: 0.4em;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+html[dir="rtl"] .keep-mono {
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+/* Timeline rail flips side in RTL. */
+html[dir="rtl"] .timeline-rail {
+  border-left: 0;
+  border-right: 1px solid var(--color-border);
+}
+
+/* ---- Mobile efficiency ------------------------------------------------ */
+
+@media (max-width: 640px) {
+  .surface-panel {
+    backdrop-filter: none;
+  }
+  .reveal {
+    transform: translateY(16px);
+    transition-duration: 0.6s;
+  }
+}
