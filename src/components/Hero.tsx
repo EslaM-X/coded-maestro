@@ -1,6 +1,7 @@
 import { lazy, Suspense } from "react";
 import { ArrowDown, Sparkles } from "lucide-react";
-import { PROFILE, SOCIALS } from "@/lib/profile-data";
+import { COPY, PROFILE, SOCIALS } from "@/lib/profile-data";
+import { openExternal, useLang } from "@/lib/i18n";
 import { SocialIcon } from "@/components/icons";
 import { useHydrated, useTypewriter } from "@/hooks/use-motion";
 import portrait from "@/assets/eslam-portrait.png";
@@ -11,6 +12,7 @@ const EmberField = lazy(() => import("@/components/EmberField"));
 export default function Hero() {
   const hydrated = useHydrated();
   const typed = useTypewriter(PROFILE.roles);
+  const { t, isAr } = useLang();
 
   return (
     <section
@@ -40,23 +42,27 @@ export default function Hero() {
           <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5">
             <Sparkles className="h-3.5 w-3.5 text-primary" />
             <span className="text-[10px] uppercase tracking-[0.32em] text-primary">
-              Available for elite engagements
+              {t(COPY.available.en, COPY.available.ar)}
             </span>
           </div>
 
-          <p className="font-mono text-xs uppercase tracking-[0.5em] text-muted-foreground">
-            {PROFILE.location}
+          <p className="font-mono text-[10px] uppercase tracking-[0.34em] text-muted-foreground sm:text-xs sm:tracking-[0.5em]">
+            {t(PROFILE.location, "القاهرة، مصر · عن بُعد حول العالم")}
           </p>
 
           <h1 className="mt-4 font-display text-[clamp(2.6rem,7vw,5.4rem)] leading-[0.95] font-bold tracking-tight">
-            <span className="block text-foreground">EslaM</span>
-            <span className="block text-gilded">HeshAM</span>
+            <span className="keep-latin block text-foreground" style={{ letterSpacing: "normal" }}>
+              EslaM
+            </span>
+            <span className="keep-latin block text-gilded" style={{ letterSpacing: "normal" }}>
+              HeshAM
+            </span>
             <span className="mt-3 block font-sans text-[clamp(0.7rem,1.6vw,1rem)] font-light tracking-[0.6em] text-muted-foreground">
               &mdash; MR-X &mdash;
             </span>
           </h1>
 
-          <p className="mt-7 min-h-[2.2rem] font-mono text-sm tracking-[0.22em] text-primary sm:text-base">
+          <p className="keep-mono mt-7 min-h-[2.2rem] font-mono text-xs tracking-[0.16em] text-primary sm:text-base sm:tracking-[0.22em]">
             {typed}
             <span className="ml-0.5 inline-block animate-[caret-blink_1s_steps(1)_infinite]">
               _
@@ -64,8 +70,10 @@ export default function Hero() {
           </p>
 
           <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-            {PROFILE.headline}. I architect decentralized systems, harden them against
-            the worst adversaries, and turn engineering depth into business outcomes.
+            {t(
+              `${PROFILE.headline}. ${COPY.heroBody.en}`,
+              `كبير المهندسين التقنيين · مدير العمليات · الويب 3 والأمن السيبراني. ${COPY.heroBody.ar}`,
+            )}
           </p>
 
           <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -74,13 +82,13 @@ export default function Hero() {
               className="group relative overflow-hidden rounded-full px-7 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-primary-foreground transition-transform hover:-translate-y-0.5"
               style={{ backgroundImage: "var(--gradient-gold)", backgroundSize: "200% auto" }}
             >
-              View the Work
+              {t(COPY.viewWork.en, COPY.viewWork.ar)}
             </a>
             <a
               href="#contact"
               className="rounded-full border border-primary/40 px-7 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-primary transition-all hover:bg-primary/10"
             >
-              Start a Conversation
+              {t(COPY.startConversation.en, COPY.startConversation.ar)}
             </a>
           </div>
 
@@ -91,6 +99,10 @@ export default function Hero() {
                   href={s.href}
                   target="_blank"
                   rel="noreferrer noopener"
+                  onClick={(ev) => {
+                    ev.preventDefault();
+                    openExternal(s.href);
+                  }}
                   aria-label={s.label}
                   className="flex h-11 w-11 items-center justify-center rounded-full border border-border text-muted-foreground transition-all hover:-translate-y-1 hover:border-primary/60 hover:text-primary"
                 >
@@ -101,7 +113,7 @@ export default function Hero() {
           </ul>
         </div>
 
-        <div className="relative mx-auto w-full max-w-md">
+        <div className="relative mx-auto w-full max-w-xs sm:max-w-md">
           <div
             className="absolute inset-x-6 top-10 bottom-0 rounded-[50%] opacity-70 blur-3xl animate-[halo-pulse_6s_ease-in-out_infinite]"
             style={{ background: "var(--gradient-gold)" }}
@@ -113,7 +125,11 @@ export default function Hero() {
           />
           <img
             src={portrait}
-            alt="Portrait of EslaM HeshAM, Lead Technical Architect"
+            alt={
+              isAr
+                ? "صورة إسلام هشام، كبير المهندسين التقنيين"
+                : "Portrait of EslaM HeshAM, Lead Technical Architect"
+            }
             className="relative z-10 w-full animate-[float-slow_7s_ease-in-out_infinite] drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
             style={{
               maskImage:
