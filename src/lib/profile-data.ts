@@ -593,11 +593,17 @@ export const COPY = {
     projects: { en: "Selected Works", ar: "أعمال مختارة" },
     recognition: { en: "Recognition", ar: "التقدير" },
     contact: { en: "Contact", ar: "تواصل" },
+    research: { en: "Depth of Research", ar: "عمق البحث" },
   },
   kickers: {
+    research: {
+      en: "Decades of sustained research across chains, contracts, adversaries and ciphers.",
+      ar: "عقود من البحث المتواصل في السلاسل والعقود والخصوم والشيفرات.",
+    },
     skills: {
       en: "The stack behind protocol design, enterprise systems and adversarial security work.",
       ar: "الأدوات خلف تصميم البروتوكولات وأنظمة المؤسسات والعمل الأمني الهجومي.",
+
     },
     horizons: {
       en: "Where physics, autonomous machines, cryptographic law and digital justice converge.",
