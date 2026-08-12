@@ -59,7 +59,7 @@ const eslam = {
 [![Instagram](https://img.shields.io/badge/INSTAGRAM-0A0A0A?style=for-the-badge&logo=instagram&logoColor=FFB627)](https://instagram.com/eslam_hesham_x_)
 [![Facebook](https://img.shields.io/badge/FACEBOOK-0A0A0A?style=for-the-badge&logo=facebook&logoColor=FFB627)](https://facebook.com/EslaM.HeshAM.X)
 [![Medium](https://img.shields.io/badge/MEDIUM-0A0A0A?style=for-the-badge&logo=medium&logoColor=FFB627)](https://medium.com/@eslam_hesham_x)
-[![Email](https://img.shields.io/badge/EMAIL-0A0A0A?style=for-the-badge&logo=gmail&logoColor=FFB627)](mailto:eslamhesham.x@gmail.com)
+[![Email](https://img.shields.io/badge/EMAIL-0A0A0A?style=for-the-badge&logo=gmail&logoColor=FFB627)](mailto:eslam.kora60@gmail.com)
 
 </div>
 
