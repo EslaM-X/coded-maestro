@@ -43,3 +43,13 @@
   - `public/robots.txt`
 - أضف الموقع في Google Search Console و Bing Webmaster Tools، وارفع `sitemap.xml`.
 - صورة المشاركة الاجتماعية جاهزة في `public/og-image.jpg` (1200×630).
+
+## 5. رابط الموقع داخل الريدمي (مهم)
+
+في `github-profile/README.md` الرابط مكتوب كـ `https://eslamx.vercel.app` في عدة أماكن
+(الشعار في الأعلى، زر ENTER THE SOVEREIGN PORTFOLIO، البادجات، التوقيع في الأسفل).
+بعد ما تعرف دومين Vercel النهائي، افتح الملف على GitHub واستبدل كل `eslamx.vercel.app`
+بالدومين بتاعك (Ctrl+H أو من محرر GitHub) — وخلاص.
+
+وكمان لازم ترفع الشعار داخل مستودع `EslaM-X/EslaM-X` في المسار:
+`assets/x-crown-logo.jpg` — عشان الشعار يظهر ويكون قابل للضغط ويودّي للموقع.
