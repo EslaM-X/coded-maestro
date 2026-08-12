@@ -30,7 +30,7 @@ export const SOCIALS = [
     icon: "instagram",
   },
   { label: "Facebook", href: "https://facebook.com/EslaM.HeshAM.X", icon: "facebook" },
-  { label: "Medium", href: "https://medium.com/@eslam_hesham_x", icon: "medium" },
+  { label: "Medium", href: "https://medium.com/@eslam.kora60", icon: "medium" },
 ] as const;
 
 export const STATS = [
@@ -539,7 +539,7 @@ export const HORIZONS = [
 
 /** Featured writing / recognition spotlight. */
 export const SPOTLIGHT = {
-  href: "https://medium.com/@eslam_hesham_x",
+  href: "https://medium.com/@eslam.kora60/building-the-future-of-pi-web3-architectural-insights-recognition-from-dr-nicolas-kokkalis-03027c9c221d",
   prHref: "https://github.com/PiNetwork/PiRC/pull/2",
   en: {
     kicker: "Featured",

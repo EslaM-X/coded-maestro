@@ -15,9 +15,11 @@ import {
   Skills,
 } from "@/components/sections";
 
+const SITE = "https://project--959d682e-3677-4575-9a84-f86b30c36ef5.lovable.app";
+const OG_IMAGE = `${SITE}/og-image.jpg`;
 const title = "EslaM HeshAM (MR-X) — Lead Technical Architect & Web3 Engineer";
 const description =
-  "Portfolio of EslaM HeshAM (EslaM-X): Lead Technical Architect, Web3 & protocol engineer, cyber security specialist and business operations executive. Full-stack MERN, AI systems, smart contracts.";
+  "Portfolio of EslaM HeshAM (EslaM-X): Lead Technical Architect, Web3 & protocol engineer, cyber security specialist and Business Operations Manager. Full-stack MERN, AI systems, smart contracts.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -27,12 +29,30 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "profile" },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: SITE },
+      { property: "og:locale", content: "en_US" },
+      { property: "og:locale:alternate", content: "ar_EG" },
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "EslaM HeshAM — MR-X, Lead Technical Architect" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
+      { name: "twitter:image", content: OG_IMAGE },
+      {
+        name: "keywords",
+        content:
+          "EslaM HeshAM, MR-X, EslaM-X, Web3 architect, blockchain researcher, smart contracts, cyber security, digital forensics, AI agents, Pi Network, إسلام هشام",
+      },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: SITE },
+      { rel: "alternate", hrefLang: "en", href: SITE },
+      { rel: "alternate", hrefLang: "ar", href: SITE },
+      { rel: "alternate", hrefLang: "x-default", href: SITE },
+    ],
+
     scripts: [
       {
         type: "application/ld+json",
