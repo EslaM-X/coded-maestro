@@ -311,3 +311,199 @@ export const NAV = [
   { label: "Projects", id: "projects" },
   { label: "Contact", id: "contact" },
 ];
+
+/** Advanced Horizons — bilingual frontier domains. */
+export const HORIZONS = [
+  {
+    icon: "cpu",
+    en: {
+      title: "Technological Physics & Physical AI",
+      desc: "Bridging physics simulation and machine intelligence: embodied agents, sim-to-sim transfer and control systems that reason about the real world before they touch it.",
+    },
+    ar: {
+      title: "الفيزياء التكنولوجية والذكاء الاصطناعي الفيزيائي",
+      desc: "الجمع بين محاكاة الفيزياء وذكاء الآلة: وكلاء مُجسَّدون، ونقل التعلم بين المحاكيات، وأنظمة تحكّم تفهم العالم الحقيقي قبل أن تلمسه.",
+    },
+  },
+  {
+    icon: "file",
+    en: {
+      title: "Smart Contracts & Protocol Law",
+      desc: "Contracts as legislation: escrow proofs, invariant testing, formal verification and storage-slot level auditing for value that cannot afford to fail.",
+    },
+    ar: {
+      title: "العقود الذكية وقانون البروتوكول",
+      desc: "العقود كتشريع: إثباتات الضمان، واختبار الثوابت، والتحقق الصوري، والتدقيق حتى مستوى خانات التخزين لقيمة لا تحتمل الفشل.",
+    },
+  },
+  {
+    icon: "scale",
+    en: {
+      title: "Smart Digital Justice",
+      desc: "Automated, auditable dispute resolution on-chain: transparent evidence trails, Sybil-resistant reputation and rulings that anyone can verify.",
+    },
+    ar: {
+      title: "العدالة الرقمية الذكية",
+      desc: "فضّ نزاعات آلي وقابل للتدقيق على السلسلة: مسارات أدلة شفافة، وسمعة مقاومة لهجمات الهوية، وأحكام يستطيع أي شخص التحقق منها.",
+    },
+  },
+  {
+    icon: "search",
+    en: {
+      title: "Digital Forensics & Cybercrime Analysis",
+      desc: "Tracing attacks and illicit flows across chains and infrastructure — incident reconstruction, adversary profiling and evidence-grade reporting.",
+    },
+    ar: {
+      title: "التحليل الجنائي الرقمي وتحليل الجرائم السيبرانية",
+      desc: "تتبّع الهجمات والتدفقات غير المشروعة عبر السلاسل والبنية التحتية — إعادة بناء الحوادث، وتوصيف الخصوم، وتقارير بمستوى الأدلة.",
+    },
+  },
+  {
+    icon: "bot",
+    en: {
+      title: "Robotics & the Machine Economy",
+      desc: "Machines that earn and spend: x402 payment gating, no-settle-on-failure guarantees and paid embodied skills for autonomous hardware.",
+    },
+    ar: {
+      title: "الروبوتات واقتصاد الآلات",
+      desc: "آلات تكسب وتنفق: بوابات دفع x402، وضمانات عدم التسوية عند الفشل، ومهارات مُجسَّدة مدفوعة للعتاد المستقل.",
+    },
+  },
+  {
+    icon: "brain",
+    en: {
+      title: "Autonomous AI Agents",
+      desc: "Local-first agents that plan and execute multi-step work with no central service — memory, tool use and guardrails built in.",
+    },
+    ar: {
+      title: "وكلاء الذكاء الاصطناعي المستقلون",
+      desc: "وكلاء يعملون محليًا يخططون وينفذون مهامًا متعددة الخطوات دون خدمة مركزية — ذاكرة واستخدام أدوات وحواجز أمان مدمجة.",
+    },
+  },
+] as const;
+
+/** Featured writing / recognition spotlight. */
+export const SPOTLIGHT = {
+  href: "https://medium.com/@eslam_hesham_x",
+  prHref: "https://github.com/PiNetwork/PiRC/pull/2",
+  en: {
+    kicker: "Featured",
+    title: "Recognized by the Founder of Pi Network",
+    body: "My PiRC1 utility-standards proposal — escrow lock proofs, dynamic p_floor pricing, engagement-weighted PiPower and Sybil-resistant reporting — was reviewed and endorsed publicly by Dr. Nicolas Kokkalis, Stanford PhD and Founder of Pi Network.",
+    quote:
+      "“Both of these are good ideas. Implementation seems possible.” — Dr. Nicolas Kokkalis, Founder of Pi Network",
+    cta: "Read the article on Medium",
+    cta2: "View the proposal",
+  },
+  ar: {
+    kicker: "مقال مميز",
+    title: "تقدير من مؤسس شبكة Pi",
+    body: "مقترحي لمعايير المنفعة PiRC1 — إثباتات قفل الضمان، والتسعير الديناميكي لـ p_floor، وقوة PiPower الموزونة بالتفاعل، والتقارير المقاومة لهجمات Sybil — تمت مراجعته والإشادة به علنًا من الدكتور نيكولاس كوكاليس، مؤسس شبكة Pi وحاصل على الدكتوراه من ستانفورد.",
+    quote:
+      "«كلتا الفكرتين جيدة. ويبدو التنفيذ ممكنًا.» — د. نيكولاس كوكاليس، مؤسس شبكة Pi",
+    cta: "اقرأ المقال على Medium",
+    cta2: "اطّلع على المقترح",
+  },
+} as const;
+
+/** Arabic labels for the primary navigation. */
+export const NAV_AR: Record<string, string> = {
+  about: "نبذة",
+  skills: "المهارات",
+  horizons: "آفاق متقدمة",
+  experience: "المسيرة",
+  impact: "الأثر",
+  projects: "الأعمال",
+  contact: "تواصل",
+};
+
+/** Bilingual UI copy. */
+export const COPY = {
+  hire: { en: "Hire Me", ar: "وظّفني" },
+  available: {
+    en: "Available for elite engagements",
+    ar: "متاح للمشاريع الاستثنائية",
+  },
+  viewWork: { en: "View the Work", ar: "شاهد الأعمال" },
+  startConversation: { en: "Start a Conversation", ar: "ابدأ محادثة" },
+  heroBody: {
+    en: "I architect decentralized systems, harden them against the worst adversaries, and turn engineering depth into business outcomes.",
+    ar: "أُصمّم أنظمة لا مركزية، وأُحصّنها ضد أشرس الخصوم، وأحوّل العمق الهندسي إلى نتائج تجارية ملموسة.",
+  },
+  sections: {
+    about: { en: "The Architect", ar: "المهندس" },
+    skills: { en: "Arsenal", ar: "الترسانة" },
+    horizons: { en: "Advanced Horizons", ar: "آفاق متقدمة" },
+    experience: { en: "Trajectory", ar: "المسيرة" },
+    impact: { en: "Open-Source Impact", ar: "الأثر مفتوح المصدر" },
+    projects: { en: "Selected Works", ar: "أعمال مختارة" },
+    recognition: { en: "Recognition", ar: "التقدير" },
+    contact: { en: "Contact", ar: "تواصل" },
+  },
+  kickers: {
+    skills: {
+      en: "The stack behind protocol design, enterprise systems and adversarial security work.",
+      ar: "الأدوات خلف تصميم البروتوكولات وأنظمة المؤسسات والعمل الأمني الهجومي.",
+    },
+    horizons: {
+      en: "Where physics, autonomous machines, cryptographic law and digital justice converge.",
+      ar: "حيث تلتقي الفيزياء والآلات المستقلة والقانون التشفيري والعدالة الرقمية.",
+    },
+    impact: {
+      en: "Contributions to protocols used by millions — reviewed by the people who built them.",
+      ar: "مساهمات في بروتوكولات يستخدمها الملايين — راجعها من بنوها بأنفسهم.",
+    },
+    projects: {
+      en: "Real systems in production — enterprise operations, robotics payments, protocol tooling and Web3 products.",
+      ar: "أنظمة حقيقية في الإنتاج — عمليات مؤسسية، ومدفوعات روبوتية، وأدوات بروتوكول، ومنتجات ويب 3.",
+    },
+  },
+  aboutP1: {
+    en: "I am a Lead Technical Architect and Business Operations Manager operating at the intersection of Web3, artificial intelligence and cyber security. I do not merely inhabit technology — I shape it: designing decentralized ecosystems, hardening them with military-grade cryptography, and translating deep engineering into measurable business growth.",
+    ar: "أنا كبير المهندسين التقنيين ومدير العمليات، أعمل عند تقاطع الويب 3 والذكاء الاصطناعي والأمن السيبراني. أنا لا أسكن التقنية فحسب — بل أصوغها: أُصمّم منظومات لا مركزية، وأُحصّنها بتشفير بمستوى عسكري، وأترجم العمق الهندسي إلى نمو تجاري قابل للقياس.",
+  },
+  aboutP2: {
+    en: "On the engineering side I build high-scale MERN and Next.js systems, author protocol standards, audit smart contracts down to storage-slot collisions and invariant testing, and integrate neural intelligence into self-evolving products. On the business side I sit in the Office of the CEO & Board, run operations for a live retail brand, and turn strategy into systems that people use every single day.",
+    ar: "على الجانب الهندسي أبني أنظمة MERN وNext.js واسعة النطاق، وأكتب معايير البروتوكولات، وأدقّق العقود الذكية حتى تصادمات خانات التخزين واختبار الثوابت، وأدمج الذكاء العصبي في منتجات ذاتية التطور. وعلى جانب الأعمال أعمل ضمن مكتب الرئيس التنفيذي ومجلس الإدارة، وأدير عمليات علامة تجارية قائمة، وأحوّل الاستراتيجية إلى أنظمة تُستخدم يوميًا.",
+  },
+  aboutP3: {
+    en: "Excellence without compromise. My code is my law. My vision is my compass.",
+    ar: "تميّز بلا تنازلات. شفرتي هي قانوني، ورؤيتي هي بوصلتي.",
+  },
+  creedTitle: { en: "Creed", ar: "العقيدة" },
+  creed: [
+    {
+      en: ["Empire Architect", "Blockchain ecosystems and the foundations of trust."],
+      ar: ["مهندس الإمبراطورية", "منظومات البلوكشين وأسس الثقة."],
+    },
+    {
+      en: ["Shadow Guardian", "Anticipating threats before they emerge."],
+      ar: ["حارس الظل", "استباق التهديدات قبل ظهورها."],
+    },
+    {
+      en: ["Data Oracle", "Turning raw data into strategic power."],
+      ar: ["عرّاف البيانات", "تحويل البيانات الخام إلى قوة استراتيجية."],
+    },
+    {
+      en: ["Operator", "Systems that scale a business, not just a codebase."],
+      ar: ["المشغّل", "أنظمة تُنمّي العمل، لا الشيفرة فقط."],
+    },
+  ],
+  certifications: { en: "Certifications", ar: "الشهادات" },
+  exploreRepos: { en: "Explore all repositories", ar: "استعرض كل المستودعات" },
+  contactTitle: { en: "Build something legendary", ar: "لنبنِ شيئًا أسطوريًا" },
+  contactBody: {
+    en: "If you seek a worker, look elsewhere. If you seek a partner in greatness — you have arrived.",
+    ar: "إن كنت تبحث عن موظف، فابحث في مكان آخر. وإن كنت تبحث عن شريك في العظمة — فقد وصلت.",
+  },
+  copy: { en: "Copy", ar: "نسخ" },
+  copied: { en: "Copied", ar: "تم النسخ" },
+  footerTag: {
+    en: "Sovereign Engineer · Blockchain Titan · Cyber Authority",
+    ar: "مهندس سيادي · عملاق البلوكشين · مرجع سيبراني",
+  },
+  footerRights: {
+    en: "Rare. Unseen. Unstoppable.",
+    ar: "نادر. غير مرئي. لا يُوقف.",
+  },
+} as const;
