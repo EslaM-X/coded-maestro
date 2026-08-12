@@ -52,7 +52,7 @@ export default function Hero() {
             <span className="block text-foreground">EslaM</span>
             <span className="block text-gilded">HeshAM</span>
             <span className="mt-3 block font-sans text-[clamp(0.7rem,1.6vw,1rem)] font-light tracking-[0.6em] text-muted-foreground">
-              𓄂 MR-X 𓆃
+              &mdash; MR-X &mdash;
             </span>
           </h1>
 
