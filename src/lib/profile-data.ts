@@ -29,7 +29,7 @@ export const SOCIALS = [
     href: "https://instagram.com/eslam_hesham_x_",
     icon: "instagram",
   },
-  { label: "Facebook", href: "https://facebook.com/EslaM.HeshAM.X", icon: "facebook" },
+  { label: "Facebook", href: "https://www.facebook.com/share/17tZjhwv99", icon: "facebook" },
   { label: "Medium", href: "https://medium.com/@eslam.kora60", icon: "medium" },
 ] as const;
 
@@ -40,7 +40,7 @@ export const STATS = [
     label: "Contributions this year",
     labelAr: "مساهمة برمجية هذا العام",
   },
-  { value: 7, suffix: " yrs", label: "Engineering in Web3", labelAr: "سنوات في الويب 3" },
+  { value: 8, suffix: " yrs", label: "Engineering in Web3", labelAr: "سنوات في الويب 3" },
   { value: 60, suffix: "+", label: "Repositories shipped", labelAr: "مستودع تم إطلاقه" },
   {
     value: 5,
@@ -122,6 +122,48 @@ export const RESEARCH_TRACKS = [
       desc: "تعمّق في التشفير: الأنظمة المتماثلة وغير المتماثلة، والتجزئة، وإدارة المفاتيح، والتشفير الكامل والطرف-إلى-طرف، وبدائيات المعرفة الصفرية، وأبحاث فك التشفير وتحليل الشيفرات.",
     },
   },
+  {
+    icon: "brain",
+    years: 9,
+    en: {
+      title: "AI, Agents & the Machine Economy",
+      unit: "years",
+      desc: "Researching autonomous intelligence as an economic actor: multi-agent planning, tool use, machine-to-machine payments and the Discover → Negotiate → Pay → Create → Sell → Earn loop.",
+    },
+    ar: {
+      title: "الذكاء الاصطناعي والوكلاء واقتصاد الآلات",
+      unit: "سنوات",
+      desc: "بحث في الذكاء المستقل كفاعل اقتصادي: التخطيط متعدد الوكلاء، واستخدام الأدوات، والمدفوعات بين الآلات، ودورة الاكتشاف ← التفاوض ← الدفع ← الخلق ← البيع ← الربح.",
+    },
+  },
+  {
+    icon: "cpu",
+    years: 10,
+    en: {
+      title: "Advanced Automation & Systems Engineering",
+      unit: "years",
+      desc: "Engineering the removal of manual human intervention: self-running scripts, event pipelines and API meshes that link software, databases and interfaces into one instant, error-free operation.",
+    },
+    ar: {
+      title: "الأتمتة المتقدمة وهندسة الأنظمة",
+      unit: "سنوات",
+      desc: "هندسة إلغاء التدخل البشري اليدوي: سكربتات ذاتية التشغيل، وخطوط أحداث، وشبكات واجهات برمجية تربط البرمجيات وقواعد البيانات والواجهات في عملية واحدة لحظية وخالية من الأخطاء.",
+    },
+  },
+  {
+    icon: "coins",
+    years: 9,
+    en: {
+      title: "DeFi, Tokenomics & Digital Governance",
+      unit: "years",
+      desc: "Open financial systems without banks or intermediaries: liquidity pools, lending markets, yield mechanics, DAO voting and on-chain governance executed by transparent code.",
+    },
+    ar: {
+      title: "التمويل اللامركزي واقتصاد الرموز والحوكمة الرقمية",
+      unit: "سنوات",
+      desc: "أنظمة مالية مفتوحة بلا بنوك أو وسطاء: مجمعات السيولة، وأسواق الإقراض، وآليات العائد، وتصويت المنظمات المستقلة، والحوكمة على السلسلة بشيفرة شفافة.",
+    },
+  },
 ] as const;
 
 export const SKILL_GROUPS = [
@@ -150,6 +192,14 @@ export const SKILL_GROUPS = [
       "Wallet & Key Custody",
       "DAO Governance",
       "x402 Machine Payments",
+      "DApps Architecture",
+      "DeFi Protocol Design",
+      "Liquidity & AMM Design",
+      "On-Chain Voting",
+      "Staking & Yield Logic",
+      "NFT & Digital Ownership",
+      "Cross-Chain Messaging",
+      "Gas Optimization",
     ],
   },
   {
@@ -181,6 +231,12 @@ export const SKILL_GROUPS = [
       "System Design",
       "Testing (Vitest / Playwright)",
       "Observability",
+      "Event-Driven Pipelines",
+      "Workflow Orchestration",
+      "Web3 Frontend (wagmi / viem)",
+      "Realtime Infrastructure",
+      "Zero-Downtime Deploys",
+      "Edge Caching & CDN",
     ],
   },
   {
@@ -204,6 +260,13 @@ export const SKILL_GROUPS = [
       "Physical AI",
       "MLOps",
       "Speech & TTS",
+      "Autonomous Agent Economies",
+      "Agent-to-Agent Negotiation",
+      "Machine-Payable Skills",
+      "Workflow Automation (n8n)",
+      "Data Scraping & ETL",
+      "Self-Healing Systems",
+      "Decision Engines",
     ],
   },
   {
@@ -231,6 +294,12 @@ export const SKILL_GROUPS = [
       "Kali / Linux Hardening",
       "MITRE ATT&CK (TTPs)",
       "Post-Quantum Awareness",
+      "Cybercrime Investigation",
+      "Chain Analysis & Tracing",
+      "Anti-Sybil Systems",
+      "Secure Key Custody",
+      "Threat Intelligence",
+      "Supply-Chain Security",
     ],
   },
   {
@@ -246,6 +315,10 @@ export const SKILL_GROUPS = [
       "Digital Twins",
       "Edge Inference",
       "CAN Bus / Telemetry",
+      "Autonomous Navigation",
+      "Machine-to-Machine Commerce",
+      "Robotic Fleet Ops",
+      "Firmware Security",
     ],
   },
   {
@@ -263,6 +336,10 @@ export const SKILL_GROUPS = [
       "Go-To-Market",
       "Process Automation",
       "Technical Leadership",
+      "Digital Transformation",
+      "Revenue Operations",
+      "Vendor & Partner Strategy",
+      "Data-Driven Decisions",
     ],
   },
 ];
@@ -584,6 +661,132 @@ export const HORIZONS = [
     ar: {
       title: "وكلاء الذكاء الاصطناعي المستقلون",
       desc: "وكلاء يعملون محليًا يخططون وينفذون مهامًا متعددة الخطوات دون خدمة مركزية — ذاكرة واستخدام أدوات وحواجز أمان مدمجة.",
+    },
+  },
+  {
+    icon: "coins",
+    en: {
+      title: "The Machine Economy",
+      desc: "The revolutionary shift of AI from a mere analysis and automation tool into an autonomous economic entity capable of direct financial action.",
+      bullets: [
+        "Operational loop: Discover → Negotiate → Pay → Create → Sell → Earn.",
+        "Agents discover resources, negotiate them, pay, create value and earn with full autonomy.",
+        "The human role narrows to setting strategic objectives while AI executes inside strict boundaries.",
+      ],
+    },
+    ar: {
+      title: "اقتصاد الآلات (Machine Economy)",
+      desc: "التحول الثوري لانتقال الذكاء الاصطناعي من مجرد أداة تحليل وأتمتة إلى كيان اقتصادي مستقل وقادر على الفعل المالي المباشر.",
+      bullets: [
+        "القدرات التشغيلية: (Discover → Negotiate → Pay → Create → Sell → Earn).",
+        "آلية العمل: تتيح للوكلاء الذكيين اكتشاف الموارد، والتفاوض عليها، والدفع، وخلق القيمة، والربح باستقلالية تامة.",
+        "الدور البشري: يقتصر على صياغة الأهداف الاستراتيجية، بينما يتولى الذكاء الاصطناعي التنفيذ ضمن حدود صارمة.",
+      ],
+    },
+  },
+  {
+    icon: "zap",
+    en: {
+      title: "Advanced Automation",
+      desc: "Engineering away manual human intervention by building intelligent, integrated digital systems that run complex operations instantly and with absolute efficiency.",
+      bullets: [
+        "Operational structure: linking software systems, databases and APIs through self-running scripts.",
+        "Added value: eliminating human error, cutting response time and maximizing operational productivity.",
+        "Built for companies and digital platforms that cannot afford downtime.",
+      ],
+    },
+    ar: {
+      title: "الأتمتة المتقدمة (Advanced Automation)",
+      desc: "هندسة إلغاء التدخل البشري اليدوي عبر بناء منظومات رقمية ذكية ومتكاملة تدير العمليات المعقدة بلحظية وكفاءة مطلقة.",
+      bullets: [
+        "البنية التشغيلية: ربط الأنظمة البرمجية، وقواعد البيانات، والواجهات البرمجية عبر سكربتات ذاتية التشغيل.",
+        "القيمة المضافة: القضاء على الأخطاء البشرية، وتقليل زمن الاستجابة، وتعظيم الإنتاجية التشغيلية.",
+        "مصمّمة للشركات والمنصات الرقمية التي لا تحتمل التوقف.",
+      ],
+    },
+  },
+  {
+    icon: "globe",
+    en: {
+      title: "Web3 Applications",
+      desc: "The next generation of the internet, built on decentralization and true digital ownership for users through blockchain technology.",
+      bullets: [
+        "Operational structure: distributed networks, smart contracts and data encryption at high cyber-security standards.",
+        "Added value: stripping intermediaries of control and letting individuals fully own their data and digital assets.",
+        "Transparent by design — every state change is verifiable.",
+      ],
+    },
+    ar: {
+      title: "تطبيقات الويب 3 (Web3 Applications)",
+      desc: "الجيل القادم من الإنترنت المبني على اللامركزية والملكية الرقمية الحقيقية للمستخدمين عبر تقنيات البلوكشين.",
+      bullets: [
+        "البنية التشغيلية: الاعتماد على شبكات موزعة، والعقود الذكية، وتشفير البيانات بمعايير أمان سيبراني عالية.",
+        "القيمة المضافة: حرمان الوسطاء من السيطرة، وتمكين الأفراد من امتلاك بياناتهم وأصولهم الرقمية بالكامل.",
+        "الشفافية بالتصميم — كل تغيير في الحالة قابل للتحقق.",
+      ],
+    },
+  },
+  {
+    icon: "coins",
+    en: {
+      title: "Decentralized Finance (DeFi)",
+      desc: "An open, global and independent financial system operating without central banks or traditional intermediaries through transparent code.",
+      bullets: [
+        "Operational structure: lending, borrowing, trading and automated yield generation via liquidity pools and smart contracts.",
+        "Added value: financial services for anyone on earth with an internet connection, with full transparency on every transaction.",
+        "Composability: protocols stack into new financial primitives.",
+      ],
+    },
+    ar: {
+      title: "تطبيقات التمويل اللامركزي (DeFi)",
+      desc: "نظام مالي عالمي مفتوح ومستقل يعمل بلا بنوك مركزية أو وسطاء تقليديين عبر شيفرات برمجية شفافة.",
+      bullets: [
+        "البنية التشغيلية: الإقراض، والاقتراض، والتداول، وتوليد العائدات آليًا عبر مجمعات السيولة والعقود الذكية.",
+        "القيمة المضافة: إتاحة الخدمات المالية لأي شخص في العالم يملك اتصالًا بالإنترنت مع شفافية كاملة في كل معاملة.",
+        "قابلية التركيب: تتراكم البروتوكولات لتكوّن أدوات مالية جديدة.",
+      ],
+    },
+  },
+  {
+    icon: "layers",
+    en: {
+      title: "Decentralized Applications (DApps)",
+      desc: "Complete digital applications running on blockchain networks instead of traditional centralized company servers.",
+      bullets: [
+        "Operational structure: front-ends wired to smart contracts running on tamper-proof distributed ledgers.",
+        "Added value: censorship resistance, absolute zero-downtime continuity and protection of user privacy.",
+        "No single point of failure, no silent takedowns.",
+      ],
+    },
+    ar: {
+      title: "التطبيقات اللامركزية (DApps)",
+      desc: "برمجيات وتطبيقات رقمية متكاملة تعمل على شبكات البلوكشين بدلًا من خوادم الشركات المركزية التقليدية.",
+      bullets: [
+        "البنية التشغيلية: واجهات أمامية متصلة بعقود ذكية تعمل على دفاتر أستاذ موزعة وغير قابلة للتلاعب.",
+        "القيمة المضافة: مقاومة الرقابة، واستمرارية العمل المطلقة بلا توقف (Zero Downtime)، وحماية خصوصية المستخدمين.",
+        "لا نقطة فشل واحدة، ولا إيقاف صامت للخدمة.",
+      ],
+    },
+  },
+  {
+    icon: "vote",
+    en: {
+      title: "DAO & Decentralized Voting",
+      desc: "Managing organizations and digital networks collectively and democratically through tokens and smart contracts.",
+      bullets: [
+        "Operational structure: proposal submission, direct voting and automatic execution of decisions from encrypted on-chain results.",
+        "Added value: absolute transparency in decision-making, incentivized community participation and the end of bureaucracy.",
+        "Governance that anyone can audit, line by line.",
+      ],
+    },
+    ar: {
+      title: "الحوكمة اللامركزية والتصويت (DAO & Decentralized Voting)",
+      desc: "إدارة المنظمات والشبكات الرقمية بشكل جماعي وديمقراطي يعتمد على الرموز الرقمية والعقود الذكية.",
+      bullets: [
+        "البنية التشغيلية: تقديم المقترحات، والتصويت المباشر، والتنفيذ الآلي للقرارات بناءً على نتائج التصويت المشفرة على البلوكشين.",
+        "القيمة المضافة: شفافية مطلقة في اتخاذ القرار، وتحفيز المشاركة المجتمعية، والقضاء على البيروقراطية والإدارة الفردية.",
+        "حوكمة يستطيع أي شخص تدقيقها سطرًا بسطر.",
+      ],
     },
   },
 ] as const;
