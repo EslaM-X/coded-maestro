@@ -735,6 +735,57 @@ export const PROJECTS: readonly Project[] = [
   },
 ];
 
+/** Curated display order — strongest engineering first. */
+export const PROJECT_ORDER: readonly string[] = [
+  "ai-agent-automation-platform",
+  "RoboPay Go2 Tier-1",
+  "RoboPay Spot Tier-1",
+  "production-systems-lab",
+  "robot-sim-policy-lab",
+  "Steinheim ERP & Invoicing",
+  "PiRC1 Standards Pro",
+  "Pi Local AI Agent",
+  "MapCap IPO Platform",
+  "Spin4Pi Vault",
+  "PiEat-Me",
+  "S.I.G Corporate Platform",
+  "engineering-notes",
+  "EslaM-X Sovereign Portfolio",
+];
+
+/** Curated display groups shown on the ALL view. */
+export const PROJECT_GROUPS: readonly {
+  label: { en: string; ar: string };
+  names: readonly string[];
+}[] = [
+  {
+    label: { en: "Flagship Systems", ar: "الأنظمة الرائدة" },
+    names: [
+      "ai-agent-automation-platform",
+      "RoboPay Go2 Tier-1",
+      "production-systems-lab",
+      "robot-sim-policy-lab",
+      "RoboPay Spot Tier-1",
+    ],
+  },
+  {
+    label: { en: "Production & Product Systems", ar: "أنظمة الإنتاج والمنتجات" },
+    names: ["Steinheim ERP & Invoicing", "PiEat-Me", "S.I.G Corporate Platform"],
+  },
+  {
+    label: { en: "Protocol & Web3", ar: "البروتوكول وويب 3" },
+    names: ["PiRC1 Standards Pro", "MapCap IPO Platform", "Spin4Pi Vault"],
+  },
+  {
+    label: { en: "Research & Engineering Evidence", ar: "البحث والأدلة الهندسية" },
+    names: ["engineering-notes", "Pi Local AI Agent"],
+  },
+  {
+    label: { en: "Ecosystem", ar: "المنظومة" },
+    names: ["EslaM-X Sovereign Portfolio"],
+  },
+];
+
 export const CERTS = [
   { name: "Web3 / Blockchain Project Manager", issuer: "Udemy", year: "2023" },
   { name: "Web5 Fundamentals — Data Ownership", issuer: "Udemy", year: "2023" },
@@ -1118,8 +1169,8 @@ export const COPY = {
       ar: "مساهمات في بروتوكولات يستخدمها الملايين — راجعها من بنوها بأنفسهم.",
     },
     projects: {
-      en: "Real systems in production — enterprise operations, robotics payments, protocol tooling and Web3 products.",
-      ar: "أنظمة حقيقية في الإنتاج — عمليات مؤسسية، ومدفوعات روبوتية، وأدوات بروتوكول، ومنتجات ويب 3.",
+      en: "Systems I designed, built, validated, shipped, or contributed to — with evidence attached to every claim.",
+      ar: "أنظمة صمّمتها، وبنيتها، وتحققّت منها، وأطلقتها، أو ساهمت فيها — وكل ادعاء مقرون بدليل.",
     },
     arsenal: {
       en: "Live telemetry from the GitHub profile — refreshed every day by an automated workflow.",

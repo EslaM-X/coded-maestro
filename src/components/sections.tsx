@@ -9,7 +9,10 @@ import {
   IMPACT,
   PROFILE,
   PROJECTS,
+  PROJECT_ORDER,
+  PROJECT_GROUPS,
   PROJECT_CATEGORIES,
+  type Project,
   type ProjectCategory,
   RECOMMENDATIONS,
   SKILL_GROUPS,
@@ -244,7 +247,62 @@ export function Impact() {
 export function Projects() {
   const { t } = useLang();
   const [cat, setCat] = useState<ProjectCategory>("ALL");
-  const filtered = cat === "ALL" ? PROJECTS : PROJECTS.filter((p) => p.category === cat);
+  const order = new Map(PROJECT_ORDER.map((n, i) => [n, i]));
+  const filtered = (
+    cat === "ALL" ? PROJECTS : PROJECTS.filter((p) => p.category === cat)
+  )
+    .slice()
+    .sort((a, b) => (order.get(a.name) ?? 99) - (order.get(b.name) ?? 99));
+  const card = (p: Project, i: number) => {
+    const ar = PROJECT_AR[p.name];
+    const inner = (
+      <>
+        <div className="flex items-center justify-between">
+          <span className="rounded-full border border-primary/30 px-3 py-1 text-[10px] uppercase tracking-[0.26em] text-primary">
+            {t(p.tag, ar?.tag ?? p.tag)}
+          </span>
+          {p.href && <ExternalLink className="h-4 w-4 text-muted-foreground" />}
+        </div>
+        <h3 className="mt-5 font-display text-xl text-foreground">{p.name}</h3>
+        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+          {t(p.desc, ar?.desc ?? p.desc)}
+        </p>
+        {p.details && (
+          <ul className="mt-4 space-y-2 text-[13px] leading-relaxed text-muted-foreground">
+            {t(p.details.en, p.details.ar).map((d) => (
+              <li key={d} className="flex gap-2.5">
+                <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-primary" />
+                <span>{d}</span>
+              </li>
+            ))}
+          </ul>
+        )}
+        <ul className="mt-5 flex flex-wrap gap-2">
+          {p.stack.map((s) => (
+            <li
+              key={s}
+              className="rounded-md bg-secondary/60 px-2.5 py-1 font-mono text-[10px] tracking-wide text-muted-foreground"
+            >
+              {s}
+            </li>
+          ))}
+        </ul>
+      </>
+    );
+    const cls =
+      "surface-panel flex h-full flex-col rounded-2xl p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/60";
+    return (
+      <Reveal key={p.name} delay={(i % 3) * 90}>
+        {p.href ? (
+          <a href={p.href} target="_blank" rel="noreferrer noopener" className={cls}>
+            {inner}
+          </a>
+        ) : (
+          <div className={cls}>{inner}</div>
+        )}
+      </Reveal>
+    );
+  };
   return (
     <section id="projects" className="relative py-28">
       <div className={shell}>
@@ -274,59 +332,36 @@ export function Projects() {
             );
           })}
         </div>
-        <div key={cat} className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {filtered.map((p, i) => {
-            const ar = PROJECT_AR[p.name];
-            const inner = (
-              <>
-                <div className="flex items-center justify-between">
-                  <span className="rounded-full border border-primary/30 px-3 py-1 text-[10px] uppercase tracking-[0.26em] text-primary">
-                    {t(p.tag, ar?.tag ?? p.tag)}
-                  </span>
-                  {p.href && <ExternalLink className="h-4 w-4 text-muted-foreground" />}
+        {cat === "ALL" ? (
+          <div className="space-y-16">
+            {PROJECT_GROUPS.map((g) => {
+              const items = g.names
+                .map((n) => PROJECTS.find((p) => p.name === n))
+                .filter((p): p is Project => Boolean(p));
+              return (
+                <div key={g.label.en}>
+                  <div className="mb-6 flex items-center gap-4">
+                    <h3 className="font-display text-xs uppercase tracking-[0.32em] text-gilded sm:text-sm">
+                      {t(g.label.en, g.label.ar)}
+                    </h3>
+                    <span className="h-px flex-1 bg-border/60" />
+                    <span className="font-mono text-[10px] tracking-widest text-muted-foreground">
+                      {String(items.length).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                    {items.map((p, i) => card(p, i))}
+                  </div>
                 </div>
-                <h3 className="mt-5 font-display text-xl text-foreground">{p.name}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {t(p.desc, ar?.desc ?? p.desc)}
-                </p>
-                {p.details && (
-                  <ul className="mt-4 space-y-2 text-[13px] leading-relaxed text-muted-foreground">
-                    {t(p.details.en, p.details.ar).map((d) => (
-                      <li key={d} className="flex gap-2.5">
-                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-primary" />
-                        <span>{d}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-                <ul className="mt-5 flex flex-wrap gap-2">
-                  {p.stack.map((s) => (
-                    <li
-                      key={s}
-                      className="rounded-md bg-secondary/60 px-2.5 py-1 font-mono text-[10px] tracking-wide text-muted-foreground"
-                    >
-                      {s}
-                    </li>
-                  ))}
-                </ul>
-              </>
-            );
-            const cls =
-              "surface-panel flex h-full flex-col rounded-2xl p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/60";
-            return (
-              <Reveal key={p.name} delay={(i % 3) * 90}>
-                {p.href ? (
-                  <a href={p.href} target="_blank" rel="noreferrer noopener" className={cls}>
-                    {inner}
-                  </a>
-                ) : (
-                  <div className={cls}>{inner}</div>
-                )}
-              </Reveal>
-            );
-          })}
-        </div>
-        {filtered.length === 0 && (
+              );
+            })}
+          </div>
+        ) : (
+          <div key={cat} className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {filtered.map((p, i) => card(p, i))}
+          </div>
+        )}
+        {cat !== "ALL" && filtered.length === 0 && (
           <div className="surface-panel rounded-2xl p-12 text-center">
             <p className="font-display text-xl text-foreground">
               {t(

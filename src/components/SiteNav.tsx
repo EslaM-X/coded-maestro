@@ -43,7 +43,10 @@ export default function SiteNav() {
       }`}
     >
       <nav className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3 sm:px-8 lg:flex lg:justify-between">
-        <a href="#top" className="group flex min-w-0 items-center gap-2.5">
+        <a
+          href="#top"
+          className="group flex shrink-0 items-center gap-2.5 whitespace-nowrap"
+        >
           <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full ring-1 ring-primary/40 transition-transform duration-500 group-hover:rotate-12 sm:h-10 sm:w-10">
             <img
               src={logo}
@@ -51,7 +54,7 @@ export default function SiteNav() {
               className="h-full w-full scale-110 object-cover"
             />
           </span>
-          <span className="keep-latin truncate font-display text-[11px] tracking-[0.42em] text-gilded sm:text-sm">
+          <span className="keep-latin shrink-0 whitespace-nowrap font-display text-[11px] tracking-[0.42em] text-gilded sm:text-sm">
             ESLAM-X
           </span>
         </a>
