@@ -326,6 +326,22 @@ export function Projects() {
             );
           })}
         </div>
+        {filtered.length === 0 && (
+          <div className="surface-panel rounded-2xl p-12 text-center">
+            <p className="font-display text-xl text-foreground">
+              {t(
+                "This lane is being forged right now.",
+                "هذه الفئة تُشغَل عليها الآن.",
+              )}
+            </p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              {t(
+                "When it ships, the evidence will be public here.",
+                "عند الإطلاق، ستكون الأدلة عامة هنا.",
+              )}
+            </p>
+          </div>
+        )}
         <Reveal delay={120}>
           <div className="mt-12 text-center">
             <a

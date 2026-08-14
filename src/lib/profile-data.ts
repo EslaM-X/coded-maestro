@@ -487,6 +487,22 @@ export const IMPACT = [
       "Connecting robots, simulators and physical devices to a payment network — x402 payment gating with no-settle-on-failure guarantees.",
     quote: null,
   },
+  {
+    org: "Fabric Foundation",
+    title: "RoboPay — platform hardening & quality",
+    href: "https://github.com/fabricfoundation/RoboPay/pull/92",
+    summary:
+      "Seven open PRs to the Fabric RoboPay repo: security redaction of payment payloads, hardened Go CI, a Python quality baseline, a profile registry validator and two Tier-1 robot profiles.",
+    quote: null,
+  },
+  {
+    org: "Steinheim",
+    title: "Steinheim — luxury health brand engineering",
+    href: "https://github.com/hakamabudagga77/steinheim-eg",
+    summary:
+      "Twenty shipped PRs to a live luxury health brand: installable PWA, bilingual AI concierge, seasonal campaign engine, accessibility foundation, security hardening, Arabic RTL polish and SEO schema.",
+    quote: null,
+  },
 ];
 
 /** Project filter taxonomy — ALL / AI / ROBOTICS / WEB3 / SECURITY / SYSTEMS / FULL-STACK. */
@@ -517,9 +533,19 @@ export const PROJECTS: readonly Project[] = [
     name: "Steinheim ERP & Invoicing",
     tag: "Enterprise",
     category: "SYSTEMS" as ProjectCategory,
-    desc: "Full internal operations platform: invoicing, inventory, stock audits, customer records, reporting and daily sales performance for a live retail brand.",
-    stack: ["TypeScript", "React", "Supabase", "PostgreSQL"],
-    href: null,
+    desc: "Full internal operations platform — invoicing, inventory, stock audits, customer records, reporting and daily sales performance — plus the live public web product, shipped through 20 merged PRs.",
+    stack: ["TypeScript", "React", "Supabase", "PostgreSQL", "Next.js"],
+    details: {
+      en: [
+        "Internal ERP used daily by the operating brand.",
+        "Public storefront: PWA, bilingual AI concierge, seasonal campaign engine.",
+      ],
+      ar: [
+        "نظام ERP داخلي يُستخدم يوميًا في العلامة التجارية.",
+        "واجهة عامة: تطبيق PWA ومساعد ذكاء اصطناعي ثنائي اللغة ومحرك حملات موسمي.",
+      ],
+    },
+    href: "https://github.com/hakamabudagga77/steinheim-eg",
   },
   {
     name: "RoboPay Spot Tier-1",
@@ -596,6 +622,116 @@ export const PROJECTS: readonly Project[] = [
     desc: "Founded a food-commerce product inside the Pi Network ecosystem, from concept to live users.",
     stack: ["React", "Node.js", "Pi Payments"],
     href: null,
+  },
+  {
+    name: "ai-agent-automation-platform",
+    tag: "Flagship · AI",
+    category: "AI" as ProjectCategory,
+    desc: "Governed agent orchestration: planning, specialized agents, a human approval gate, execution, full audit, offline evaluation, retries and idempotency — zero API keys, fully offline-testable.",
+    stack: ["Python", "Agents", "Workflows", "Audit"],
+    details: {
+      en: [
+        "Retry policy with exponential backoff; permanent failures abort with a full audit trail.",
+        "Tool permissions deny-by-default; idempotent runs and checkpoint-based resume.",
+        "22 offline tests · CI green · v0.2.0 released.",
+      ],
+      ar: [
+        "سياسة إعادة محاولة بتأخير متصاعد؛ الفشل الدائم يُوقف العملية مع سجل تدقيق كامل.",
+        "صلاحيات أدوات مرفوضة افتراضيًا؛ تشغيل متماكل واستئناف من نقاط الحفظ.",
+        "22 اختبارًا أوفلاين · CI أخضر · الإصدار v0.2.0.",
+      ],
+    },
+    href: "https://github.com/EslaM-X/ai-agent-automation-platform",
+  },
+  {
+    name: "robot-sim-policy-lab",
+    tag: "Robotics · Simulation",
+    category: "ROBOTICS" as ProjectCategory,
+    desc: "Policy-driven robotics experiments with measurable task execution, physics validation and simulator-to-simulator testing across MuJoCo and PyBullet.",
+    stack: ["Python", "MuJoCo", "PyBullet"],
+    details: {
+      en: [
+        "The same policy re-validated across physics engines — sim-to-sim, not sim-to-hype.",
+        "Measured success, collision and deviation; 18 tests, CI green.",
+      ],
+      ar: [
+        "نفس السياسة يُعاد التحقق منها عبر محركات فيزيائية — نقل بين المحاكيات لا وعود.",
+        "قياس دقيق للنجاح والتصادم والانحراف؛ 18 اختبارًا و CI أخضر.",
+      ],
+    },
+    href: "https://github.com/EslaM-X/robot-sim-policy-lab",
+  },
+  {
+    name: "RoboPay Go2 Tier-1",
+    tag: "Robotics · Bounty PR",
+    category: "ROBOTICS" as ProjectCategory,
+    desc: "Unitree Go2 Tier-1 simulator profile for the Fabric RoboPay bounty — obstacle navigation re-validated across MuJoCo + PyBullet, submitted as an open PR.",
+    stack: ["Python", "MuJoCo", "PyBullet", "x402"],
+    details: {
+      en: [
+        "A paid-per-skill embodied profile for the machine economy.",
+        "Public PR #89 to fabricfoundation/RoboPay — evidence, not estimates.",
+      ],
+      ar: [
+        "ملف مُجسَّد يُدفع لكل مهارة في اقتصاد الآلات.",
+        "PR #89 عام إلى fabricfoundation/RoboPay — أدلة لا تخمينات.",
+      ],
+    },
+    href: "https://github.com/fabricfoundation/RoboPay/pull/89",
+  },
+  {
+    name: "production-systems-lab",
+    tag: "Systems · Go",
+    category: "SYSTEMS" as ProjectCategory,
+    desc: "Production-grade Go building blocks for financial and distributed systems: idempotency, replay protection, circuit breakers, retries, HMAC auth, rate limiting and hash-chained audit.",
+    stack: ["Go", "Idempotency", "Webhooks", "Audit"],
+    details: {
+      en: [
+        "Race-tested, benchmarked building blocks — not a toy repo.",
+        "Hash-chained audit log for tamper-evident accounting.",
+      ],
+      ar: [
+        "لبنات مُختبَرة ضد التنافسية ومقيسة الأداء — لا مستودع تجريبي.",
+        "سجل تدقيق متسلسل بالتجزئة لمحاسبة مقاومة للتلاعب.",
+      ],
+    },
+    href: "https://github.com/EslaM-X/production-systems-lab",
+  },
+  {
+    name: "engineering-notes",
+    tag: "Notes · Deep Dives",
+    category: "SYSTEMS" as ProjectCategory,
+    desc: "Problem-first engineering deep dives — policy-driven robotics, replay-safe payments, CI as evidence and secure API design. Every claim ends in a testable artifact.",
+    stack: ["Robotics", "Payments", "Security", "CI"],
+    details: {
+      en: [
+        "Each note closes the loop: problem → design → code → measurable artifact.",
+        "The notes behind the evidence matrix on this page.",
+      ],
+      ar: [
+        "كل ملاحظة تُغلق الحلقة: المشكلة ← التصميم ← الكود ← أثر قابل للقياس.",
+        "الملاحظات التي تقف خلف مصفوفة الأدلة في هذه الصفحة.",
+      ],
+    },
+    href: "https://github.com/EslaM-X/engineering-notes",
+  },
+  {
+    name: "EslaM-X Sovereign Portfolio",
+    tag: "This Site",
+    category: "FULL-STACK" as ProjectCategory,
+    desc: "This bilingual AR/EN portfolio, engineered as an evidence system — every claim opens to a public repo, PR or benchmark, with SSR meta for Arabic and English share cards.",
+    stack: ["TypeScript", "TanStack Start", "Nitro", "Vercel"],
+    details: {
+      en: [
+        "Deterministic telemetry, live GitHub evidence, zero fabricated numbers.",
+        "Shared link cards adapt to Arabic or English automatically.",
+      ],
+      ar: [
+        "قياس حتمي وأدلة GitHub حية وصفر أرقام مختلقة.",
+        "بطاقات المشاركة تتكيف مع العربية أو الإنجليزية تلقائيًا.",
+      ],
+    },
+    href: "https://github.com/EslaM-X/coded-maestro",
   },
 ];
 
@@ -895,40 +1031,6 @@ export const COPY = {
     en: "I architect decentralized systems, harden them against the worst adversaries, and turn engineering depth into business outcomes.",
     ar: "أُصمّم أنظمة لا مركزية، وأُحصّنها ضد أشرس الخصوم، وأحوّل العمق الهندسي إلى نتائج تجارية ملموسة.",
   },
-  sections: {
-    about: { en: "The Architect", ar: "المهندس" },
-    skills: { en: "Arsenal", ar: "الترسانة" },
-    horizons: { en: "Advanced Horizons", ar: "آفاق متقدمة" },
-    experience: { en: "Trajectory", ar: "المسيرة" },
-    impact: { en: "Open-Source Impact", ar: "الأثر مفتوح المصدر" },
-    projects: { en: "Selected Works", ar: "أعمال مختارة" },
-    recognition: { en: "Recognition", ar: "التقدير" },
-    contact: { en: "Contact", ar: "تواصل" },
-    research: { en: "Depth of Research", ar: "عمق البحث" },
-  },
-  kickers: {
-    research: {
-      en: "Decades of sustained research across chains, contracts, adversaries and ciphers.",
-      ar: "عقود من البحث المتواصل في السلاسل والعقود والخصوم والشيفرات.",
-    },
-    skills: {
-      en: "The stack behind protocol design, enterprise systems and adversarial security work.",
-      ar: "الأدوات خلف تصميم البروتوكولات وأنظمة المؤسسات والعمل الأمني الهجومي.",
-
-    },
-    horizons: {
-      en: "Where physics, autonomous machines, cryptographic law and digital justice converge.",
-      ar: "حيث تلتقي الفيزياء والآلات المستقلة والقانون التشفيري والعدالة الرقمية.",
-    },
-    impact: {
-      en: "Contributions to protocols used by millions — reviewed by the people who built them.",
-      ar: "مساهمات في بروتوكولات يستخدمها الملايين — راجعها من بنوها بأنفسهم.",
-    },
-    projects: {
-      en: "Real systems in production — enterprise operations, robotics payments, protocol tooling and Web3 products.",
-      ar: "أنظمة حقيقية في الإنتاج — عمليات مؤسسية، ومدفوعات روبوتية، وأدوات بروتوكول، ومنتجات ويب 3.",
-    },
-  },
   aboutP1: {
     en: "I am a Lead Technical Architect and Business Operations Manager operating at the intersection of Web3, artificial intelligence and cyber security. I do not merely inhabit technology — I shape it: designing decentralized ecosystems, hardening them with military-grade cryptography, and translating deep engineering into measurable business growth.",
     ar: "أنا كبير المهندسين التقنيين ومدير العمليات، أعمل عند تقاطع الويب 3 والذكاء الاصطناعي والأمن السيبراني. أنا لا أسكن التقنية فحسب — بل أصوغها: أُصمّم منظومات لا مركزية، وأُحصّنها بتشفير بمستوى عسكري، وأترجم العمق الهندسي إلى نمو تجاري قابل للقياس.",
@@ -1116,6 +1218,15 @@ export const EVIDENCE = [
     },
     metric: { en: "RoboPay PR #89 · Go2 Tier-1", ar: "RoboPay PR #89 · Go2 Tier-1" },
     href: "https://github.com/fabricfoundation/RoboPay/pull/89",
+  },
+  {
+    org: { en: "Client Engineering", ar: "هندسة العملاء" },
+    claim: {
+      en: "Twenty merged PRs shipping a live luxury health brand — PWA, AI concierge, security hardening.",
+      ar: "عشرون طلب دمج مُنجزًا تشحن علامة صحية فاخرة حية — PWA ومساعد ذكاء اصطناعي وتحصين أمني.",
+    },
+    metric: { en: "20 PRs · steinheim-eg", ar: "20 PR · steinheim-eg" },
+    href: "https://github.com/hakamabudagga77/steinheim-eg",
   },
   {
     org: { en: "The Evidence Matrix", ar: "مصفوفة الأدلة" },

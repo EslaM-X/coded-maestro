@@ -7,8 +7,9 @@ import {
   useState,
   type ReactNode,
 } from "react";
+import { META, type SiteLang } from "./meta";
 
-export type Lang = "en" | "ar";
+export type Lang = SiteLang;
 
 type Ctx = {
   lang: Lang;
@@ -22,21 +23,7 @@ type Ctx = {
 const LangContext = createContext<Ctx | null>(null);
 
 const STORAGE_KEY = "eslamx-lang";
-
-const META: Record<Lang, { title: string; description: string; locale: string }> = {
-  en: {
-    title: "EslaM HeshAM (MR-X) — Lead Technical Architect & Web3 Engineer",
-    description:
-      "Portfolio of EslaM HeshAM (EslaM-X): Lead Technical Architect, Web3 & protocol engineer, cyber security researcher and Business Operations Manager.",
-    locale: "en_US",
-  },
-  ar: {
-    title: "إسلام هشام — السيد أكس | كبير المهندسين التقنيين ومهندس الويب 3",
-    description:
-      "الملف الاحترافي لإسلام هشام (السيد أكس): كبير المهندسين التقنيين، مهندس بروتوكولات الويب 3، باحث في الأمن السيبراني والأدلة الجنائية الرقمية، ومدير العمليات.",
-    locale: "ar_EG",
-  },
-};
+const COOKIE_KEY = "eslamx-lang";
 
 function setMeta(attr: "name" | "property", key: string, content: string) {
   let el = document.head.querySelector<HTMLMetaElement>(`meta[${attr}="${key}"]`);
@@ -48,13 +35,45 @@ function setMeta(attr: "name" | "property", key: string, content: string) {
   el.setAttribute("content", content);
 }
 
+/** Persist the language choice so share-card crawlers and reloads keep it. */
+function persistLang(lang: Lang) {
+  try {
+    window.localStorage.setItem(STORAGE_KEY, lang);
+  } catch {
+    /* ignore */
+  }
+  try {
+    document.cookie = `${COOKIE_KEY}=${lang};path=/;max-age=31536000;samesite=lax`;
+  } catch {
+    /* ignore */
+  }
+  try {
+    const url = new URL(window.location.href);
+    if (url.searchParams.get("lang") !== lang) {
+      url.searchParams.set("lang", lang);
+      window.history.replaceState({}, "", url.toString());
+    }
+  } catch {
+    /* ignore */
+  }
+}
+
+/** Resolve the initial language: URL param wins, then saved choice, then browser locale. */
+function resolveInitialLang(): Lang {
+  if (typeof window === "undefined") return "en";
+  const q = new URLSearchParams(window.location.search).get("lang");
+  if (q === "ar" || q === "en") return q;
+  const stored = window.localStorage.getItem(STORAGE_KEY);
+  if (stored === "ar" || stored === "en") return stored;
+  if (navigator.language?.toLowerCase().startsWith("ar")) return "ar";
+  return "en";
+}
+
 export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("en");
 
   useEffect(() => {
-    const stored = window.localStorage.getItem(STORAGE_KEY);
-    if (stored === "ar" || stored === "en") setLangState(stored);
-    else if (navigator.language?.toLowerCase().startsWith("ar")) setLangState("ar");
+    setLangState(resolveInitialLang());
   }, []);
 
   useEffect(() => {
@@ -66,21 +85,18 @@ export function LangProvider({ children }: { children: ReactNode }) {
     const m = META[lang];
     document.title = m.title;
     setMeta("name", "description", m.description);
+    setMeta("name", "keywords", m.keywords);
     setMeta("property", "og:title", m.title);
     setMeta("property", "og:description", m.description);
     setMeta("property", "og:locale", m.locale);
+    setMeta("property", "og:image:alt", m.ogAlt);
     setMeta("name", "twitter:title", m.title);
     setMeta("name", "twitter:description", m.description);
   }, [lang]);
 
-
   const setLang = useCallback((l: Lang) => {
     setLangState(l);
-    try {
-      window.localStorage.setItem(STORAGE_KEY, l);
-    } catch {
-      /* ignore */
-    }
+    persistLang(l);
   }, []);
 
   const value = useMemo<Ctx>(

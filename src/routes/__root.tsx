@@ -12,6 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { LangProvider } from "../lib/i18n";
+import { getSsrLang, langFromUrl } from "../lib/meta";
 
 function NotFoundComponent() {
   return (
@@ -102,10 +103,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;900&family=Sora:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&family=Tajawal:wght@300;400;500;700;800&display=swap",
       },
-      { rel: "icon", type: "image/png", sizes: "512x512", href: "/favicon.png" },
-      { rel: "shortcut icon", type: "image/png", href: "/favicon.png" },
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon.png" },
       { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
-
+      { rel: "icon", type: "image/png", sizes: "192x192", href: "/favicon-192.png" },
+      { rel: "icon", type: "image/png", sizes: "512x512", href: "/favicon-512.png" },
     ],
   }),
   shellComponent: RootShell,
@@ -115,8 +117,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
+  const lang =
+    typeof window !== "undefined" ? langFromUrl(window.location.search) : getSsrLang();
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning>
+    <html lang={lang} dir={lang === "ar" ? "rtl" : "ltr"} suppressHydrationWarning>
       <head>
         <HeadContent />
       </head>
