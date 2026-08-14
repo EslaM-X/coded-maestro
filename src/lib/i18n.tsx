@@ -7,7 +7,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-import { META, type SiteLang } from "./meta";
+import { META, getSsrLang, type SiteLang } from "./meta";
 
 export type Lang = SiteLang;
 
@@ -60,7 +60,7 @@ function persistLang(lang: Lang) {
 
 /** Resolve the initial language: URL param wins, then saved choice, then browser locale. */
 function resolveInitialLang(): Lang {
-  if (typeof window === "undefined") return "en";
+  if (typeof window === "undefined") return getSsrLang();
   const q = new URLSearchParams(window.location.search).get("lang");
   if (q === "ar" || q === "en") return q;
   const stored = window.localStorage.getItem(STORAGE_KEY);
