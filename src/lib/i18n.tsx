@@ -70,7 +70,7 @@ function resolveInitialLang(): Lang {
 }
 
 export function LangProvider({ children }: { children: ReactNode }) {
-  const [lang, setLangState] = useState<Lang>("en");
+  const [lang, setLangState] = useState<Lang>(() => resolveInitialLang());
 
   useEffect(() => {
     setLangState(resolveInitialLang());
