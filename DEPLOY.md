@@ -11,7 +11,8 @@
 3. اختر **Public** وفعّل **Add a README file**
 4. افتح المستودع → `README.md` → زر التعديل (قلم رصاص)
 5. امسح المحتوى القديم والصق محتوى `github-profile/README.md` بالكامل
-6. ارفع الشعار داخل المستودع في مسار `assets/x-crown-logo.jpg` (Add file → Upload files)
+6. **مش محتاج ترفع الشعار في المستودع** — الشعار بقى بيتحمّل من الموقع مباشرة:
+   `https://eslamx.vercel.app/x-crown-logo.jpg` (موجود في `public/x-crown-logo.jpg`). يكفي إن الموقع منشور على Vercel.
 7. Commit changes → افتح https://github.com/EslaM-X وهتلاقي البروفايل بالشكل الجديد
 
 ## 2. النشر عبر Lovable (الأسرع)
@@ -51,5 +52,9 @@
 بعد ما تعرف دومين Vercel النهائي، افتح الملف على GitHub واستبدل كل `eslamx.vercel.app`
 بالدومين بتاعك (Ctrl+H أو من محرر GitHub) — وخلاص.
 
-وكمان لازم ترفع الشعار داخل مستودع `EslaM-X/EslaM-X` في المسار:
-`assets/x-crown-logo.jpg` — عشان الشعار يظهر ويكون قابل للضغط ويودّي للموقع.
+الشعار في الريدمي بقى بيتحمّل من `https://eslamx.vercel.app/x-crown-logo.jpg` مباشرة،
+فمفيش أي رفع مطلوب داخل المستودع — بس خلي الموقع منشور على Vercel.
+
+كروت المشاريع والإنجازات اتحوّلت لبادچات `shields.io` (خدمة مستقرة 100%) بدل
+`github-readme-stats` و`github-profile-trophy` اللي بيحصلهم rate-limit، وكروت الإحصائيات
+اتضاف لها `cache_seconds=86400` لتقليل الفشل.

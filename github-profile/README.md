@@ -2,8 +2,9 @@
   EslaM-X — GitHub Profile README
   1) Create a PUBLIC repo named exactly: EslaM-X  (same as your username)
   2) Paste this file as README.md
-  3) Upload the crowned-X logo to:  assets/x-crown-logo.jpg  in that same repo
-  4) Replace PORTFOLIO_URL below (https://eslamx.vercel.app) with your final domain.
+  3) The crowned-X logo is served from the live site: https://eslamx.vercel.app/x-crown-logo.jpg
+     (no upload needed — just keep the site deployed).
+  4) Replace PORTFOLIO_URL below (https://eslamx.vercel.app) if your domain ever changes.
 -->
 
 <div align="center">
