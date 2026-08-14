@@ -370,7 +370,11 @@ export function Contact() {
   const { t } = useLang();
   const [copied, setCopied] = useState(false);
   const copy = async () => {
-    await navigator.clipboard.writeText(PROFILE.email);
+    try {
+      await navigator.clipboard?.writeText(PROFILE.email);
+    } catch {
+      /* clipboard unavailable (insecure context / preview frame) — ignore */
+    }
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
