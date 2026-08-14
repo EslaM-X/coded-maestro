@@ -1105,8 +1105,17 @@ export const EVIDENCE = [
       en: "x402 payment gating with no-settle-on-failure guarantees for embodied agents.",
       ar: "بوابة دفع x402 بضمانات عدم التسوية عند الفشل للوكلاء المُجسَّدين.",
     },
-    metric: { en: "RoboPay PR #86 · Go2 Tier-1", ar: "RoboPay PR #86 · Go2 Tier-1" },
+    metric: { en: "RoboPay PR #86 · Spot Tier-1", ar: "RoboPay PR #86 · Spot Tier-1" },
     href: "https://github.com/fabricfoundation/RoboPay/pull/86",
+  },
+  {
+    org: { en: "Machine-Payable Robotics", ar: "الروبوتات المدفوعة آليًا" },
+    claim: {
+      en: "Unitree Go2 Tier-1 simulator profile — obstacle navigation re-validated across MuJoCo + PyBullet, paid per skill.",
+      ar: "ملف محاكي Tier-1 لـ Unitree Go2 — ملاحة مع العقبات مُعاد التحقق منها عبر MuJoCo + PyBullet، مدفوعة لكل مهارة.",
+    },
+    metric: { en: "RoboPay PR #89 · Go2 Tier-1", ar: "RoboPay PR #89 · Go2 Tier-1" },
+    href: "https://github.com/fabricfoundation/RoboPay/pull/89",
   },
   {
     org: { en: "The Evidence Matrix", ar: "مصفوفة الأدلة" },
