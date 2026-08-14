@@ -9,6 +9,8 @@ import {
   IMPACT,
   PROFILE,
   PROJECTS,
+  PROJECT_CATEGORIES,
+  type ProjectCategory,
   RECOMMENDATIONS,
   SKILL_GROUPS,
   SOCIALS,
@@ -21,6 +23,7 @@ import {
   IMPACT_AR,
   ISSUER_AR,
   PROJECT_AR,
+  PROJECT_CATEGORY_AR,
   RECO_AR,
   SKILL_AR,
   SKILL_GROUP_AR,
@@ -240,6 +243,8 @@ export function Impact() {
 
 export function Projects() {
   const { t } = useLang();
+  const [cat, setCat] = useState<ProjectCategory>("ALL");
+  const filtered = cat === "ALL" ? PROJECTS : PROJECTS.filter((p) => p.category === cat);
   return (
     <section id="projects" className="relative py-28">
       <div className={shell}>
@@ -248,8 +253,29 @@ export function Projects() {
           title={t(COPY.sections.projects.en, COPY.sections.projects.ar)}
           kicker={t(COPY.kickers.projects.en, COPY.kickers.projects.ar)}
         />
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {PROJECTS.map((p, i) => {
+        <div className="mb-10 flex flex-wrap items-center gap-2">
+          {PROJECT_CATEGORIES.map((c) => {
+            const active = cat === c;
+            return (
+              <button
+                key={c}
+                type="button"
+                onClick={() => setCat(c)}
+                aria-pressed={active}
+                className={
+                  active
+                    ? "rounded-full px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary-foreground transition-all"
+                    : "rounded-full border border-primary/30 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground transition-all hover:border-primary/60 hover:text-primary"
+                }
+                style={active ? { backgroundImage: "var(--gradient-gold)" } : undefined}
+              >
+                {t(c, PROJECT_CATEGORY_AR[c] ?? c)}
+              </button>
+            );
+          })}
+        </div>
+        <div key={cat} className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+          {filtered.map((p, i) => {
             const ar = PROJECT_AR[p.name];
             const inner = (
               <>
@@ -260,9 +286,19 @@ export function Projects() {
                   {p.href && <ExternalLink className="h-4 w-4 text-muted-foreground" />}
                 </div>
                 <h3 className="mt-5 font-display text-xl text-foreground">{p.name}</h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                   {t(p.desc, ar?.desc ?? p.desc)}
                 </p>
+                {p.details && (
+                  <ul className="mt-4 space-y-2 text-[13px] leading-relaxed text-muted-foreground">
+                    {t(p.details.en, p.details.ar).map((d) => (
+                      <li key={d} className="flex gap-2.5">
+                        <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-primary" />
+                        <span>{d}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 <ul className="mt-5 flex flex-wrap gap-2">
                   {p.stack.map((s) => (
                     <li
@@ -314,7 +350,7 @@ export function Recognition() {
     <section className="relative py-28">
       <div className={shell}>
         <SectionHeading
-          index="07"
+          index="10"
           title={t(COPY.sections.recognition.en, COPY.sections.recognition.ar)}
         />
         <div className="grid gap-6 lg:grid-cols-2">
@@ -394,7 +430,7 @@ export function Contact() {
       <div className={`${shell} relative text-center`}>
         <Reveal>
           <p className="font-mono text-[11px] uppercase tracking-[0.42em] text-primary">
-            08 — {t(COPY.sections.contact.en, COPY.sections.contact.ar)}
+            11 — {t(COPY.sections.contact.en, COPY.sections.contact.ar)}
           </p>
           <h2 className="mt-6 font-display text-[clamp(2.2rem,6vw,4.4rem)] leading-[1.05] font-bold">
             <span className="text-gilded">

@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import SiteNav from "@/components/SiteNav";
 import SafeSection from "@/components/SafeSection";
 import Hero from "@/components/Hero";
+import { Arsenal, Architecture, Evidence } from "@/components/arsenal";
 import {
   About,
   Contact,
@@ -95,13 +96,26 @@ function Index() {
     <div className="relative min-h-screen bg-background">
       <SiteNav />
       <main>
-        {[Hero, About, Research, Skills, Horizons, Experience, Spotlight, Impact, Projects, Recognition, Contact].map(
-          (Section, i) => (
-            <SafeSection key={i}>
-              <Section />
-            </SafeSection>
-          ),
-        )}
+        {[
+          Hero,
+          About,
+          Research,
+          Skills,
+          Horizons,
+          Experience,
+          Spotlight,
+          Impact,
+          Projects,
+          Arsenal,
+          Evidence,
+          Architecture,
+          Recognition,
+          Contact,
+        ].map((Section, i) => (
+          <SafeSection key={i}>
+            <Section />
+          </SafeSection>
+        ))}
       </main>
       <Footer />
     </div>

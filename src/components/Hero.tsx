@@ -25,6 +25,27 @@ export default function Hero() {
         style={{ background: "var(--gradient-gold)" }}
         aria-hidden="true"
       />
+      {[
+        { left: "12%", top: "24%", d: "0s", s: 5 },
+        { left: "84%", top: "32%", d: "1.2s", s: 7 },
+        { left: "26%", top: "72%", d: "2.1s", s: 4 },
+        { left: "72%", top: "74%", d: "0.6s", s: 6 },
+        { left: "46%", top: "18%", d: "1.7s", s: 4 },
+        { left: "8%", top: "52%", d: "2.6s", s: 5 },
+      ].map((p, i) => (
+        <span
+          key={i}
+          aria-hidden="true"
+          className="absolute rounded-full bg-primary/40 blur-[1px]"
+          style={{
+            left: p.left,
+            top: p.top,
+            width: p.s,
+            height: p.s,
+            animation: `float-slow ${7 + i}s ease-in-out ${p.d} infinite`,
+          }}
+        />
+      ))}
       <div className="absolute inset-0">
         {hydrated && (
           <Suspense fallback={null}>
@@ -39,11 +60,25 @@ export default function Hero() {
 
       <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 px-6 sm:px-8 lg:grid-cols-[1.15fr_0.85fr]">
         <div>
-          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5">
-            <Sparkles className="h-3.5 w-3.5 text-primary" />
-            <span className="text-[10px] uppercase tracking-[0.32em] text-primary">
-              {t(COPY.available.en, COPY.available.ar)}
-            </span>
+          <div className="mb-7 flex flex-wrap items-center gap-3">
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5">
+              <Sparkles className="h-3.5 w-3.5 text-primary" />
+              <span className="text-[10px] uppercase tracking-[0.32em] text-primary">
+                {t(COPY.available.en, COPY.available.ar)}
+              </span>
+            </div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5">
+              <span className="relative flex h-2 w-2" aria-hidden="true">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary" />
+              </span>
+              <span className="keep-mono text-[10px] uppercase tracking-[0.32em] text-primary">
+                {t(COPY.systemOnline.en, COPY.systemOnline.ar)}
+              </span>
+              <span className="hidden text-[10px] tracking-[0.2em] text-muted-foreground sm:inline">
+                {t(COPY.liveStatus.en, COPY.liveStatus.ar)}
+              </span>
+            </div>
           </div>
 
           <p className="font-mono text-[10px] uppercase tracking-[0.34em] text-muted-foreground sm:text-xs sm:tracking-[0.5em]">
@@ -89,6 +124,18 @@ export default function Hero() {
               className="rounded-full border border-primary/40 px-7 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-primary transition-all hover:bg-primary/10"
             >
               {t(COPY.startConversation.en, COPY.startConversation.ar)}
+            </a>
+            <a
+              href="https://github.com/EslaM-X"
+              target="_blank"
+              rel="noreferrer noopener"
+              onClick={(ev) => {
+                ev.preventDefault();
+                openExternal("https://github.com/EslaM-X");
+              }}
+              className="rounded-full border border-primary/40 px-7 py-3 text-xs font-semibold uppercase tracking-[0.24em] text-primary transition-all hover:bg-primary/10"
+            >
+              {t(COPY.ctaGithub.en, COPY.ctaGithub.ar)}
             </a>
           </div>
 

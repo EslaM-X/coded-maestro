@@ -3,6 +3,17 @@
  * Keyed by the English source string so nothing has to be duplicated or removed.
  */
 
+/** Project filter categories translated for Arabic UI. */
+export const PROJECT_CATEGORY_AR: Record<string, string> = {
+  ALL: "الكل",
+  AI: "الذكاء الاصطناعي",
+  ROBOTICS: "الروبوتات",
+  WEB3: "الويب 3",
+  SECURITY: "الأمن السيبراني",
+  SYSTEMS: "الأنظمة",
+  "FULL-STACK": "الواجهة والخلفية",
+};
+
 export const SKILL_GROUP_AR: Record<string, string> = {
   "Web3 & Blockchain": "الويب 3 والبلوك تشين",
   "Full-Stack Engineering": "هندسة الويب المتكاملة",

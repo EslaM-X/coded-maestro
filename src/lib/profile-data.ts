@@ -489,10 +489,34 @@ export const IMPACT = [
   },
 ];
 
-export const PROJECTS = [
+/** Project filter taxonomy — ALL / AI / ROBOTICS / WEB3 / SECURITY / SYSTEMS / FULL-STACK. */
+export const PROJECT_CATEGORIES = [
+  "ALL",
+  "AI",
+  "ROBOTICS",
+  "WEB3",
+  "SECURITY",
+  "SYSTEMS",
+  "FULL-STACK",
+] as const;
+
+export type ProjectCategory = (typeof PROJECT_CATEGORIES)[number];
+
+export type Project = {
+  name: string;
+  tag: string;
+  category: ProjectCategory;
+  desc: string;
+  stack: readonly string[];
+  href: string | null;
+  details?: { en: readonly string[]; ar: readonly string[] };
+};
+
+export const PROJECTS: readonly Project[] = [
   {
     name: "Steinheim ERP & Invoicing",
     tag: "Enterprise",
+    category: "SYSTEMS" as ProjectCategory,
     desc: "Full internal operations platform: invoicing, inventory, stock audits, customer records, reporting and daily sales performance for a live retail brand.",
     stack: ["TypeScript", "React", "Supabase", "PostgreSQL"],
     href: null,
@@ -500,13 +524,25 @@ export const PROJECTS = [
   {
     name: "RoboPay Spot Tier-1",
     tag: "Robotics · Payments",
+    category: "ROBOTICS" as ProjectCategory,
     desc: "Boston Dynamics Spot Tier-1 profile — 7 paid embodied skills on MuJoCo + PyBullet sim-to-sim, gated by an x402 payment layer with no-settle-on-failure.",
     stack: ["Python", "MuJoCo", "PyBullet", "x402"],
+    details: {
+      en: [
+        "Policy → planner → controller pipeline measured across 3 physics backends.",
+        "0.26 m max sim-to-sim deviation at 100% success, 0% collision.",
+      ],
+      ar: [
+        "خط أنابيب السياسة ← المخطط ← المتحكم مقيس عبر 3 محاكيات فيزيائية.",
+        "أقصى انحراف بين المحاكيات 0.26 م بنجاح 100% وبدون تصادمات.",
+      ],
+    },
     href: "https://github.com/EslaM-X/robopay-spot-tier1",
   },
   {
     name: "PiRC1 Standards Pro",
     tag: "Protocol",
+    category: "WEB3" as ProjectCategory,
     desc: "Reference implementation proposal for PiRC1 Utility Standards and the PEP Protocol — engagement scoring, transparency dashboards and Sybil protection.",
     stack: ["TypeScript", "Protocol Design"],
     href: "https://github.com/EslaM-X/pirc1-standards-pro",
@@ -514,6 +550,7 @@ export const PROJECTS = [
   {
     name: "MapCap IPO Platform",
     tag: "Web3",
+    category: "WEB3" as ProjectCategory,
     desc: "Frontend and backend systems for a decentralized capital-formation platform inside the Pi ecosystem.",
     stack: ["TypeScript", "Node.js", "MongoDB"],
     href: "https://github.com/EslaM-X/mapcap-ipo-frontendX",
@@ -521,13 +558,25 @@ export const PROJECTS = [
   {
     name: "Pi Local AI Agent",
     tag: "AI",
+    category: "AI" as ProjectCategory,
     desc: "A locally-running autonomous agent for the Pi ecosystem — planning and executing multi-step tasks without a central service.",
     stack: ["TypeScript", "LLM", "Agents"],
+    details: {
+      en: [
+        "Planning → router → research/content/QA pipeline with a human approval gate.",
+        "Every execution writes to an audit log before it is allowed to act.",
+      ],
+      ar: [
+        "خط التخطيط ← الموجّه ← البحث/المحتوى/الجودة مع بوابة موافقة بشرية.",
+        "كل تنفيذ يُسجّل في سجل تدقيق قبل السماح له بالفعل.",
+      ],
+    },
     href: "https://github.com/EslaM-X/pi-local-ai-agent",
   },
   {
     name: "S.I.G Corporate Platform",
     tag: "Brand",
+    category: "FULL-STACK" as ProjectCategory,
     desc: "End-to-end design and build of a diversified business group's corporate presence: UI/UX, content architecture and business data integration.",
     stack: ["React", "TypeScript", "Design Systems"],
     href: null,
@@ -535,6 +584,7 @@ export const PROJECTS = [
   {
     name: "Spin4Pi Vault",
     tag: "Web3",
+    category: "WEB3" as ProjectCategory,
     desc: "Vault mechanics and reward logic for a gamified Pi ecosystem application.",
     stack: ["TypeScript", "Pi SDK"],
     href: "https://github.com/EslaM-X/spin4pi-vault",
@@ -542,6 +592,7 @@ export const PROJECTS = [
   {
     name: "PiEat-Me",
     tag: "Founder",
+    category: "WEB3" as ProjectCategory,
     desc: "Founded a food-commerce product inside the Pi Network ecosystem, from concept to live users.",
     stack: ["React", "Node.js", "Pi Payments"],
     href: null,
@@ -592,6 +643,8 @@ export const NAV = [
   { label: "Experience", id: "experience" },
   { label: "Impact", id: "impact" },
   { label: "Projects", id: "projects" },
+  { label: "Arsenal", id: "arsenal" },
+  { label: "Evidence", id: "evidence" },
   { label: "Contact", id: "contact" },
 ];
 
@@ -824,6 +877,8 @@ export const NAV_AR: Record<string, string> = {
   experience: "المسيرة",
   impact: "الأثر",
   projects: "الأعمال",
+  arsenal: "الترسانة",
+  evidence: "الأدلة",
   contact: "تواصل",
 };
 
@@ -922,4 +977,238 @@ export const COPY = {
     en: "Rare. Unseen. Unstoppable.",
     ar: "نادر. غير مرئي. لا يُوقف.",
   },
+  systemOnline: { en: "SYSTEM ONLINE", ar: "النظام يعمل" },
+  liveStatus: {
+    en: "Live — eslamx.vercel.app",
+    ar: "مباشر — eslamx.vercel.app",
+  },
+  ctaGithub: { en: "Open GitHub", ar: "افتح GitHub" },
+  sections: {
+    about: { en: "The Architect", ar: "المهندس" },
+    skills: { en: "Arsenal", ar: "الترسانة" },
+    horizons: { en: "Advanced Horizons", ar: "آفاق متقدمة" },
+    experience: { en: "Trajectory", ar: "المسيرة" },
+    impact: { en: "Open-Source Impact", ar: "الأثر مفتوح المصدر" },
+    projects: { en: "Selected Works", ar: "أعمال مختارة" },
+    recognition: { en: "Recognition", ar: "التقدير" },
+    contact: { en: "Contact", ar: "تواصل" },
+    research: { en: "Depth of Research", ar: "عمق البحث" },
+    arsenal: { en: "GitHub Arsenal", ar: "ترسانة جيت هب" },
+    evidence: { en: "Engineering Evidence", ar: "الأدلة الهندسية" },
+    architecture: { en: "Interactive Architecture", ar: "المعمارية التفاعلية" },
+  },
+  kickers: {
+    research: {
+      en: "Decades of sustained research across chains, contracts, adversaries and ciphers.",
+      ar: "عقود من البحث المتواصل في السلاسل والعقود والخصوم والشيفرات.",
+    },
+    skills: {
+      en: "The stack behind protocol design, enterprise systems and adversarial security work.",
+      ar: "الأدوات خلف تصميم البروتوكولات وأنظمة المؤسسات والعمل الأمني الهجومي.",
+
+    },
+    horizons: {
+      en: "Where physics, autonomous machines, cryptographic law and digital justice converge.",
+      ar: "حيث تلتقي الفيزياء والآلات المستقلة والقانون التشفيري والعدالة الرقمية.",
+    },
+    impact: {
+      en: "Contributions to protocols used by millions — reviewed by the people who built them.",
+      ar: "مساهمات في بروتوكولات يستخدمها الملايين — راجعها من بنوها بأنفسهم.",
+    },
+    projects: {
+      en: "Real systems in production — enterprise operations, robotics payments, protocol tooling and Web3 products.",
+      ar: "أنظمة حقيقية في الإنتاج — عمليات مؤسسية، ومدفوعات روبوتية، وأدوات بروتوكول، ومنتجات ويب 3.",
+    },
+    arsenal: {
+      en: "Live telemetry from the GitHub profile — refreshed every day by an automated workflow.",
+      ar: "بيانات حية من ملف GitHub — تُحدَّث يوميًا عبر سير عمل آلي.",
+    },
+    evidence: {
+      en: "Every claim on this page opens to a public repository, a PR, or a benchmark. Evidence, not estimates.",
+      ar: "كل ادعاء في هذه الصفحة يقود إلى مستودع عام أو طلب دمج أو معيار قياس. أدلة، لا تخمينات.",
+    },
+    architecture: {
+      en: "The pipelines behind the systems — click a domain to walk its flow.",
+      ar: "خطوط الأنابيب خلف الأنظمة — اضغط على مجال لاستعراض مساره.",
+    },
+  },
+  arsenalNote: {
+    en: "Telemetry panels are generated from live GitHub data by the update-profile-assets workflow. Motion is pure SMIL — no JavaScript.",
+    ar: "لوحات القياس تُولَّد من بيانات GitHub الحية عبر سير عمل update-profile-assets. الحركة بـ SMIL خالص — بلا جافاسكربت.",
+  },
+  evidenceCta: { en: "View source", ar: "اعرض المصدر" },
+  archNote: {
+    en: "The human approval gate is the difference between automation and accountability.",
+    ar: "بوابة الموافقة البشرية هي الفارق بين الأتمتة والمساءلة.",
+  },
 } as const;
+
+/** Engineering Evidence — every claim links to a public artifact. */
+export const EVIDENCE = [
+  {
+    org: { en: "Robotics & Simulation", ar: "الروبوتات والمحاكاة" },
+    claim: {
+      en: "Policy-driven navigation validated across three physics backends — measured, not promised.",
+      ar: "ملاحة مدفوعة بالسياسات مُتحقَّق منها عبر ثلاثة محاكيات فيزيائية — مقاسة، لا موعودة.",
+    },
+    metric: { en: "18 tests · 0.26 m max deviation · CI green", ar: "18 اختبارًا · 0.26 م كحد أقصى · CI أخضر" },
+    href: "https://github.com/EslaM-X/robot-sim-policy-lab",
+  },
+  {
+    org: { en: "AI Agents", ar: "وكلاء الذكاء الاصطناعي" },
+    claim: {
+      en: "Human-gated, audit-logged agent orchestration — no autonomous execution without approval.",
+      ar: "تنسيق وكلاء خاضع لموافقة بشرية وسجلات تدقيق — لا تنفيذ مستقل دون موافقة.",
+    },
+    metric: { en: "10 tests · approval gate · audit chain", ar: "10 اختبارات · بوابة موافقة · سلسلة تدقيق" },
+    href: "https://github.com/EslaM-X/ai-agent-automation-platform",
+  },
+  {
+    org: { en: "Production Systems", ar: "الأنظمة الإنتاجية" },
+    claim: {
+      en: "Reliability patterns in Go — idempotency, replay, circuit-breakers, HMAC auth, hash-chained audit.",
+      ar: "أنماط موثوقية في Go — التماثل، وإعادة التشغيل، وقواطع الدائرة، ومصادقة HMAC، وتدقيق متسلسل بالتجزئة.",
+    },
+    metric: { en: "Go · race-tested · benchmarks", ar: "Go · مختبر ضد التنافسية · قياسات أداء" },
+    href: "https://github.com/EslaM-X/production-systems-lab",
+  },
+  {
+    org: { en: "Engineering Notes", ar: "ملاحظات هندسية" },
+    claim: {
+      en: "Problem-first deep dives — robotics, payments, CI and secure APIs, each ending in a testable artifact.",
+      ar: "غوص معمّق يبدأ بالمشكلة — الروبوتات والمدفوعات وCI والواجهات الآمنة، كل منها ينتهي بأثر قابل للاختبار.",
+    },
+    metric: { en: "5 notes · v1.0.0", ar: "5 ملاحظات · v1.0.0" },
+    href: "https://github.com/EslaM-X/engineering-notes",
+  },
+  {
+    org: { en: "Web3 Protocols", ar: "بروتوكولات الويب 3" },
+    claim: {
+      en: "Authored PiRC1 utility standards — reviewed and endorsed by Pi Network's founder.",
+      ar: "تأليف معايير المنفعة PiRC1 — رُوجعت وأُثني عليها من مؤسس Pi Network.",
+    },
+    metric: { en: "PR #2 · Dr. Nicolas Kokkalis", ar: "PR #2 · د. نيكولاس كوكاليس" },
+    href: "https://github.com/PiNetwork/PiRC/pull/2",
+  },
+  {
+    org: { en: "Stellar", ar: "ستيلر" },
+    claim: {
+      en: "Contribution to the reference P2P implementation behind Stellar consensus.",
+      ar: "مساهمة في تنفيذ الندّ المرجعي خلف إجماع Stellar.",
+    },
+    metric: { en: "stellar-core PR #5409", ar: "stellar-core PR #5409" },
+    href: "https://github.com/stellar/stellar-core/pull/5409",
+  },
+  {
+    org: { en: "Machine-Payable Robotics", ar: "الروبوتات المدفوعة آليًا" },
+    claim: {
+      en: "x402 payment gating with no-settle-on-failure guarantees for embodied agents.",
+      ar: "بوابة دفع x402 بضمانات عدم التسوية عند الفشل للوكلاء المُجسَّدين.",
+    },
+    metric: { en: "RoboPay PR #86 · Go2 Tier-1", ar: "RoboPay PR #86 · Go2 Tier-1" },
+    href: "https://github.com/fabricfoundation/RoboPay/pull/86",
+  },
+  {
+    org: { en: "The Evidence Matrix", ar: "مصفوفة الأدلة" },
+    claim: {
+      en: "The full audit trail — every number, test and benchmark, tracked in one place.",
+      ar: "مسار التدقيق الكامل — كل رقم واختبار ومعيار قياس، في مكان واحد.",
+    },
+    metric: { en: "portfolio · public", ar: "portfolio · عام" },
+    href: "https://github.com/EslaM-X/portfolio",
+  },
+];
+
+/** Interactive architecture flows — bilingual stage pipelines. */
+export const ARCH_FLOWS = [
+  {
+    id: "robotics",
+    icon: "bot",
+    title: { en: "Robotics", ar: "الروبوتات" },
+    tagline: {
+      en: "Policy → Planner → Controller → MuJoCo ⇄ PyBullet → Validation",
+      ar: "السياسة ← المخطط ← المتحكم ← MuJoCo ⇄ PyBullet ← التحقق",
+    },
+    stages: [
+      {
+        en: "Policy",
+        ar: "السياسة",
+        descEn: "High-level rules: where to go, what to avoid, what to respect.",
+        descAr: "قواعد عالية المستوى: إلى أين تذهب، وماذا تتجنب، وما الذي تحترمه.",
+      },
+      {
+        en: "Planner",
+        ar: "المخطط",
+        descEn: "Turns the policy into a concrete trajectory in the simulated world.",
+        descAr: "يحوّل السياسة إلى مسار ملموس في العالم المُحاكى.",
+      },
+      {
+        en: "Controller",
+        ar: "المتحكم",
+        descEn: "Executes the plan at real-time frequency, closed-loop on state.",
+        descAr: "ينفّذ الخطة بتردد لحظي، بحلقة مغلقة على الحالة.",
+      },
+      {
+        en: "MuJoCo ⇄ PyBullet",
+        ar: "MuJoCo ⇄ PyBullet",
+        descEn: "The same policy re-validated across two physics engines — sim-to-sim.",
+        descAr: "نفس السياسة تُعاد معاينتها عبر محركي فيزياء — من محاكي إلى محاكي.",
+      },
+      {
+        en: "Validation",
+        ar: "التحقق",
+        descEn: "Measured success, collision and deviation before anything ships.",
+        descAr: "قياس النجاح والتصادم والانحراف قبل إطلاق أي شيء.",
+      },
+    ],
+    note: {
+      en: "Measured 0.26 m max sim-to-sim deviation — 100% success, 0% collision.",
+      ar: "أقصى انحراف مقاس بين المحاكيات 0.26 م — نجاح 100% وبدون تصادمات.",
+    },
+  },
+  {
+    id: "ai",
+    icon: "brain",
+    title: { en: "AI Agents", ar: "وكلاء الذكاء الاصطناعي" },
+    tagline: {
+      en: "Planning → Agent Router → Research / Content / QA → Approval Gate → Execution → AuditLog",
+      ar: "التخطيط ← موجّه الوكلاء ← البحث / المحتوى / الجودة ← بوابة الموافقة ← التنفيذ ← سجل التدقيق",
+    },
+    stages: [
+      {
+        en: "Planning",
+        ar: "التخطيط",
+        descEn: "The goal is decomposed into verifiable, ordered tasks.",
+        descAr: "الهدف يُجزَّأ إلى مهام مرتبة قابلة للتحقق.",
+      },
+      {
+        en: "Agent Router",
+        ar: "موجّه الوكلاء",
+        descEn: "Each task routes to the specialist agent best equipped for it.",
+        descAr: "كل مهمة تُوجَّه إلى الوكلاء المتخصص الأنسب لها.",
+      },
+      {
+        en: "Research / Content / QA",
+        ar: "البحث / المحتوى / الجودة",
+        descEn: "Parallel lanes gather, produce and verify before anything is final.",
+        descAr: "مسارات متوازية تجمع وتنتج وتتحقق قبل اعتماد أي شيء.",
+      },
+      {
+        en: "Approval Gate",
+        ar: "بوابة الموافقة",
+        descEn: "A human decision point — nothing acts on the real world without consent.",
+        descAr: "نقطة قرار بشري — لا شيء يعمل على العالم الحقيقي دون موافقة.",
+      },
+      {
+        en: "Execution → AuditLog",
+        ar: "التنفيذ ← سجل التدقيق",
+        descEn: "Every action is written to an append-only audit trail as it executes.",
+        descAr: "كل فعل يُسجَّل في سجل تدقيق غير قابل للتعديل لحظة تنفيذه.",
+      },
+    ],
+    note: {
+      en: "The human approval gate is the difference between automation and accountability.",
+      ar: "بوابة الموافقة البشرية هي الفارق بين الأتمتة والمساءلة.",
+    },
+  },
+] as const;
