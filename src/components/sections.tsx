@@ -17,6 +17,15 @@ import {
 import { SocialIcon } from "@/components/icons";
 import { openExternal, useLang } from "@/lib/i18n";
 import {
+  CERT_AR,
+  IMPACT_AR,
+  ISSUER_AR,
+  PROJECT_AR,
+  RECO_AR,
+  SKILL_AR,
+  SKILL_GROUP_AR,
+} from "@/lib/i18n-content";
+import {
   ExternalLink,
   Quote,
   ShieldCheck,
@@ -32,6 +41,11 @@ import {
   Bug,
   Lock,
   Sparkles,
+  Coins,
+  Zap,
+  Globe,
+  Layers,
+  Vote,
 } from "lucide-react";
 import { useState } from "react";
 import logo from "@/assets/x-crown-logo.jpg";
@@ -110,7 +124,9 @@ export function Skills() {
           {SKILL_GROUPS.map((g, i) => (
             <Reveal key={g.title} delay={i * 90}>
               <div className="surface-panel group h-full rounded-2xl p-6 transition-all duration-500 hover:-translate-y-1 hover:border-primary/50">
-                <h3 className="font-display text-lg text-foreground">{g.title}</h3>
+                <h3 className="font-display text-lg text-foreground">
+                  {t(g.title, SKILL_GROUP_AR[g.title] ?? g.title)}
+                </h3>
                 <span className="gold-rule mt-4 block w-full opacity-60" />
                 <ul className="mt-5 flex flex-wrap gap-2">
                   {g.items.map((it) => (
@@ -118,7 +134,7 @@ export function Skills() {
                       key={it}
                       className="rounded-full border border-border bg-secondary/40 px-3 py-1.5 text-[11px] tracking-wide text-muted-foreground transition-colors group-hover:text-foreground"
                     >
-                      {it}
+                      {t(it, SKILL_AR[it] ?? it)}
                     </li>
                   ))}
                 </ul>
@@ -185,7 +201,9 @@ export function Impact() {
           kicker={t(COPY.kickers.impact.en, COPY.kickers.impact.ar)}
         />
         <div className="grid gap-6 lg:grid-cols-3">
-          {IMPACT.map((m, i) => (
+          {IMPACT.map((m, i) => {
+            const ar = IMPACT_AR[m.title];
+            return (
             <Reveal key={m.title} delay={i * 110}>
               <a
                 href={m.href}
@@ -195,22 +213,25 @@ export function Impact() {
               >
                 <div className="flex items-center justify-between">
                   <span className="text-[10px] uppercase tracking-[0.3em] text-primary">
-                    {m.org}
+                    {t(m.org, ar?.org ?? m.org)}
                   </span>
                   <ExternalLink className="h-4 w-4 text-muted-foreground" />
                 </div>
-                <h3 className="mt-4 font-display text-lg text-foreground">{m.title}</h3>
+                <h3 className="mt-4 font-display text-lg text-foreground">
+                  {t(m.title, ar?.title ?? m.title)}
+                </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {m.summary}
+                  {t(m.summary, ar?.summary ?? m.summary)}
                 </p>
-                {m.quote && (
-                  <p className="mt-5 border-l-2 border-primary/60 pl-4 text-sm italic text-foreground/90">
-                    {m.quote}
+                {(t(m.quote, ar?.quote ?? m.quote)) && (
+                  <p className="mt-5 border-s-2 border-primary/60 ps-4 text-sm italic text-foreground/90">
+                    {t(m.quote, ar?.quote ?? m.quote)}
                   </p>
                 )}
               </a>
             </Reveal>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
@@ -229,17 +250,18 @@ export function Projects() {
         />
         <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {PROJECTS.map((p, i) => {
+            const ar = PROJECT_AR[p.name];
             const inner = (
               <>
                 <div className="flex items-center justify-between">
                   <span className="rounded-full border border-primary/30 px-3 py-1 text-[10px] uppercase tracking-[0.26em] text-primary">
-                    {p.tag}
+                    {t(p.tag, ar?.tag ?? p.tag)}
                   </span>
                   {p.href && <ExternalLink className="h-4 w-4 text-muted-foreground" />}
                 </div>
                 <h3 className="mt-5 font-display text-xl text-foreground">{p.name}</h3>
                 <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">
-                  {p.desc}
+                  {t(p.desc, ar?.desc ?? p.desc)}
                 </p>
                 <ul className="mt-5 flex flex-wrap gap-2">
                   {p.stack.map((s) => (
@@ -296,20 +318,27 @@ export function Recognition() {
           title={t(COPY.sections.recognition.en, COPY.sections.recognition.ar)}
         />
         <div className="grid gap-6 lg:grid-cols-2">
-          {RECOMMENDATIONS.map((r, i) => (
+          {RECOMMENDATIONS.map((r, i) => {
+            const ar = RECO_AR[r.author];
+            return (
             <Reveal key={r.author} delay={i * 120}>
               <figure className="surface-panel h-full rounded-2xl p-8">
                 <Quote className="h-6 w-6 text-primary/70" />
                 <blockquote className="mt-5 text-sm leading-relaxed text-muted-foreground">
-                  {r.quote}
+                  {t(r.quote, ar?.quote ?? r.quote)}
                 </blockquote>
                 <figcaption className="mt-6">
-                  <div className="font-display text-base text-foreground">{r.author}</div>
-                  <div className="text-xs text-muted-foreground">{r.title}</div>
+                  <div className="font-display text-base text-foreground">
+                    {t(r.author, ar?.author ?? r.author)}
+                  </div>
+                  <div className="text-xs text-muted-foreground">
+                    {t(r.title, ar?.title ?? r.title)}
+                  </div>
                 </figcaption>
               </figure>
             </Reveal>
-          ))}
+            );
+          })}
         </div>
 
         <Reveal delay={100}>
@@ -322,9 +351,11 @@ export function Recognition() {
           {CERTS.map((c, i) => (
             <Reveal key={c.name} delay={(i % 3) * 60}>
               <div className="flex items-center justify-between gap-4 rounded-xl border border-border/70 bg-card/40 px-4 py-3">
-                <span className="text-sm text-foreground">{c.name}</span>
+                <span className="text-sm text-foreground">
+                  {t(c.name, CERT_AR[c.name] ?? c.name)}
+                </span>
                 <span className="shrink-0 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
-                  {c.issuer} · {c.year}
+                  {t(c.issuer, ISSUER_AR[c.issuer] ?? c.issuer)} · {c.year}
                 </span>
               </div>
             </Reveal>
@@ -339,7 +370,11 @@ export function Contact() {
   const { t } = useLang();
   const [copied, setCopied] = useState(false);
   const copy = async () => {
-    await navigator.clipboard.writeText(PROFILE.email);
+    try {
+      await navigator.clipboard?.writeText(PROFILE.email);
+    } catch {
+      /* clipboard unavailable (insecure context / preview frame) — ignore */
+    }
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -442,6 +477,11 @@ const HORIZON_ICONS = {
   search: Search,
   bot: Bot,
   brain: BrainCircuit,
+  coins: Coins,
+  zap: Zap,
+  globe: Globe,
+  layers: Layers,
+  vote: Vote,
 } as const;
 
 export function Horizons() {
@@ -463,8 +503,9 @@ export function Horizons() {
           {HORIZONS.map((h, i) => {
             const Icon = HORIZON_ICONS[h.icon as keyof typeof HORIZON_ICONS] ?? Cpu;
             const c = t(h.en, h.ar);
+            const bullets = (c as { bullets?: readonly string[] }).bullets ?? [];
             return (
-              <Reveal key={h.icon} delay={(i % 3) * 90}>
+              <Reveal key={c.title} delay={(i % 3) * 90}>
                 <article className="surface-panel group relative h-full overflow-hidden rounded-2xl p-6 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/60 sm:p-7">
                   <div
                     className="absolute -right-16 -top-16 h-40 w-40 rounded-full opacity-0 blur-3xl transition-opacity duration-700 group-hover:opacity-25"
@@ -481,6 +522,16 @@ export function Horizons() {
                   <p className="relative mt-4 text-sm leading-relaxed text-muted-foreground">
                     {c.desc}
                   </p>
+                  {bullets.length > 0 && (
+                    <ul className="relative mt-4 space-y-2 text-[13px] leading-relaxed text-muted-foreground">
+                      {bullets.map((b) => (
+                        <li key={b} className="flex gap-2.5">
+                          <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-primary" />
+                          <span>{b}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </article>
               </Reveal>
             );
@@ -576,6 +627,9 @@ const RESEARCH_ICONS = {
   shield: ShieldCheck,
   bug: Bug,
   lock: Lock,
+  brain: BrainCircuit,
+  cpu: Cpu,
+  coins: Coins,
 } as const;
 
 export function Research() {
