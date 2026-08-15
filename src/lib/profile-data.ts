@@ -376,12 +376,12 @@ export const EXPERIENCE = [
     place: "Remote",
     placeAr: "عن بُعد",
     points: [
-      "Authored PiRC protocol standards; proposals reviewed and endorsed by Pi Network's founder.",
+      "Proposed PiRC protocol standards; received technical review and feedback from Pi Network founder Nicolas Kokkalis.",
       "Adversarial threat modeling, BFT consensus research and cryptographic state-machine design.",
       "Zero-knowledge validation vectors and formal verification for mission-critical contracts.",
     ],
     pointsAr: [
-      "تأليف معايير بروتوكول PiRC؛ ومراجعة المقترحات واعتمادها من مؤسس Pi Network.",
+      "اقتراح معايير بروتوكول PiRC؛ وتلقي مراجعة تقنية وملاحظات من مؤسس Pi Network نيكولاس كوكاليس.",
       "نمذجة التهديدات العدائية، وأبحاث إجماع BFT، وتصميم آلات الحالة التشفيرية.",
       "متجهات تحقق بدون معرفة (ZK) وتحقق شكلي للعقود بالغة الأهمية.",
     ],
@@ -467,7 +467,7 @@ export const IMPACT = [
     title: "PiRC — Pi Requests for Comment",
     href: "https://github.com/PiNetwork/PiRC/pull/2",
     summary:
-      "Authored the PiRC1 utility standards proposal: escrow lock proofs, dynamic p_floor calculation, engagement-weighted PiPower and Sybil-resistant reporting.",
+      "Proposed the PiRC1 utility standards: escrow lock proofs, dynamic p_floor calculation, engagement-weighted PiPower and Sybil-resistant reporting.",
     quote:
       "\u201cBoth of these are good ideas. Implementation seems possible.\u201d \u2014 Dr. Nicolas Kokkalis, Founder of Pi Network",
   },
@@ -1037,8 +1037,8 @@ export const SPOTLIGHT = {
   prHref: "https://github.com/PiNetwork/PiRC/pull/2",
   en: {
     kicker: "Featured",
-    title: "Recognized by the Founder of Pi Network",
-    body: "My PiRC1 utility-standards proposal — escrow lock proofs, dynamic p_floor pricing, engagement-weighted PiPower and Sybil-resistant reporting — was reviewed and endorsed publicly by Dr. Nicolas Kokkalis, Stanford PhD and Founder of Pi Network.",
+    title: "Reviewed by the Founder of Pi Network",
+    body: "My PiRC1 utility-standards proposal — escrow lock proofs, dynamic p_floor pricing, engagement-weighted PiPower and Sybil-resistant reporting — received technical review and feedback from Dr. Nicolas Kokkalis, Founder of Pi Network.",
     quote:
       "“Both of these are good ideas. Implementation seems possible.” — Dr. Nicolas Kokkalis, Founder of Pi Network",
     cta: "Read the article on Medium",
@@ -1046,8 +1046,8 @@ export const SPOTLIGHT = {
   },
   ar: {
     kicker: "مقال مميز",
-    title: "تقدير من مؤسس شبكة Pi",
-    body: "مقترحي لمعايير المنفعة PiRC1 — إثباتات قفل الضمان، والتسعير الديناميكي لـ p_floor، وقوة PiPower الموزونة بالتفاعل، والتقارير المقاومة لهجمات Sybil — تمت مراجعته والإشادة به علنًا من الدكتور نيكولاس كوكاليس، مؤسس شبكة Pi وحاصل على الدكتوراه من ستانفورد.",
+    title: "مراجعة من مؤسس شبكة Pi",
+    body: "مقترحي لمعايير المنفعة PiRC1 — إثباتات قفل الضمان، والتسعير الديناميكي لـ p_floor، وقوة PiPower الموزونة بالتفاعل، والتقارير المقاومة لهجمات Sybil — حظي بمراجعة تقنية وملاحظات من الدكتور نيكولاس كوكاليس، مؤسس شبكة Pi.",
     quote:
       "«كلتا الفكرتين جيدة. ويبدو التنفيذ ممكنًا.» — د. نيكولاس كوكاليس، مؤسس شبكة Pi",
     cta: "اقرأ المقال على Medium",
@@ -1237,8 +1237,8 @@ export const EVIDENCE = [
   {
     org: { en: "Web3 Protocols", ar: "بروتوكولات الويب 3" },
     claim: {
-      en: "Authored PiRC1 utility standards — reviewed and endorsed by Pi Network's founder.",
-      ar: "تأليف معايير المنفعة PiRC1 — رُوجعت وأُثني عليها من مؤسس Pi Network.",
+      en: "Proposed PiRC1 utility standards — received technical review and feedback from Pi Network's founder.",
+      ar: "اقتراح معايير المنفعة PiRC1 — حظي بمراجعة تقنية وملاحظات من مؤسس Pi Network.",
     },
     metric: { en: "PR #2 · Dr. Nicolas Kokkalis", ar: "PR #2 · د. نيكولاس كوكاليس" },
     href: "https://github.com/PiNetwork/PiRC/pull/2",
