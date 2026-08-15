@@ -14,11 +14,11 @@
 </a>
 
 <a href="https://github.com/EslaM-X">
-  <img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=34&duration=2200&pause=700&color=FFB627&center=true&vCenter=true&width=1000&lines=SOVEREIGN+ENGINEER;WEB3+%26+PROTOCOL+ARCHITECT;CYBER+SECURITY+AUTHORITY;FULL-STACK+%2B+AI+SYSTEMS" alt="EslaM-X" />
+  <img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=34&duration=2200&pause=700&color=FFB627&center=true&vCenter=true&width=1000&lines=TECHNICAL+ARCHITECT;AI+%26+ROBOTICS;DISTRIBUTED+SYSTEMS;BLOCKCHAIN+%26+CRYPTOGRAPHY;CYBERSECURITY+%26+SECURE+PROTOCOLS" alt="EslaM-X" />
 </a>
 
 <h3>EslaM HeshAM — MR-X</h3>
-<p><b>Lead Technical Architect</b> · Business Operations Manager · Web3 &amp; Cyber Security · Cairo, Egypt 🇪🇬 · Remote Worldwide</p>
+<p><b>Technical Architect</b> · Business Operations Manager · Web3 &amp; Cyber Security · Cairo, Egypt 🇪🇬 · Remote Worldwide</p>
 
 </div>
 
@@ -29,7 +29,7 @@
   <img src="https://eslamx.vercel.app/x-crown-logo.jpg" width="64" align="left" alt="" />
 </a>
 
-### ⚜️ ENTER THE SOVEREIGN PORTFOLIO ⚜️
+### ⚜️ ENTER THE ARCHITECT'S PORTFOLIO ⚜️
 
 <a href="https://eslamx.vercel.app">
   <img src="https://img.shields.io/badge/⚜️%20EslaM--X%20·%20OFFICIAL%20PORTFOLIO-0A0A0A?style=for-the-badge&logo=vercel&logoColor=FFB627&labelColor=0A0A0A&color=FFB627" height="46" alt="Open the portfolio" />
@@ -39,7 +39,7 @@
 </a>
 
 <a href="https://eslamx.vercel.app">
-  <img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=22&duration=2600&pause=900&color=FF6A00&center=true&vCenter=true&width=760&lines=%E2%86%92+eslamx.vercel.app+%E2%80%94+CLICK+TO+ENTER;The+most+dangerous+mind+in+cyberspace.;I+break+the+unbreakable+just+to+prove+nothing+is+safe" alt="portfolio link" />
+  <img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=22&duration=2600&pause=900&color=FF6A00&center=true&vCenter=true&width=760&lines=%E2%86%92+eslamx.vercel.app+%E2%80%94+CLICK+TO+ENTER;Evidence+over+claims.;Reliable+AI%2C+robotics%2C+distributed+systems%2C+blockchain" alt="portfolio link" />
 </a>
 
 </div>
@@ -50,16 +50,16 @@
 
 ```ts
 const eslam = {
-  role:      "Lead Technical Architect",
+  role:      "Technical Architect & Business Operations Manager",
   focus:     ["Web3 protocols", "AI systems", "Cyber security", "Digital forensics", "Enterprise ops"],
   stack:     ["Next.js", "React", "TypeScript", "Node.js", "MongoDB", "PostgreSQL", "Supabase", "Docker"],
   building:  ["Map of Pi v2.0", "Steinheim ERP", "RoboPay Spot Tier-1"],
   contributing: ["Pi Network", "Stellar", "Fabric Foundation", "Map of Pi", "S.I.G"],
-  creed:     "Excellence without compromise. My code is my law.",
+  creed:     "Evidence over claims.",
 };
 ```
 
-- 🏛️ **Lead Technical Architect @ Map of Pi** — high-scale MERN architecture, AI integration, elite security layers.
+- 🏛️ **Lead Technical Architect @ Map of Pi** — high-scale MERN architecture, AI integration, elite security layers. *(official role title at Map of Pi)*
 - ⛓️ **Web3 core systems** — protocol standards, BFT consensus research, smart-contract auditing (Foundry, invariant testing).
 - 🛡️ **Cyber security & digital forensics** — zero-trust design, adversarial threat modeling, malware research, OSINT.
 - 🤖 **Physical AI & robotics** — machine-payable agents, digital twins, embedded systems.
@@ -191,8 +191,8 @@ const eslam = {
 
 **⚜️ [ESLAM-X · eslamx.vercel.app](https://eslamx.vercel.app) ⚜️**
 
-`Sovereign Engineer · Blockchain Titan · Cyber Authority · Legacy Builder`
+`Technical Architect · AI & Robotics · Distributed Systems · Blockchain · Cryptography · Cybersecurity · Secure Protocols`
 
-<i>Rare. Unseen. Unstoppable.</i>
+<i>Evidence over claims.</i>
 
 </div>

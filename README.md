@@ -5,14 +5,14 @@
 </a>
 
 <a href="https://github.com/EslaM-X">
-  <img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=34&duration=2200&pause=700&color=FFB627&center=true&vCenter=true&width=1000&lines=SOVEREIGN+ENGINEER;WEB3+%26+PROTOCOL+ARCHITECT;CYBER+SECURITY+AUTHORITY;FULL-STACK+%2B+AI+SYSTEMS" alt="EslaM-X — Sovereign Engineer" />
+  <img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=34&duration=2200&pause=700&color=FFB627&center=true&vCenter=true&width=1000&lines=TECHNICAL+ARCHITECT;AI+%26+ROBOTICS;DISTRIBUTED+SYSTEMS;BLOCKCHAIN+%26+CRYPTOGRAPHY;CYBERSECURITY+%26+SECURE+PROTOCOLS" alt="EslaM-X — Technical Architect" />
 </a>
 
 <h3>⚜️ EslaM HeshAM — <b>MR-X</b> ⚜️</h3>
 
-<p><b>Lead Technical Architect</b> · Business Operations Manager · Web3 &amp; Cyber Security · Cairo, Egypt 🇪🇬 · Remote Worldwide</p>
+<p><b>Technical Architect</b> · Business Operations Manager · Web3 &amp; Cyber Security · Cairo, Egypt 🇪🇬 · Remote Worldwide</p>
 
-<p><i>“Most people play within the rules. I write the code that defines them.” 🌑</i></p>
+<p><i>“Evidence over claims.”</i></p>
 
 </div>
 
@@ -41,17 +41,16 @@
 ```ts
 const eslam = {
   alias:     "MR-X",
-  role:      "Lead Technical Architect & Business Operations Manager",
+  role:      "Technical Architect & Business Operations Manager",
   focus:     ["Web3 protocols", "AI systems", "Cyber security", "Digital forensics", "Enterprise ops", "Robotics & the machine economy"],
   stack:     ["Next.js", "React", "TypeScript", "Node.js", "MongoDB", "PostgreSQL", "Supabase", "Docker", "Go", "Python"],
   building:  ["Map of Pi v2.0", "Steinheim ERP & Invoicing", "RoboPay Spot Tier-1", "PiRC1 Standards"],
   contributing: ["Pi Network", "Stellar", "Fabric Foundation", "Map of Pi", "S.I.G"],
-  creed:     "Excellence without compromise. My code is my law. My vision is my compass.",
+  creed:     "Evidence over claims.",
 };
 ```
 
-> **The Manifesto of a Digital Sovereign ♛** — *"Most people play within the rules. I write the code that defines them."* 🌑
-> In the digital void, there is **The Source**. I do not merely inhabit technology; I shape it as **Architect, Guardian, and Visionary**. Through elite engineering, I build what others deem impossible, turning vulnerabilities into fortresses.
+> **Technical Architect** — building reliable AI, robotics, distributed systems, blockchain, cryptography, cybersecurity, and secure protocols.
 
 Currently serving as **Business Operations Manager at Steinheim** (under El Sharbatly International Group), playing a key role in launching and scaling a new sanitaryware brand in Egypt from the ground up. Leading operations, systems, inventory controls, invoicing, reporting, exhibition readiness, and commercial execution. Partnering closely with leadership to drive growth, optimize performance, and turn strategy into measurable results.
 
@@ -59,10 +58,10 @@ Experienced in building scalable business systems including inventory management
 
 On the engineering side I build high-scale **MERN and Next.js systems**, author protocol standards, audit smart contracts down to storage-slot collisions and invariant testing, and integrate neural intelligence into self-evolving products. On the business side I sit in the **Office of the CEO & Board**, run operations for a live retail brand, and turn strategy into systems that people use every single day.
 
-### ⚔️ Sovereign Expertise
+### ⚔️ Expertise
 
-- 🏛️ **Empire Architect** — I build Blockchain ecosystems and the foundations of trust. ⛓️
-- 🛡️ **Shadow Guardian** — In Cyber Security, I anticipate threats before they emerge. 🛡️
+- 🏛️ **Architect** — I build Blockchain ecosystems and the foundations of trust. ⛓️
+- 🛡️ **Guardian** — In Cyber Security, I anticipate threats before they emerge. 🛡️
 - 📊 **Data Oracle** — I turn raw data into strategic power. 📊
 - ⚙️ **Operator** — Systems that scale a business, not just a codebase.
 
@@ -77,11 +76,11 @@ On the engineering side I build high-scale **MERN and Next.js systems**, author 
 
 - **Vision:** To decentralize the world's power.
 - **Mission:** To secure digital assets through unbreakable logic.
-- **Status:** Rare. Unseen. Unstoppable.
+- **Status:** Evidence over claims.
 
 > If you seek a worker, look elsewhere. If you seek a partner in greatness, a visionary to lead your empire into the next century — you have arrived.
 
-**Sovereign Engineer · Blockchain Titan · Cyber Authority · The Source · Legacy Builder · Master of the Digital Forge · InfoSec Expert**
+**Technical Architect · AI & Robotics · Distributed Systems · Blockchain · Cryptography · Cybersecurity · Secure Protocols**
 
 <div align="center">
 
@@ -514,9 +513,9 @@ Smart Contracts & Cloud Guard 𓂀
 
 **⚜️ [ESLAM-X · eslamx.vercel.app](https://eslamx.vercel.app) ⚜️**
 
-`Sovereign Engineer · Blockchain Titan · Cyber Authority · Legacy Builder`
+`Technical Architect · AI & Robotics · Distributed Systems · Blockchain · Cryptography · Cybersecurity · Secure Protocols`
 
-<i>Rare. Unseen. Unstoppable.</i>
+<i>Evidence over claims.</i>
 
 </div>
 
@@ -541,6 +540,6 @@ npm run dev
 
 <div align="center">
 
-<sub>© 2026 EslaM HeshAM — MR-X. Most people play within the rules. I write the code that defines them.</sub>
+<sub>© 2026 EslaM HeshAM — MR-X. Evidence over claims.</sub>
 
 </div>
