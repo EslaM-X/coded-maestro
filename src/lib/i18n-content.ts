@@ -47,7 +47,7 @@ export const SKILL_AR: Record<string, string> = {
   "NFT & Digital Ownership": "الرموز غير القابلة للاستبدال والملكية الرقمية",
   "Cross-Chain Messaging": "المراسلة عبر السلاسل",
   "Gas Optimization": "تحسين رسوم الغاز",
-  "Microservices": "الخدمات المصغّرة",
+  Microservices: "الخدمات المصغّرة",
   "System Design": "تصميم الأنظمة",
   Observability: "المراقبة والرصد",
   "Event-Driven Pipelines": "خطوط معالجة مدفوعة بالأحداث",
@@ -149,8 +149,7 @@ export const IMPACT_AR: Record<
     title: "PiRC — مقترحات تطوير بروتوكول Pi",
     summary:
       "اقتراح معايير المنفعة PiRC1: إثباتات قفل الضمان، والحساب الديناميكي لـ p_floor، وقوة PiPower الموزونة بالتفاعل، والتقارير المقاومة لهجمات Sybil.",
-    quote:
-      "«كلتا الفكرتين جيدة. ويبدو التنفيذ ممكنًا.» — د. نيكولاس كوكاليس، مؤسس شبكة Pi",
+    quote: "«كلتا الفكرتين جيدة. ويبدو التنفيذ ممكنًا.» — د. نيكولاس كوكاليس، مؤسس شبكة Pi",
   },
   "stellar-core — consensus layer contribution": {
     org: "Stellar",

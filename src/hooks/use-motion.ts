@@ -63,9 +63,7 @@ export function useTypewriter(words: readonly string[], speed = 70, hold = 1600)
     }
     const t = setTimeout(
       () =>
-        setText(
-          deleting ? current.slice(0, text.length - 1) : current.slice(0, text.length + 1),
-        ),
+        setText(deleting ? current.slice(0, text.length - 1) : current.slice(0, text.length + 1)),
       deleting ? speed / 2.2 : speed,
     );
     return () => clearTimeout(t);

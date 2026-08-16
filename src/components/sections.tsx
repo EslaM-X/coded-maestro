@@ -67,10 +67,7 @@ export function About() {
         <div className="grid gap-10 lg:grid-cols-[1.25fr_0.75fr]">
           <Reveal>
             <p className="font-display text-xl leading-relaxed text-foreground sm:text-2xl">
-              “{t(
-                PROFILE.tagline,
-                "معظم الناس يلعبون داخل القواعد. أنا أكتب الشيفرة التي تضعها.",
-              )}”
+              “{t(PROFILE.tagline, "معظم الناس يلعبون داخل القواعد. أنا أكتب الشيفرة التي تضعها.")}”
             </p>
             <div className="mt-7 space-y-5 text-sm leading-relaxed text-muted-foreground sm:text-base">
               <p>{t(COPY.aboutP1.en, COPY.aboutP1.ar)}</p>
@@ -210,32 +207,32 @@ export function Impact() {
           {IMPACT.map((m, i) => {
             const ar = IMPACT_AR[m.title];
             return (
-            <Reveal key={m.title} delay={i * 110}>
-              <a
-                href={m.href}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="surface-panel flex h-full flex-col rounded-2xl p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/60"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-primary">
-                    {t(m.org, ar?.org ?? m.org)}
-                  </span>
-                  <ExternalLink className="h-4 w-4 text-muted-foreground" />
-                </div>
-                <h3 className="mt-4 font-display text-lg text-foreground">
-                  {t(m.title, ar?.title ?? m.title)}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {t(m.summary, ar?.summary ?? m.summary)}
-                </p>
-                {(t(m.quote, ar?.quote ?? m.quote)) && (
-                  <p className="mt-5 border-s-2 border-primary/60 ps-4 text-sm italic text-foreground/90">
-                    {t(m.quote, ar?.quote ?? m.quote)}
+              <Reveal key={m.title} delay={i * 110}>
+                <a
+                  href={m.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="surface-panel flex h-full flex-col rounded-2xl p-7 transition-all duration-500 hover:-translate-y-1.5 hover:border-primary/60"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-primary">
+                      {t(m.org, ar?.org ?? m.org)}
+                    </span>
+                    <ExternalLink className="h-4 w-4 text-muted-foreground" />
+                  </div>
+                  <h3 className="mt-4 font-display text-lg text-foreground">
+                    {t(m.title, ar?.title ?? m.title)}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {t(m.summary, ar?.summary ?? m.summary)}
                   </p>
-                )}
-              </a>
-            </Reveal>
+                  {t(m.quote, ar?.quote ?? m.quote) && (
+                    <p className="mt-5 border-s-2 border-primary/60 ps-4 text-sm italic text-foreground/90">
+                      {t(m.quote, ar?.quote ?? m.quote)}
+                    </p>
+                  )}
+                </a>
+              </Reveal>
             );
           })}
         </div>
@@ -248,9 +245,7 @@ export function Projects() {
   const { t } = useLang();
   const [cat, setCat] = useState<ProjectCategory>("ALL");
   const order = new Map(PROJECT_ORDER.map((n, i) => [n, i]));
-  const filtered = (
-    cat === "ALL" ? PROJECTS : PROJECTS.filter((p) => p.category === cat)
-  )
+  const filtered = (cat === "ALL" ? PROJECTS : PROJECTS.filter((p) => p.category === cat))
     .slice()
     .sort((a, b) => (order.get(a.name) ?? 99) - (order.get(b.name) ?? 99));
   const card = (p: Project, i: number) => {
@@ -364,10 +359,7 @@ export function Projects() {
         {cat !== "ALL" && filtered.length === 0 && (
           <div className="surface-panel rounded-2xl p-12 text-center">
             <p className="font-display text-xl text-foreground">
-              {t(
-                "This lane is being forged right now.",
-                "هذه الفئة تُشغَل عليها الآن.",
-              )}
+              {t("This lane is being forged right now.", "هذه الفئة تُشغَل عليها الآن.")}
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
               {t(
@@ -408,22 +400,22 @@ export function Recognition() {
           {RECOMMENDATIONS.map((r, i) => {
             const ar = RECO_AR[r.author];
             return (
-            <Reveal key={r.author} delay={i * 120}>
-              <figure className="surface-panel h-full rounded-2xl p-8">
-                <Quote className="h-6 w-6 text-primary/70" />
-                <blockquote className="mt-5 text-sm leading-relaxed text-muted-foreground">
-                  {t(r.quote, ar?.quote ?? r.quote)}
-                </blockquote>
-                <figcaption className="mt-6">
-                  <div className="font-display text-base text-foreground">
-                    {t(r.author, ar?.author ?? r.author)}
-                  </div>
-                  <div className="text-xs text-muted-foreground">
-                    {t(r.title, ar?.title ?? r.title)}
-                  </div>
-                </figcaption>
-              </figure>
-            </Reveal>
+              <Reveal key={r.author} delay={i * 120}>
+                <figure className="surface-panel h-full rounded-2xl p-8">
+                  <Quote className="h-6 w-6 text-primary/70" />
+                  <blockquote className="mt-5 text-sm leading-relaxed text-muted-foreground">
+                    {t(r.quote, ar?.quote ?? r.quote)}
+                  </blockquote>
+                  <figcaption className="mt-6">
+                    <div className="font-display text-base text-foreground">
+                      {t(r.author, ar?.author ?? r.author)}
+                    </div>
+                    <div className="text-xs text-muted-foreground">
+                      {t(r.title, ar?.title ?? r.title)}
+                    </div>
+                  </figcaption>
+                </figure>
+              </Reveal>
             );
           })}
         </div>
@@ -484,9 +476,7 @@ export function Contact() {
             11 — {t(COPY.sections.contact.en, COPY.sections.contact.ar)}
           </p>
           <h2 className="mt-6 font-display text-[clamp(2.2rem,6vw,4.4rem)] leading-[1.05] font-bold">
-            <span className="text-gilded">
-              {t(COPY.contactTitle.en, COPY.contactTitle.ar)}
-            </span>
+            <span className="text-gilded">{t(COPY.contactTitle.en, COPY.contactTitle.ar)}</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
             {t(COPY.contactBody.en, COPY.contactBody.ar)}

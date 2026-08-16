@@ -117,8 +117,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
-  const lang =
-    typeof window !== "undefined" ? langFromUrl(window.location.search) : getSsrLang();
+  const lang = typeof window !== "undefined" ? langFromUrl(window.location.search) : getSsrLang();
   return (
     <html lang={lang} dir={lang === "ar" ? "rtl" : "ltr"} suppressHydrationWarning>
       <head>

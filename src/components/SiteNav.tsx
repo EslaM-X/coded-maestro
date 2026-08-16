@@ -31,8 +31,7 @@ export default function SiteNav() {
     return () => io.disconnect();
   }, []);
 
-  const label = (n: { id: string; label: string }) =>
-    isAr ? (NAV_AR[n.id] ?? n.label) : n.label;
+  const label = (n: { id: string; label: string }) => (isAr ? (NAV_AR[n.id] ?? n.label) : n.label);
 
   return (
     <header
@@ -43,10 +42,7 @@ export default function SiteNav() {
       }`}
     >
       <nav className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3 sm:px-8 lg:flex lg:justify-between">
-        <a
-          href="#top"
-          className="group flex shrink-0 items-center gap-2.5 whitespace-nowrap"
-        >
+        <a href="#top" className="group flex shrink-0 items-center gap-2.5 whitespace-nowrap">
           <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full ring-1 ring-primary/40 transition-transform duration-500 group-hover:rotate-12 sm:h-10 sm:w-10">
             <img
               src={logo}
@@ -65,9 +61,7 @@ export default function SiteNav() {
               <a
                 href={`#${n.id}`}
                 className={`relative rounded-full px-3 py-2 text-[11px] font-medium uppercase tracking-[0.18em] transition-colors ${
-                  active === n.id
-                    ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
+                  active === n.id ? "text-primary" : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {label(n)}

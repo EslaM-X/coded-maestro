@@ -25,8 +25,7 @@ const LOCALE_SITE_NAME: Record<string, string> = {
 
 export const Route = createFileRoute("/")({
   head: () => {
-    const query =
-      typeof window !== "undefined" ? window.location.search : "";
+    const query = typeof window !== "undefined" ? window.location.search : "";
     const lang = typeof window !== "undefined" ? langFromUrl(query) : getSsrLang();
     const m = META[lang];
     const title = m.title;

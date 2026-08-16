@@ -42,9 +42,7 @@ export function SectionHeading({
         <span className="text-gilded">{title}</span>
       </h2>
       {kicker && (
-        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">
-          {kicker}
-        </p>
+        <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground">{kicker}</p>
       )}
     </Reveal>
   );
@@ -63,10 +61,7 @@ export function Counter({
   const n = useCountUp(value, visible);
   return (
     <div ref={ref} className="text-center">
-      <div
-        dir="ltr"
-        className="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-gilded"
-      >
+      <div dir="ltr" className="font-display text-[clamp(1.8rem,4vw,2.8rem)] font-bold text-gilded">
         {n.toLocaleString("en-US")}
         {suffix}
       </div>

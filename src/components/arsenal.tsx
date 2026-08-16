@@ -191,13 +191,8 @@ export function Architecture() {
                       </p>
                     </div>
                     {i < flow.stages.length - 1 && (
-                      <span
-                        className="hidden shrink-0 text-primary/60 lg:block"
-                        aria-hidden="true"
-                      >
-                        <ArrowRight
-                          className={`h-4 w-4 ${isAr ? "rotate-180" : ""}`}
-                        />
+                      <span className="hidden shrink-0 text-primary/60 lg:block" aria-hidden="true">
+                        <ArrowRight className={`h-4 w-4 ${isAr ? "rotate-180" : ""}`} />
                       </span>
                     )}
                   </li>

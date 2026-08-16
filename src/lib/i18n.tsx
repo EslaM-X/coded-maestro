@@ -151,4 +151,3 @@ export function openExternal(href: string) {
     }
   }
 }
-

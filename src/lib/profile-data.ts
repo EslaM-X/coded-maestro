@@ -10,10 +10,8 @@ export const PROFILE = {
     "CYBER SECURITY AUTHORITY",
     "FULL-STACK · AI SYSTEMS",
   ],
-  headline:
-    "Lead Technical Architect · Business Operations Manager · Web3 & Cyber Security",
-  tagline:
-    "Most people play within the rules. I write the code that defines them.",
+  headline: "Lead Technical Architect · Business Operations Manager · Web3 & Cyber Security",
+  tagline: "Most people play within the rules. I write the code that defines them.",
 };
 
 export const SOCIALS = [
@@ -344,7 +342,6 @@ export const SKILL_GROUPS = [
   },
 ];
 
-
 export const EXPERIENCE = [
   {
     role: "Lead Technical Architect",
@@ -435,12 +432,8 @@ export const EXPERIENCE = [
     periodAr: "مايو 2025 — فبراير 2026",
     place: "Remote · Worldwide",
     placeAr: "عن بُعد · عالميًا",
-    points: [
-      "Founded and shipped a consumer product inside the Pi Network ecosystem.",
-    ],
-    pointsAr: [
-      "تأسيس وإطلاق منتج استهلاكي داخل منظومة Pi Network.",
-    ],
+    points: ["Founded and shipped a consumer product inside the Pi Network ecosystem."],
+    pointsAr: ["تأسيس وإطلاق منتج استهلاكي داخل منظومة Pi Network."],
   },
   {
     role: "Cost Controller & Data Systems",
@@ -454,12 +447,9 @@ export const EXPERIENCE = [
     points: [
       "Cost control, financial data pipelines and reporting for large-scale construction operations.",
     ],
-    pointsAr: [
-      "مراقبة التكاليف وخطوط البيانات المالية والتقارير لعمليات إنشاءات واسعة النطاق.",
-    ],
+    pointsAr: ["مراقبة التكاليف وخطوط البيانات المالية والتقارير لعمليات إنشاءات واسعة النطاق."],
   },
 ];
-
 
 export const IMPACT = [
   {
@@ -1048,8 +1038,7 @@ export const SPOTLIGHT = {
     kicker: "مقال مميز",
     title: "مراجعة من مؤسس شبكة Pi",
     body: "مقترحي لمعايير المنفعة PiRC1 — إثباتات قفل الضمان، والتسعير الديناميكي لـ p_floor، وقوة PiPower الموزونة بالتفاعل، والتقارير المقاومة لهجمات Sybil — حظي بمراجعة تقنية وملاحظات من الدكتور نيكولاس كوكاليس، مؤسس شبكة Pi.",
-    quote:
-      "«كلتا الفكرتين جيدة. ويبدو التنفيذ ممكنًا.» — د. نيكولاس كوكاليس، مؤسس شبكة Pi",
+    quote: "«كلتا الفكرتين جيدة. ويبدو التنفيذ ممكنًا.» — د. نيكولاس كوكاليس، مؤسس شبكة Pi",
     cta: "اقرأ المقال على Medium",
     cta2: "اطّلع على المقترح",
   },
@@ -1158,7 +1147,6 @@ export const COPY = {
     skills: {
       en: "The stack behind protocol design, enterprise systems and adversarial security work.",
       ar: "الأدوات خلف تصميم البروتوكولات وأنظمة المؤسسات والعمل الأمني الهجومي.",
-
     },
     horizons: {
       en: "Where physics, autonomous machines, cryptographic law and digital justice converge.",
@@ -1204,7 +1192,10 @@ export const EVIDENCE = [
       en: "Policy-driven navigation validated across three physics backends — measured, not promised.",
       ar: "ملاحة مدفوعة بالسياسات مُتحقَّق منها عبر ثلاثة محاكيات فيزيائية — مقاسة، لا موعودة.",
     },
-    metric: { en: "18 tests · 0.26 m max deviation · CI green", ar: "18 اختبارًا · 0.26 م كحد أقصى · CI أخضر" },
+    metric: {
+      en: "18 tests · 0.26 m max deviation · CI green",
+      ar: "18 اختبارًا · 0.26 م كحد أقصى · CI أخضر",
+    },
     href: "https://github.com/EslaM-X/robot-sim-policy-lab",
   },
   {
@@ -1213,7 +1204,10 @@ export const EVIDENCE = [
       en: "Human-gated, audit-logged agent orchestration — no autonomous execution without approval.",
       ar: "تنسيق وكلاء خاضع لموافقة بشرية وسجلات تدقيق — لا تنفيذ مستقل دون موافقة.",
     },
-    metric: { en: "10 tests · approval gate · audit chain", ar: "10 اختبارات · بوابة موافقة · سلسلة تدقيق" },
+    metric: {
+      en: "10 tests · approval gate · audit chain",
+      ar: "10 اختبارات · بوابة موافقة · سلسلة تدقيق",
+    },
     href: "https://github.com/EslaM-X/ai-agent-automation-platform",
   },
   {
