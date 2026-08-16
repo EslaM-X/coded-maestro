@@ -27,6 +27,9 @@
 <a href="https://github.com/EslaM-X">
   <img src="https://img.shields.io/github/followers/EslaM-X?style=for-the-badge&color=FFB627&labelColor=0A0A0A&logo=github" height="44" alt="followers" />
 </a>
+<a href="https://github.com/EslaM-X/coded-maestro/actions">
+  <img src="https://img.shields.io/github/actions/workflow/status/EslaM-X/coded-maestro/ci.yml?style=for-the-badge&logo=githubactions&logoColor=FF6A00&label=CI&labelColor=0A0A0A&color=FF6A00" height="44" alt="CI" />
+</a>
 <a href="https://github.com/EslaM-X">
   <img src="https://img.shields.io/github/stars/EslaM-X?style=for-the-badge&color=FFB627&labelColor=0A0A0A&logo=github" height="44" alt="stars" />
 </a>
