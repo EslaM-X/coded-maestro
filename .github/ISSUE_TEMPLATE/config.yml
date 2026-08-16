@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+- name: Discussions
+  url: https://github.com/EslaM-X/coded-maestro/discussions
+  about: Ask questions and discuss the roadmap here.
+- name: Project documentation
+  url: https://github.com/EslaM-X/coded-maestro/blob/main/DEPLOY.md
+  about: Deployment instructions.

@@ -1,0 +1,16 @@
+labels: [discussion]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Welcome to the coded-maestro discussions
+
+        Technical Architect. Evidence over claims. AI, security, Web3, and
+        engineering systems.
+
+        - **Q&A** — ask anything about the site, the portfolio, or the work behind it.
+        - **Ideas** — proposals for new sections, content, or tooling.
+        - **Feedback** — what would make the portfolio more useful or impressive?
+
+        Before posting, skim the [README](../../README.md) and
+        [ROADMAP](../../ROADMAP.md).

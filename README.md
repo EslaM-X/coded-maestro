@@ -538,6 +538,15 @@ npm run dev
 - **Design system:** Obsidian & Molten Gold (black + `#FFB627` gold / `#FF6A00` ember) · Cinzel · Sora · JetBrains Mono · Tajawal
 - **Build:** `npm run build` · **Output:** `.output/public` · Deploy on Vercel → Settings → Domains
 
+## Contributing
+
+Contributions are welcome — great portfolios are built in public. Start with
+the [Contributing Guide](CONTRIBUTING.md) and the [Code of Conduct](CODE_OF_CONDUCT.md).
+
+- **Good first issues** are labelled `good first issue` / `good first contribution`.
+- Every change keeps `npm run lint` clean and the design system consistent.
+- See the [changelog](CHANGELOG.md) for release history.
+
 <div align="center">
 
 <sub>© 2026 EslaM HeshAM — MR-X. Evidence over claims.</sub>
