@@ -16,7 +16,7 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>() {
           }
         }
       },
-      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" },
+      { threshold: 0, rootMargin: "0px 0px -20px 0px" },
     );
     io.observe(el);
     return () => io.disconnect();
@@ -26,7 +26,7 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>() {
 }
 
 export function useCountUp(target: number, run: boolean, duration = 1800) {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(() => (run ? target : 0));
 
   useEffect(() => {
     if (!run) return;
