@@ -47,7 +47,7 @@ const eslam = {
   role:      "Technical Architect & Business Operations Manager",
   focus:     ["Web3 protocols", "AI systems", "Cyber security", "Digital forensics", "Enterprise ops", "Robotics & the machine economy"],
   stack:     ["Next.js", "React", "TypeScript", "Node.js", "MongoDB", "PostgreSQL", "Supabase", "Docker", "Go", "Python"],
-  building:  ["ProofX v0.4", "Atlas Shelf Inspection", "Map of Pi v2.0", "Steinheim ERP & Invoicing", "RoboPay Spot Tier-1", "PiRC1 Standards"],
+  building:  ["ProofX v0.4", "PiProof v1.0", "Atlas Shelf Inspection", "Map of Pi v2.0", "Steinheim ERP & Invoicing", "RoboPay Spot Tier-1", "PiRC1 Standards"],
   contributing: ["Pi Network", "Stellar", "Fabric Foundation", "rhysd/actionlint", "buildpacks/pack", "Map of Pi", "S.I.G"],
   creed:     "Evidence over claims.",
 };
@@ -176,6 +176,11 @@ Contributions to protocols used by millions — reviewed by the people who built
 
 🔗 [EslaM-X/proofx](https://github.com/EslaM-X/proofx) — v0.4.0, protocol frozen
 
+### 📜 PiProof — Portable Verifiable Evidence
+**PEP/1 protocol implementation.** Proof Passports, Dispute Engine, cross-application proofs, AI Agent Evidence, AUREVIA dashboard. Zero dependencies.
+
+🔗 [EslaM-X/piproof](https://github.com/EslaM-X/piproof) — v1.0.0, zero dependencies
+
 ### 🏗️ CI/CD Supply-Chain Security
 Contributions to upstream CI/CD tools to improve supply-chain security.
 
@@ -257,6 +262,9 @@ Founder of PiEat-Me in the Pi Network Ecosystem.
 <a href="https://github.com/EslaM-X/proofx">
   <img src="https://img.shields.io/badge/🔐%20ProofX%20v0.4-Go%20·%20WASM%20·%20Rust%20·%20102%20Tests-0A0A0A?style=for-the-badge&labelColor=0A0A0A&color=FFB627" height="34" alt="ProofX v0.4" />
 </a>
+<a href="https://github.com/EslaM-X/piproof">
+  <img src="https://img.shields.io/badge/📜%20PiProof%20v1.0-PEP%2F1%20·%20Ed25519%20·%20Zero-Dep-0A0A0A?style=for-the-badge&labelColor=0A0A0A&color=FF6A00" height="34" alt="PiProof v1.0" />
+</a>
 <a href="https://github.com/EslaM-X/atlas-shelf-inspection">
   <img src="https://img.shields.io/badge/🤖%20Atlas%20Shelf%20Inspection-MuJoCo%20·%20USDC%20·%20x402-0A0A0A?style=for-the-badge&labelColor=0A0A0A&color=FF6A00" height="34" alt="Atlas Shelf Inspection" />
 </a>
@@ -284,6 +292,7 @@ Founder of PiEat-Me in the Pi Network Ecosystem.
 | Project | Type | Description |
 | --- | --- | --- |
 | **[ProofX v0.4](https://github.com/EslaM-X/proofx)** | Protocol · Security | Execution proof protocol — claim → evidence → proof → verification. 102-case conformance, Go/WASM/Rust CLI + GitHub Action. Protocol frozen. |
+| **[PiProof v1.0](https://github.com/EslaM-X/piproof)** | Cryptography · Evidence | Portable verifiable evidence — PEP/1 protocol, Proof Passports, Dispute Engine, AUREVIA dashboard. Zero dependencies. |
 | **[Atlas Shelf Inspection](https://github.com/EslaM-X/atlas-shelf-inspection)** | Robotics · Payments | Payment-gated Boston Dynamics Atlas — MuJoCo + PyBullet + Webots, real USDC on Base Sepolia. PR #120 on RoboPay. |
 | **Steinheim ERP & Invoicing** | Enterprise | Full internal operations platform: invoicing, inventory, stock audits, customer records, reporting and daily sales performance for a live retail brand. |
 | **[RoboPay Spot Tier-1](https://github.com/EslaM-X/robopay-spot-tier1)** | Robotics · Payments | Boston Dynamics Spot Tier-1 profile — 7 paid embodied skills on MuJoCo + PyBullet sim-to-sim, gated by an x402 payment layer with no-settle-on-failure. |
@@ -305,6 +314,7 @@ Founder of PiEat-Me in the Pi Network Ecosystem.
 | Repository | Language | Notes |
 | --- | --- | --- |
 | [proofx](https://github.com/EslaM-X/proofx) | Go | Execution proof protocol — 102-case conformance, WASM/Rust, GitHub Action. v0.4.0. |
+| [piproof](https://github.com/EslaM-X/piproof) | JavaScript | Portable verifiable evidence — PEP/1, Proof Passports, Dispute Engine, AUREVIA. v1.0.0. |
 | [atlas-shelf-inspection](https://github.com/EslaM-X/atlas-shelf-inspection) | Python | Boston Dynamics Atlas Tier-1 — MuJoCo + PyBullet + Webots, real USDC settlement. PR #120. |
 | [homebrew-proofx](https://github.com/EslaM-X/homebrew-proofx) | Ruby | Homebrew tap for ProofX CLI. |
 | [proofx-action](https://github.com/EslaM-X/proofx-action) | JavaScript | GitHub Action for cryptographic evidence verification in CI/CD. |
