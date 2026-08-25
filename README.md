@@ -47,7 +47,7 @@ const eslam = {
   role:      "Technical Architect & Business Operations Manager",
   focus:     ["Web3 protocols", "AI systems", "Cyber security", "Digital forensics", "Enterprise ops", "Robotics & the machine economy"],
   stack:     ["Next.js", "React", "TypeScript", "Node.js", "MongoDB", "PostgreSQL", "Supabase", "Docker", "Go", "Python"],
-  building:  ["ProofX v0.4", "PiProof v1.0", "Atlas Shelf Inspection", "Map of Pi v2.0", "Steinheim ERP & Invoicing", "RoboPay Spot Tier-1", "PiRC1 Standards"],
+  building:  ["ProofX v0.4", "PiProof v1.0", "Atlas Shelf Inspection", "Steinheim AI Launchpad", "Pi Local AI Agent", "MapCap IPO", "Maplypi", "Spin4Pi", "Map of Pi v2.0", "Steinheim ERP & Invoicing", "RoboPay Tier-1", "PiRC1 Standards"],
   contributing: ["Pi Network", "Stellar", "Fabric Foundation", "rhysd/actionlint", "buildpacks/pack", "Map of Pi", "S.I.G"],
   creed:     "Evidence over claims.",
 };
@@ -318,27 +318,22 @@ Founder of PiEat-Me in the Pi Network Ecosystem.
 | [atlas-shelf-inspection](https://github.com/EslaM-X/atlas-shelf-inspection) | Python | Boston Dynamics Atlas Tier-1 — MuJoCo + PyBullet + Webots, real USDC settlement. PR #120. |
 | [homebrew-proofx](https://github.com/EslaM-X/homebrew-proofx) | Ruby | Homebrew tap for ProofX CLI. |
 | [proofx-action](https://github.com/EslaM-X/proofx-action) | JavaScript | GitHub Action for cryptographic evidence verification in CI/CD. |
-| [RoboPay](https://github.com/EslaM-X/RoboPay) | Go | Forked from fabricfoundation/RoboPay — connects robots, simulators, cameras, drones and physical devices to the Fabric network. |
-| [stellar-core](https://github.com/EslaM-X/stellar-core) | C++ | Forked from stellar/stellar-core — reference P2P agent managing the Stellar network. |
-| [robopay-spot-tier1](https://github.com/EslaM-X/robopay-spot-tier1) | Python | Boston Dynamics Spot Tier-1 RoboPay profile — 7 paid embodied skills on MuJoCo + PyBullet sim-to-sim, x402 payment gate, no-settle-on-failure. (MIT) |
-| [PiRC](https://github.com/EslaM-X/PiRC) | — | Forked from PiNetwork/PiRC — Pi Requests for Comment. |
-| [pirc1-standards-pro](https://github.com/EslaM-X/pirc1-standards-pro) | TypeScript | Implementation proposal for PiRC1 Utility Standards & PEP Protocol. (MIT) |
-| [mapcap-ipo-frontendX](https://github.com/EslaM-X/mapcap-ipo-frontendX) | TypeScript | MapCap IPO Frontend Codebase. |
-| [mapcap-ipo-backendX](https://github.com/EslaM-X/mapcap-ipo-backendX) | TypeScript | MapCap IPO Backend. |
-| [mapcap-ipo-frontend](https://github.com/EslaM-X/mapcap-ipo-frontend) | JavaScript | MapCap IPO Frontend Codebase. |
-| [mapcap-ipo-backend-dev1](https://github.com/EslaM-X/mapcap-ipo-backend-dev1) | TypeScript | MapCap IPO Backend (dev). |
-| [map-of-pi-docker](https://github.com/EslaM-X/map-of-pi-docker) | TypeScript | Forked — Map of Pi Frontend + Backend codebase w/ Docker. |
-| [pi-local-ai-agent](https://github.com/EslaM-X/pi-local-ai-agent) | TypeScript | Local autonomous AI agent for the Pi ecosystem. |
-| [spin4pi-vault](https://github.com/EslaM-X/spin4pi-vault) | TypeScript | Vault mechanics for a gamified Pi ecosystem application. |
-| [LatinChain](https://github.com/EslaM-X/LatinChain) | JavaScript | Forked from pi-apps/LatinChain — Pi Hackathon winner 2021. |
-| [gitcoin_co_30](https://github.com/EslaM-X/gitcoin_co_30) | TypeScript | Forked from gitcoinco/gitcoin_co_30. |
-| [AlJefra-OS](https://github.com/EslaM-X/AlJefra-OS) | C | Forked — AlJefra OS, the first Qatari operating system. (MIT) |
-| [Audit-](https://github.com/EslaM-X/Audit-) | — | Security & audit research vault. |
-| [pi-eats-crypto-now-90](https://github.com/EslaM-X/pi-eats-crypto-now-90) | TypeScript | PiEat-Me crypto-commerce build. |
-| [yummy-st-eats-45-66](https://github.com/EslaM-X/yummy-st-eats-45-66) | TypeScript | Consumer food-commerce build. |
-| [invoice-ease-16-4e3bcf60](https://github.com/EslaM-X/invoice-ease-16-4e3bcf60) | TypeScript | Invoice system iteration. |
-| [invoice-ease-16-069385ec](https://github.com/EslaM-X/invoice-ease-16-069385ec) | TypeScript | Invoice system iteration. |
-| [test](https://github.com/EslaM-X/test) | — | Test repo. |
+| [robopay-go2-tier1](https://github.com/EslaM-X/robopay-go2-tier1) | Python | Unitree Go2 Tier-1 — 9 skills, MuJoCo + PyBullet sim-to-sim ≤ 0.02 cm, EIP-3009 settlement. |
+| [robopay-spot-tier1](https://github.com/EslaM-X/robopay-spot-tier1) | Python | Boston Dynamics Spot Tier-1 — 8 skills, MuJoCo + PyBullet sim-to-sim. |
+| [pirc1-standards-pro](https://github.com/EslaM-X/pirc1-standards-pro) | TypeScript | PiRC1 Utility Standards & PEP Protocol implementation. |
+| [steinheim-ai-launchpad](https://github.com/EslaM-X/steinheim-ai-launchpad) | Python | AI marketing OS — verified knowledge base → AI agents → human QC gate. |
+| [pi-local-ai-agent](https://github.com/EslaM-X/pi-local-ai-agent) | TypeScript | Privacy-first local AI agent for Pi Network. |
+| [mapcap-ipo-frontendX](https://github.com/EslaM-X/mapcap-ipo-frontendX) | TypeScript | MapCap IPO — equity ownership on Pi Network. |
+| [mapcap-ipo-backendX](https://github.com/EslaM-X/mapcap-ipo-backendX) | TypeScript | MapCap IPO backend — API services for equity engine. |
+| [maplypi-frontend](https://github.com/EslaM-X/maplypi-frontend) | React | Maplypi — Geo-Trading, Supply Chain, Pi Integration. |
+| [maplypi-backend](https://github.com/EslaM-X/maplypi-backend) | Node.js | Maplypi backend — Geo-Trading engine, MongoDB. |
+| [spin4pi-vault](https://github.com/EslaM-X/spin4pi-vault) | TypeScript | Spin4Pi — spin-to-win gaming on Pi Network SDK. |
+| [pi-eats-crypto-now-90](https://github.com/EslaM-X/pi-eats-crypto-now-90) | TypeScript | PiEat-Me — food delivery marketplace on Pi Network. |
+| [yummy-st-eats-45-66](https://github.com/EslaM-X/yummy-st-eats-45-66) | TypeScript | ST-Eat — food delivery, Arabic-first UI. |
+| [steinheim-eg](https://github.com/EslaM-X/steinheim-eg) | — | Steinheim ERP — invoicing, inventory, stock audits, reporting. |
+| [invoice-ease-16](https://github.com/EslaM-X/invoice-ease-16) | TypeScript | InvoiceFlow Pro — full-stack invoicing, Supabase. |
+| [hilos-stock-flow](https://github.com/EslaM-X/hilos-stock-flow) | — | Stock flow management system. |
+| [RoboPay](https://github.com/EslaM-X/RoboPay) | Go | Forked from fabricfoundation/RoboPay — connects robots to Fabric network. |
 
 ### 🔒 Private Vaults (enterprise & in-progress)
 
