@@ -47,8 +47,8 @@ const eslam = {
   role:      "Technical Architect & Business Operations Manager",
   focus:     ["Web3 protocols", "AI systems", "Cyber security", "Digital forensics", "Enterprise ops", "Robotics & the machine economy"],
   stack:     ["Next.js", "React", "TypeScript", "Node.js", "MongoDB", "PostgreSQL", "Supabase", "Docker", "Go", "Python"],
-  building:  ["Map of Pi v2.0", "Steinheim ERP & Invoicing", "RoboPay Spot Tier-1", "PiRC1 Standards"],
-  contributing: ["Pi Network", "Stellar", "Fabric Foundation", "Map of Pi", "S.I.G"],
+  building:  ["ProofX v0.4", "Atlas Shelf Inspection", "Map of Pi v2.0", "Steinheim ERP & Invoicing", "RoboPay Spot Tier-1", "PiRC1 Standards"],
+  contributing: ["Pi Network", "Stellar", "Fabric Foundation", "rhysd/actionlint", "buildpacks/pack", "Map of Pi", "S.I.G"],
   creed:     "Evidence over claims.",
 };
 ```
@@ -169,7 +169,18 @@ Contributions to protocols used by millions — reviewed by the people who built
 ### 🤖 Fabric Foundation — RoboPay
 **Machine-payable robotics:** connecting robots, simulators and physical devices to a payment network — x402 payment gating with no-settle-on-failure guarantees.
 
-🔗 [fabricfoundation/RoboPay · Pull Request #86](https://github.com/fabricfoundation/RoboPay/pull/86)
+🔗 [fabricfoundation/RoboPay · Pull Request #120](https://github.com/fabricfoundation/RoboPay/pull/120) — Atlas Tier-1 · [PR #86](https://github.com/fabricfoundation/RoboPay/pull/86) — Spot Tier-1
+
+### 🔐 ProofX — Execution Proof Protocol
+**From "trust me" to "verify it yourself."** Cryptographic evidence infrastructure for software — claim → evidence → proof → verification. 102-case conformance suite, Go/WASM/Rust, GitHub Action.
+
+🔗 [EslaM-X/proofx](https://github.com/EslaM-X/proofx) — v0.4.0, protocol frozen
+
+### 🏗️ CI/CD Supply-Chain Security
+Contributions to upstream CI/CD tools to improve supply-chain security.
+
+🔗 [rhysd/actionlint · PR #729](https://github.com/rhysd/actionlint/pull/729) — new lint rule for unsafe patterns
+🔗 [buildpacks/pack · PR #2681](https://github.com/buildpacks/pack/pull/2681) — CNCF evidence attestation in release CI
 
 ---
 
@@ -243,6 +254,12 @@ Founder of PiEat-Me in the Pi Network Ecosystem.
 
 <div align="center">
 
+<a href="https://github.com/EslaM-X/proofx">
+  <img src="https://img.shields.io/badge/🔐%20ProofX%20v0.4-Go%20·%20WASM%20·%20Rust%20·%20102%20Tests-0A0A0A?style=for-the-badge&labelColor=0A0A0A&color=FFB627" height="34" alt="ProofX v0.4" />
+</a>
+<a href="https://github.com/EslaM-X/atlas-shelf-inspection">
+  <img src="https://img.shields.io/badge/🤖%20Atlas%20Shelf%20Inspection-MuJoCo%20·%20USDC%20·%20x402-0A0A0A?style=for-the-badge&labelColor=0A0A0A&color=FF6A00" height="34" alt="Atlas Shelf Inspection" />
+</a>
 <a href="https://github.com/EslaM-X/robopay-spot-tier1">
   <img src="https://img.shields.io/badge/⚙️%20RoboPay%20Spot%20Tier--1-Python%20·%20MuJoCo%20·%20x402-0A0A0A?style=for-the-badge&labelColor=0A0A0A&color=FFB627" height="34" alt="RoboPay Spot Tier-1" />
 </a>
@@ -266,6 +283,8 @@ Founder of PiEat-Me in the Pi Network Ecosystem.
 
 | Project | Type | Description |
 | --- | --- | --- |
+| **[ProofX v0.4](https://github.com/EslaM-X/proofx)** | Protocol · Security | Execution proof protocol — claim → evidence → proof → verification. 102-case conformance, Go/WASM/Rust CLI + GitHub Action. Protocol frozen. |
+| **[Atlas Shelf Inspection](https://github.com/EslaM-X/atlas-shelf-inspection)** | Robotics · Payments | Payment-gated Boston Dynamics Atlas — MuJoCo + PyBullet + Webots, real USDC on Base Sepolia. PR #120 on RoboPay. |
 | **Steinheim ERP & Invoicing** | Enterprise | Full internal operations platform: invoicing, inventory, stock audits, customer records, reporting and daily sales performance for a live retail brand. |
 | **[RoboPay Spot Tier-1](https://github.com/EslaM-X/robopay-spot-tier1)** | Robotics · Payments | Boston Dynamics Spot Tier-1 profile — 7 paid embodied skills on MuJoCo + PyBullet sim-to-sim, gated by an x402 payment layer with no-settle-on-failure. |
 | **[PiRC1 Standards Pro](https://github.com/EslaM-X/pirc1-standards-pro)** | Protocol | Reference implementation proposal for PiRC1 Utility Standards and the PEP Protocol — engagement scoring, transparency dashboards and Sybil protection. |
@@ -285,6 +304,10 @@ Founder of PiEat-Me in the Pi Network Ecosystem.
 
 | Repository | Language | Notes |
 | --- | --- | --- |
+| [proofx](https://github.com/EslaM-X/proofx) | Go | Execution proof protocol — 102-case conformance, WASM/Rust, GitHub Action. v0.4.0. |
+| [atlas-shelf-inspection](https://github.com/EslaM-X/atlas-shelf-inspection) | Python | Boston Dynamics Atlas Tier-1 — MuJoCo + PyBullet + Webots, real USDC settlement. PR #120. |
+| [homebrew-proofx](https://github.com/EslaM-X/homebrew-proofx) | Ruby | Homebrew tap for ProofX CLI. |
+| [proofx-action](https://github.com/EslaM-X/proofx-action) | JavaScript | GitHub Action for cryptographic evidence verification in CI/CD. |
 | [RoboPay](https://github.com/EslaM-X/RoboPay) | Go | Forked from fabricfoundation/RoboPay — connects robots, simulators, cameras, drones and physical devices to the Fabric network. |
 | [stellar-core](https://github.com/EslaM-X/stellar-core) | C++ | Forked from stellar/stellar-core — reference P2P agent managing the Stellar network. |
 | [robopay-spot-tier1](https://github.com/EslaM-X/robopay-spot-tier1) | Python | Boston Dynamics Spot Tier-1 RoboPay profile — 7 paid embodied skills on MuJoCo + PyBullet sim-to-sim, x402 payment gate, no-settle-on-failure. (MIT) |
@@ -319,7 +342,7 @@ invoice-ease-16 (V.1–V.10) · steinheim-eg · steinheim-suite · steinheim-car
 Protocol Design · Smart Contracts · Solidity / Foundry · Stellar Core · Consensus (BFT) · DeFi Mechanics · Pi SDK · Tokenomics · EVM Internals · Hardhat · Rust / Anchor · Layer-2 & Rollups · Bridges & Interop · Account Abstraction · Oracles (Chainlink) · IPFS / Arweave · MEV Awareness · Zero-Knowledge Proofs · The Graph · Wallet & Key Custody · DAO Governance · x402 Machine Payments · DApps Architecture · DeFi Protocol Design · Liquidity & AMM Design · On-Chain Voting · Staking & Yield Logic · NFT & Digital Ownership · Cross-Chain Messaging · Gas Optimization
 
 ### Full-Stack Engineering
-Next.js · React · TypeScript · Node.js · MongoDB · PostgreSQL · Supabase · Tailwind CSS · Docker · Go · Python · NestJS · Express · GraphQL · tRPC · Redis · Prisma / Drizzle · REST & WebSockets · Kubernetes · CI/CD (GitHub Actions) · Cloudflare Workers · Vercel Edge · Microservices · System Design · Testing (Vitest / Playwright) · Observability · Event-Driven Pipelines · Workflow Orchestration · Web3 Frontend (wagmi / viem) · Realtime Infrastructure · Zero-Downtime Deploys · Edge Caching & CDN
+Next.js · React · TypeScript · Node.js · MongoDB · PostgreSQL · Supabase · Tailwind CSS · Docker · Go · Python · Rust · NestJS · Express · GraphQL · tRPC · Redis · Prisma / Drizzle · REST & WebSockets · Kubernetes · CI/CD (GitHub Actions) · Cloudflare Workers · Vercel Edge · Microservices · System Design · Testing (Vitest / Playwright) · Observability · Event-Driven Pipelines · Workflow Orchestration · Web3 Frontend (wagmi / viem) · Realtime Infrastructure · Zero-Downtime Deploys · Edge Caching & CDN
 
 ### AI & Automation
 Neural Networks · AI Agents · LLM Integration · Embodied Robotics · Sim-to-Sim (MuJoCo) · Trading Automation · Multi-Agent Systems · RAG Pipelines · Vector Databases · Prompt Engineering · Fine-Tuning / LoRA · Computer Vision · PyTorch · Reinforcement Learning · PyBullet / ROS · Physical AI · MLOps · Speech & TTS · Autonomous Agent Economies · Agent-to-Agent Negotiation · Machine-Payable Skills · Workflow Automation (n8n) · Data Scraping & ETL · Self-Healing Systems · Decision Engines
@@ -335,7 +358,7 @@ Operations Strategy · ERP Architecture · KPI & Analytics · Brand Launch · Su
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,mongodb,postgres,supabase,tailwind,docker,git,github,go,python,solidity,linux,vercel,figma,vscode&perline=10" alt="stack" />
+<img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,express,mongodb,postgres,supabase,tailwind,docker,git,github,go,python,rust,solidity,linux,vercel,figma,vscode&perline=10" alt="stack" />
 
 </div>
 
