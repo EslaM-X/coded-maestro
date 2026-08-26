@@ -471,18 +471,34 @@ export const IMPACT = [
   },
   {
     org: "Fabric Foundation",
-    title: "RoboPay — machine-payable robotics",
-    href: "https://github.com/fabricfoundation/RoboPay/pull/86",
+    title: "RoboPay — Atlas Tier-1 (PR #120)",
+    href: "https://github.com/fabricfoundation/RoboPay/pull/120",
     summary:
-      "Connecting robots, simulators and physical devices to a payment network — x402 payment gating with no-settle-on-failure guarantees.",
+      "First Boston Dynamics Atlas Tier-1 profile — MuJoCo + PyBullet + Webots, real USDC settlement on Base Sepolia. 3 physics engines, 3 on-chain transactions.",
     quote: null,
   },
   {
     org: "Fabric Foundation",
-    title: "RoboPay — platform hardening & quality",
-    href: "https://github.com/fabricfoundation/RoboPay/pull/92",
+    title: "RoboPay — Spot & Go2 Tier-1",
+    href: "https://github.com/fabricfoundation/RoboPay/pull/86",
     summary:
-      "Seven open PRs to the Fabric RoboPay repo: security redaction of payment payloads, hardened Go CI, a Python quality baseline, a profile registry validator and two Tier-1 robot profiles.",
+      "Connecting robots, simulators and physical devices to a payment network — x402 payment gating with no-settle-on-failure guarantees. Spot PR #86 + Go2 PR #89.",
+    quote: null,
+  },
+  {
+    org: "rhysd/actionlint",
+    title: "CI/CD supply-chain security",
+    href: "https://github.com/rhysd/actionlint/pull/729",
+    summary:
+      "New lint rule to catch unsafe patterns in GitHub Actions workflows — improving supply-chain security for the CI/CD ecosystem.",
+    quote: null,
+  },
+  {
+    org: "buildpacks/pack",
+    title: "CNCF — evidence attestation in release CI",
+    href: "https://github.com/buildpacks/pack/pull/2681",
+    summary:
+      "Integrated cryptographic evidence attestation into the release CI pipeline for Cloud Native Buildpacks (2985 stars, CNCF project).",
     quote: null,
   },
   {
@@ -519,6 +535,78 @@ export type Project = {
 };
 
 export const PROJECTS: readonly Project[] = [
+  {
+    name: "ProofX v0.4",
+    tag: "Protocol · Security",
+    category: "SECURITY" as ProjectCategory,
+    desc: "Execution proof protocol — claim → evidence → proof → verification. 102-case conformance suite, Go/WASM/Rust CLI + GitHub Action. Protocol frozen at v0.4.0.",
+    stack: ["Go", "WASM", "Rust", "Cryptography", "CI/CD"],
+    details: {
+      en: [
+        "102-case cross-language conformance: Go 102/102, WASM 102/102, Rust 63/63.",
+        "14 adversarial attack scenarios tested. Protocol frozen — no new features.",
+      ],
+      ar: [
+        "102 اختبار عابر للغات: Go 102/102، WASM 102/102، Rust 63/63.",
+        "14 سيناريو هجوم عدائي مُختبَرة. البروتوكول مُجمّد — لا ميزات جديدة.",
+      ],
+    },
+    href: "https://github.com/EslaM-X/proofx",
+  },
+  {
+    name: "PiProof v1.0",
+    tag: "Cryptography · Evidence",
+    category: "SECURITY" as ProjectCategory,
+    desc: "Portable verifiable evidence on the PEP/1 protocol — Proof Passports, Dispute Engine, cross-application proofs, AI Agent Evidence, AUREVIA dashboard. Zero dependencies.",
+    stack: ["JavaScript", "Ed25519", "PEP/1", "Zero-Dep"],
+    details: {
+      en: [
+        "Single-file verifier under 500 lines — runs in browser, Node, Deno, Bun.",
+        "Formal dispute resolution: claim → counter-claim → evidence → resolution.",
+      ],
+      ar: [
+        "ملف تحقق واحد أقل من 500 سطر — يعمل في المتصفح و Node و Deno و Bun.",
+        "حسم نزاعات رسمي: مطالبة ← مطالبة مضادة ← أدلة ← حسم.",
+      ],
+    },
+    href: "https://github.com/EslaM-X/piproof",
+  },
+  {
+    name: "Atlas Shelf Inspection",
+    tag: "Robotics · Payments",
+    category: "ROBOTICS" as ProjectCategory,
+    desc: "Payment-gated Boston Dynamics Atlas v4 shelf inspection — MuJoCo + PyBullet + Webots, real USDC settlement on Base Sepolia. RoboPay PR #120.",
+    stack: ["Python", "Go", "MuJoCo", "PyBullet", "Webots", "x402"],
+    details: {
+      en: [
+        "3 physics engines, 3 on-chain settlement transactions, 13 evidence artifacts.",
+        "First Atlas Tier-1 profile — real USDC, not test tokens.",
+      ],
+      ar: [
+        "3 محركات فيزيائية، 3 معاملات تسوية على السلسلة، 13 أثر دليل.",
+        "أول ملف Atlas Tier-1 — USDC حقيقي، لا رموز تجريبية.",
+      ],
+    },
+    href: "https://github.com/EslaM-X/atlas-shelf-inspection",
+  },
+  {
+    name: "Steinheim AI Launchpad",
+    tag: "AI · Marketing",
+    category: "AI" as ProjectCategory,
+    desc: "AI marketing operating system — a verified knowledge base drives AI agents that plan, write, illustrate and quality-check daily content. Every claim traced to a fact.",
+    stack: ["Python", "AI Agents", "Knowledge Base", "Content"],
+    details: {
+      en: [
+        "Knowledge base → AI planner → writer → illustrator → human QC gate.",
+        "Every post waits for human approval before publishing.",
+      ],
+      ar: [
+        "قاعدة معرفة ← مخطط ذكاء اصطناعي ← كاتب ← مصمم ← بوابة مراجعة بشرية.",
+        "كل منشور ينتظر موافقة بشرية قبل النشر.",
+      ],
+    },
+    href: "https://github.com/EslaM-X/steinheim-ai-launchpad",
+  },
   {
     name: "Steinheim ERP & Invoicing",
     tag: "Enterprise",
@@ -611,7 +699,23 @@ export const PROJECTS: readonly Project[] = [
     category: "WEB3" as ProjectCategory,
     desc: "Founded a food-commerce product inside the Pi Network ecosystem, from concept to live users.",
     stack: ["React", "Node.js", "Pi Payments"],
-    href: null,
+    href: "https://github.com/EslaM-X/pi-eats-crypto-now-90",
+  },
+  {
+    name: "ST-Eat",
+    tag: "Food Delivery",
+    category: "FULL-STACK" as ProjectCategory,
+    desc: "Food delivery platform — restaurants, menus, ordering, Arabic-first UI. Full-stack consumer product.",
+    stack: ["TypeScript", "React", "Node.js", "Arabic RTL"],
+    href: "https://github.com/EslaM-X/yummy-st-eats-45-66",
+  },
+  {
+    name: "Maplypi",
+    tag: "Geo-Trading · Pi",
+    category: "WEB3" as ProjectCategory,
+    desc: "Geo-Trading platform with supply chain logic and Pi Network integration. Interactive Web3 storefront with Mapbox.",
+    stack: ["React", "Node.js", "MongoDB", "Mapbox", "Pi Network"],
+    href: "https://github.com/EslaM-X/maplypi-frontend",
   },
   {
     name: "ai-agent-automation-platform",
@@ -727,7 +831,11 @@ export const PROJECTS: readonly Project[] = [
 
 /** Curated display order — strongest engineering first. */
 export const PROJECT_ORDER: readonly string[] = [
+  "ProofX v0.4",
+  "PiProof v1.0",
+  "Atlas Shelf Inspection",
   "ai-agent-automation-platform",
+  "Steinheim AI Launchpad",
   "RoboPay Go2 Tier-1",
   "RoboPay Spot Tier-1",
   "production-systems-lab",
@@ -736,8 +844,10 @@ export const PROJECT_ORDER: readonly string[] = [
   "PiRC1 Standards Pro",
   "Pi Local AI Agent",
   "MapCap IPO Platform",
+  "Maplypi",
   "Spin4Pi Vault",
   "PiEat-Me",
+  "ST-Eat",
   "S.I.G Corporate Platform",
   "engineering-notes",
   "EslaM-X Sovereign Portfolio",
@@ -751,20 +861,24 @@ export const PROJECT_GROUPS: readonly {
   {
     label: { en: "Flagship Systems", ar: "الأنظمة الرائدة" },
     names: [
+      "ProofX v0.4",
+      "PiProof v1.0",
+      "Atlas Shelf Inspection",
       "ai-agent-automation-platform",
-      "RoboPay Go2 Tier-1",
-      "production-systems-lab",
-      "robot-sim-policy-lab",
-      "RoboPay Spot Tier-1",
+      "Steinheim AI Launchpad",
     ],
   },
   {
+    label: { en: "Robotics & Payments", ar: "الروبوتات والمدفوعات" },
+    names: ["RoboPay Go2 Tier-1", "RoboPay Spot Tier-1", "robot-sim-policy-lab"],
+  },
+  {
     label: { en: "Production & Product Systems", ar: "أنظمة الإنتاج والمنتجات" },
-    names: ["Steinheim ERP & Invoicing", "PiEat-Me", "S.I.G Corporate Platform"],
+    names: ["Steinheim ERP & Invoicing", "production-systems-lab", "PiEat-Me", "ST-Eat", "S.I.G Corporate Platform"],
   },
   {
     label: { en: "Protocol & Web3", ar: "البروتوكول وويب 3" },
-    names: ["PiRC1 Standards Pro", "MapCap IPO Platform", "Spin4Pi Vault"],
+    names: ["PiRC1 Standards Pro", "MapCap IPO Platform", "Maplypi", "Spin4Pi Vault"],
   },
   {
     label: { en: "Research & Engineering Evidence", ar: "البحث والأدلة الهندسية" },
@@ -1187,6 +1301,42 @@ export const COPY = {
 /** Engineering Evidence — every claim links to a public artifact. */
 export const EVIDENCE = [
   {
+    org: { en: "Execution Proofs", ar: "أدلة التنفيذ" },
+    claim: {
+      en: "From 'trust me' to 'verify it yourself' — cryptographic attestation for CI/CD. 102-case conformance, Go/WASM/Rust.",
+      ar: "من 'ثق بي' إلى 'تحقق بنفسك' — إثبات تشفيري لـ CI/CD. 102 اختبار توافق، Go/WASM/Rust.",
+    },
+    metric: {
+      en: "102 tests · Go/WASM/Rust · protocol frozen",
+      ar: "102 اختبار · Go/WASM/Rust · البروتوكول مُجمّد",
+    },
+    href: "https://github.com/EslaM-X/proofx",
+  },
+  {
+    org: { en: "Portable Verifiable Evidence", ar: "أدلة متنقلة قابلة للتحقق" },
+    claim: {
+      en: "PEP/1 protocol — Proof Passports, Dispute Engine, cross-application proofs. Zero dependencies, single-file verifier.",
+      ar: "بروتوكول PEP/1 — جوازات سفر الأدلة، محرك النزاعات، أدلة عابر للتطبيقات. صفر تبعيات، ملف تحقق واحد.",
+    },
+    metric: {
+      en: "PEP/1 · Ed25519 · zero-dep · v1.0.0",
+      ar: "PEP/1 · Ed25519 · صفر تبعيات · v1.0.0",
+    },
+    href: "https://github.com/EslaM-X/piproof",
+  },
+  {
+    org: { en: "Atlas Tier-1 Robotics", ar: "روبوتات Atlas Tier-1" },
+    claim: {
+      en: "Payment-gated Boston Dynamics Atlas — MuJoCo + PyBullet + Webots, real USDC settlement on Base Sepolia.",
+      ar: "بوسطن ديناميكس Atlas ببوابة دفع — MuJoCo + PyBullet + Webots، تسوية USDC حقيقية على Base Sepolia.",
+    },
+    metric: {
+      en: "3 engines · 3 on-chain txs · PR #120",
+      ar: "3 محركات · 3 معاملات سلسلة · PR #120",
+    },
+    href: "https://github.com/EslaM-X/atlas-shelf-inspection",
+  },
+  {
     org: { en: "Robotics & Simulation", ar: "الروبوتات والمحاكاة" },
     claim: {
       en: "Policy-driven navigation validated across three physics backends — measured, not promised.",
@@ -1205,10 +1355,22 @@ export const EVIDENCE = [
       ar: "تنسيق وكلاء خاضع لموافقة بشرية وسجلات تدقيق — لا تنفيذ مستقل دون موافقة.",
     },
     metric: {
-      en: "10 tests · approval gate · audit chain",
-      ar: "10 اختبارات · بوابة موافقة · سلسلة تدقيق",
+      en: "17 cases · 6 dimensions · 22 tests",
+      ar: "17 حالة · 6 أبعاد · 22 اختبارًا",
     },
     href: "https://github.com/EslaM-X/ai-agent-automation-platform",
+  },
+  {
+    org: { en: "AI Marketing", ar: "تسويق بالذكاء الاصطناعي" },
+    claim: {
+      en: "Verified knowledge base drives AI agents that plan, write, illustrate and QC daily content. Human gate before publish.",
+      ar: "قاعدة معرفة موثقة تدفع وكلاء ذكاء اصطناعي يخططون ويكتبون ويصممون ويتحققون من المحتوى اليومي. بوابة بشرية قبل النشر.",
+    },
+    metric: {
+      en: "Knowledge base · AI pipeline · human QC",
+      ar: "قاعدة معرفة · خط ذكاء اصطناعي · مراجعة بشرية",
+    },
+    href: "https://github.com/EslaM-X/steinheim-ai-launchpad",
   },
   {
     org: { en: "Production Systems", ar: "الأنظمة الإنتاجية" },
@@ -1216,16 +1378,16 @@ export const EVIDENCE = [
       en: "Reliability patterns in Go — idempotency, replay, circuit-breakers, HMAC auth, hash-chained audit.",
       ar: "أنماط موثوقية في Go — التماثل، وإعادة التشغيل، وقواطع الدائرة، ومصادقة HMAC، وتدقيق متسلسل بالتجزئة.",
     },
-    metric: { en: "Go · race-tested · benchmarks", ar: "Go · مختبر ضد التنافسية · قياسات أداء" },
+    metric: { en: "37 tests · race-tested · benchmarks", ar: "37 اختبارًا · مختبر ضد التنافسية · قياسات أداء" },
     href: "https://github.com/EslaM-X/production-systems-lab",
   },
   {
     org: { en: "Engineering Notes", ar: "ملاحظات هندسية" },
     claim: {
-      en: "Problem-first deep dives — robotics, payments, CI and secure APIs, each ending in a testable artifact.",
-      ar: "غوص معمّق يبدأ بالمشكلة — الروبوتات والمدفوعات وCI والواجهات الآمنة، كل منها ينتهي بأثر قابل للاختبار.",
+      en: "Problem-first deep dives — robotics, payments, CI, secure APIs and verification protocols. Each ending in a testable artifact.",
+      ar: "غوص معمّق يبدأ بالمشكلة — الروبوتات والمدفوعات وCI والواجهات الآمنة وبروتوكولات التحقق، كل منها ينتهي بأثر قابل للاختبار.",
     },
-    metric: { en: "5 notes · v1.0.0", ar: "5 ملاحظات · v1.0.0" },
+    metric: { en: "7 notes · v1.0.0", ar: "7 ملاحظات · v1.0.0" },
     href: "https://github.com/EslaM-X/engineering-notes",
   },
   {
@@ -1247,31 +1409,13 @@ export const EVIDENCE = [
     href: "https://github.com/stellar/stellar-core/pull/5409",
   },
   {
-    org: { en: "Machine-Payable Robotics", ar: "الروبوتات المدفوعة آليًا" },
+    org: { en: "CI/CD Supply-Chain Security", ar: "أمان سلسلة التوريد CI/CD" },
     claim: {
-      en: "x402 payment gating with no-settle-on-failure guarantees for embodied agents.",
-      ar: "بوابة دفع x402 بضمانات عدم التسوية عند الفشل للوكلاء المُجسَّدين.",
+      en: "New lint rule for actionlint + evidence attestation for buildpacks/pack — improving CI/CD security for the ecosystem.",
+      ar: "قاعدة فحص جديدة لـ actionlint + إثبات دليل لـ buildpacks/pack — تحسين أمان CI/CD للمنظومة.",
     },
-    metric: { en: "RoboPay PR #86 · Spot Tier-1", ar: "RoboPay PR #86 · Spot Tier-1" },
-    href: "https://github.com/fabricfoundation/RoboPay/pull/86",
-  },
-  {
-    org: { en: "Machine-Payable Robotics", ar: "الروبوتات المدفوعة آليًا" },
-    claim: {
-      en: "Unitree Go2 Tier-1 simulator profile — obstacle navigation re-validated across MuJoCo + PyBullet, paid per skill.",
-      ar: "ملف محاكي Tier-1 لـ Unitree Go2 — ملاحة مع العقبات مُعاد التحقق منها عبر MuJoCo + PyBullet، مدفوعة لكل مهارة.",
-    },
-    metric: { en: "RoboPay PR #89 · Go2 Tier-1", ar: "RoboPay PR #89 · Go2 Tier-1" },
-    href: "https://github.com/fabricfoundation/RoboPay/pull/89",
-  },
-  {
-    org: { en: "Client Engineering", ar: "هندسة العملاء" },
-    claim: {
-      en: "Twenty merged PRs shipping a live luxury health brand — PWA, AI concierge, security hardening.",
-      ar: "عشرون طلب دمج مُنجزًا تشحن علامة صحية فاخرة حية — PWA ومساعد ذكاء اصطناعي وتحصين أمني.",
-    },
-    metric: { en: "20 PRs · steinheim-eg", ar: "20 PR · steinheim-eg" },
-    href: "https://github.com/hakamabudagga77/steinheim-eg",
+    metric: { en: "actionlint PR #729 · pack PR #2681", ar: "actionlint PR #729 · pack PR #2681" },
+    href: "https://github.com/rhysd/actionlint/pull/729",
   },
   {
     org: { en: "The Evidence Matrix", ar: "مصفوفة الأدلة" },
@@ -1374,6 +1518,51 @@ export const ARCH_FLOWS = [
     note: {
       en: "The human approval gate is the difference between automation and accountability.",
       ar: "بوابة الموافقة البشرية هي الفارق بين الأتمتة والمساءلة.",
+    },
+  },
+  {
+    id: "verification",
+    icon: "brain",
+    title: { en: "Execution Proofs", ar: "أدلة التنفيذ" },
+    tagline: {
+      en: "Claim → Evidence → Canonicalize → Merkle Tree → Sign → Verify",
+      ar: "مطالبة ← أدلة ← توحيد ← شجرة ميركل ← توقيع ← تحقق",
+    },
+    stages: [
+      {
+        en: "Claim",
+        ar: "مطالبة",
+        descEn: "What was built, what tests ran, what the results were.",
+        descAr: "ما الذي بُني، وما الاختبارات التي شُغّلت، وما النتائج.",
+      },
+      {
+        en: "Evidence",
+        ar: "أدلة",
+        descEn: "Raw test results, coverage, build logs — structured and machine-readable.",
+        descAr: "نتائج اختبارات خام، تغطية، سجلات بناء — منظمة ومقروءة بالآلة.",
+      },
+      {
+        en: "Canonicalize",
+        ar: "توحيد",
+        descEn: "Sorted keys, compact JSON, UTF-8 — the same data always produces the same bytes.",
+        descAr: "مفاتيح مرتبة، JSON مدمج، UTF-8 — نفس البيانات تنتج دائمًا نفس البايتات.",
+      },
+      {
+        en: "Merkle Tree → Sign",
+        ar: "شجرة ميركل ← توقيع",
+        descEn: "Domain-separated hashing, Ed25519 signature over the binding root.",
+        descAr: "تجزئة بفصل نطاق، توقيع Ed25519 على جذر الربط.",
+      },
+      {
+        en: "Verify",
+        ar: "تحقق",
+        descEn: "Anyone can independently verify — no infrastructure, no trust required.",
+        descAr: "أي شخص يمكنه التحقق بشكل مستقل — لا بنية تحتية، لا ثقة مطلوبة.",
+      },
+    ],
+    note: {
+      en: "102-case conformance suite — Go 102/102, WASM 102/102, Rust 63/63. Protocol frozen at v0.4.0.",
+      ar: "102 اختبار توافق — Go 102/102، WASM 102/102، Rust 63/63. البروتوكول مُجمّد عند v0.4.0.",
     },
   },
 ] as const;
