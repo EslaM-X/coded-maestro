@@ -874,7 +874,13 @@ export const PROJECT_GROUPS: readonly {
   },
   {
     label: { en: "Production & Product Systems", ar: "أنظمة الإنتاج والمنتجات" },
-    names: ["Steinheim ERP & Invoicing", "production-systems-lab", "PiEat-Me", "ST-Eat", "S.I.G Corporate Platform"],
+    names: [
+        "Steinheim ERP & Invoicing",
+        "production-systems-lab",
+        "PiEat-Me",
+        "ST-Eat",
+        "S.I.G Corporate Platform",
+      ],
   },
   {
     label: { en: "Protocol & Web3", ar: "البروتوكول وويب 3" },
@@ -1378,7 +1384,10 @@ export const EVIDENCE = [
       en: "Reliability patterns in Go — idempotency, replay, circuit-breakers, HMAC auth, hash-chained audit.",
       ar: "أنماط موثوقية في Go — التماثل، وإعادة التشغيل، وقواطع الدائرة، ومصادقة HMAC، وتدقيق متسلسل بالتجزئة.",
     },
-    metric: { en: "37 tests · race-tested · benchmarks", ar: "37 اختبارًا · مختبر ضد التنافسية · قياسات أداء" },
+    metric: {
+      en: "37 tests · race-tested · benchmarks",
+      ar: "37 اختبارًا · مختبر ضد التنافسية · قياسات أداء",
+    },
     href: "https://github.com/EslaM-X/production-systems-lab",
   },
   {
