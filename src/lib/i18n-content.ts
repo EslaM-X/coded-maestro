@@ -172,6 +172,34 @@ export const IMPACT_AR: Record<
       "سبعة طلبات دمج عامة لمستودع Fabric RoboPay: إخفاء بيانات الدفع الحساسة من السجلات، وتحصين CI الخاص بـ Go، وخط أساس جودة Python، ومُدقّق بنية سجل الملفات، وملفا روبوت Tier-1.",
     quote: null,
   },
+  "RoboPay — Atlas Tier-1 (PR #120)": {
+    org: "Fabric Foundation",
+    title: "RoboPay — Atlas Tier-1 (PR #120)",
+    summary:
+      "أول ملف Boston Dynamics Atlas Tier-1 — MuJoCo + PyBullet + Webots، تسوية USDC حقيقية على Base Sepolia. 3 محركات فيزيائية، 3 معاملات على السلسلة.",
+    quote: null,
+  },
+  "RoboPay — Spot & Go2 Tier-1": {
+    org: "Fabric Foundation",
+    title: "RoboPay — Spot و Go2 Tier-1",
+    summary:
+      "ربط الروبوتات والمحاكيات والأجهزة الفيزيائية بشبكة مدفوعات — بوابة دفع x402 مع ضمان عدم التسوية عند الفشل. Spot PR #86 + Go2 PR #89.",
+    quote: null,
+  },
+  "CI/CD supply-chain security": {
+    org: "rhysd/actionlint",
+    title: "أمان سلسلة التوريد CI/CD",
+    summary:
+      "قاعدة فحص جديدة لاكتشاف الأنماط غير الآمنة في تدفقات عمل GitHub Actions — تحسين أمان سلسلة التوريد لمنظومة CI/CD.",
+    quote: null,
+  },
+  "CNCF — evidence attestation in release CI": {
+    org: "buildpacks/pack",
+    title: "CNCF — إثبات الأدلة في CI الإصدار",
+    summary:
+      "دمج إثبات دليل تشفيري في خط أنابيب CI الإصداري لـ Cloud Native Buildpacks (2985 نجمة، مشروع CNCF).",
+    quote: null,
+  },
   "Steinheim — luxury health brand engineering": {
     org: "ستينهايم",
     title: "ستينهايم — هندسة علامة صحية فاخرة",
@@ -182,6 +210,22 @@ export const IMPACT_AR: Record<
 };
 
 export const PROJECT_AR: Record<string, { tag: string; desc: string }> = {
+  "ProofX v0.4": {
+    tag: "بروتوكول · أمان",
+    desc: "بروتوكول إثبات التنفيذ — مطالبة ← أدلة ← إثبات ← تحقق. 102 اختبار توافق، CLI Go/WASM/Rust + GitHub Action. البروتوكول مُجمّد عند v0.4.0.",
+  },
+  "PiProof v1.0": {
+    tag: "تشفير · أدلة",
+    desc: "أدلة قابلة للتحقق والمتوسّلة على بروتوكول PEP/1 — جوازات سفر الأدلة، محرك النزاعات، أدلة عابر للتطبيقات، أدلة وكلاء الذكاء الاصطناعي، لوحة تحكم AUREVIA. صفر تبعيات.",
+  },
+  "Atlas Shelf Inspection": {
+    tag: "روبوتات · مدفوعات",
+    desc: "فحص رفوف Boston Dynamics Atlas المحكوم ببوابة الدفع — MuJoCo + PyBullet + Webots، تسوية USDC حقيقية على Base Sepolia. PR #120 من RoboPay.",
+  },
+  "Steinheim AI Launchpad": {
+    tag: "ذكاء اصطناعي · تسويق",
+    desc: "نظام تشغيل تسويقي بالذكاء الاصطناعي — قاعدة معرفة موثقة تدفع وكلاء ذكاء اصطناعي يخططون ويكتبون ويصممون ويتحققون من المحتوى اليومي. كل ادعاء مُعزَّز لحقيقة.",
+  },
   "Steinheim ERP & Invoicing": {
     tag: "مؤسسي",
     desc: "منصة عمليات داخلية متكاملة — الفوترة والمخزون وجرد المخزون وسجلات العملاء والتقارير وأداء المبيعات اليومي — إلى جانب المنتج الويب العام الحي، الذي شُحن عبر 20 طلب دمج.",
@@ -213,6 +257,14 @@ export const PROJECT_AR: Record<string, { tag: string; desc: string }> = {
   "PiEat-Me": {
     tag: "مؤسس",
     desc: "تأسيس منتج تجارة أغذية داخل منظومة Pi Network، من الفكرة حتى مستخدمين فعليين.",
+  },
+  "ST-Eat": {
+    tag: "توصيل طعام",
+    desc: "منصة توصيل طعام — مطاعم، قوائم طعام، طلب، واجهة عربية أولًا. منتج استهلاكي متكامل.",
+  },
+  "Maplypi": {
+    tag: "تجارة جغرافية · Pi",
+    desc: "منصة تجارة جغرافية مع منطق سلسلة توريد وتكامل Pi Network. واجهة تجارية تفاعلية بالويب 3 مع Mapbox.",
   },
   "ai-agent-automation-platform": {
     tag: "الرائد · ذكاء اصطناعي",
