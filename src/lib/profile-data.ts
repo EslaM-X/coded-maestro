@@ -875,12 +875,12 @@ export const PROJECT_GROUPS: readonly {
   {
     label: { en: "Production & Product Systems", ar: "أنظمة الإنتاج والمنتجات" },
     names: [
-        "Steinheim ERP & Invoicing",
-        "production-systems-lab",
-        "PiEat-Me",
-        "ST-Eat",
-        "S.I.G Corporate Platform",
-      ],
+      "Steinheim ERP & Invoicing",
+      "production-systems-lab",
+      "PiEat-Me",
+      "ST-Eat",
+      "S.I.G Corporate Platform",
+    ],
   },
   {
     label: { en: "Protocol & Web3", ar: "البروتوكول وويب 3" },
