@@ -16,7 +16,7 @@ import {
   Research,
   Skills,
 } from "@/components/sections";
-import { META, OG_IMAGE, SITE, getSsrLang, langFromUrl } from "@/lib/meta";
+import { META, SITE, getSsrLang, langFromUrl } from "@/lib/meta";
 
 const LOCALE_SITE_NAME: Record<string, string> = {
   en: "EslaM-X",
