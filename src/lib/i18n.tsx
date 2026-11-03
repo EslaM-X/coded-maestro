@@ -89,9 +89,11 @@ export function LangProvider({ children }: { children: ReactNode }) {
     setMeta("property", "og:title", m.title);
     setMeta("property", "og:description", m.description);
     setMeta("property", "og:locale", m.locale);
+    setMeta("property", "og:image", m.ogImage);
     setMeta("property", "og:image:alt", m.ogAlt);
     setMeta("name", "twitter:title", m.title);
     setMeta("name", "twitter:description", m.description);
+    setMeta("name", "twitter:image", m.ogImage);
   }, [lang]);
 
   const setLang = useCallback((l: Lang) => {
