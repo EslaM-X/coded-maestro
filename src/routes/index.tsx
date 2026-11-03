@@ -16,7 +16,7 @@ import {
   Research,
   Skills,
 } from "@/components/sections";
-import { META, OG_IMAGE, SITE, getSsrLang, langFromUrl } from "@/lib/meta";
+import { META, SITE, getSsrLang, langFromUrl } from "@/lib/meta";
 
 const LOCALE_SITE_NAME: Record<string, string> = {
   en: "EslaM-X",
@@ -42,14 +42,14 @@ export const Route = createFileRoute("/")({
         { property: "og:url", content: SITE },
         { property: "og:locale", content: m.locale },
         { property: "og:locale:alternate", content: lang === "ar" ? "en_US" : "ar_EG" },
-        { property: "og:image", content: OG_IMAGE },
+        { property: "og:image", content: m.ogImage },
         { property: "og:image:width", content: "1200" },
         { property: "og:image:height", content: "630" },
         { property: "og:image:alt", content: m.ogAlt },
         { name: "twitter:card", content: "summary_large_image" },
         { name: "twitter:title", content: title },
         { name: "twitter:description", content: description },
-        { name: "twitter:image", content: OG_IMAGE },
+        { name: "twitter:image", content: m.ogImage },
       ],
       links: [
         { rel: "canonical", href: SITE },

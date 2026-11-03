@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { COPY, NAV, NAV_AR, PROFILE } from "@/lib/profile-data";
 import { useLang } from "@/lib/i18n";
 import logo from "@/assets/x-crown-logo.jpg";
-import { Menu, X, Languages } from "lucide-react";
+import { Mail } from "lucide-react";
 
 export default function SiteNav() {
   const [scrolled, setScrolled] = useState(false);
@@ -31,13 +31,28 @@ export default function SiteNav() {
     return () => io.disconnect();
   }, []);
 
+  /* Lock body scroll while the overlay menu is open + close on Escape. */
+  useEffect(() => {
+    if (!open) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = prev;
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
+
   const label = (n: { id: string; label: string }) => (isAr ? (NAV_AR[n.id] ?? n.label) : n.label);
 
   return (
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "border-b border-border/60 bg-background/80 backdrop-blur-xl"
+        scrolled || open
+          ? "border-b border-border/60 bg-background/85 backdrop-blur-xl shadow-[0_10px_40px_-20px_rgba(0,0,0,0.9)]"
           : "border-b border-transparent"
       }`}
     >
@@ -74,55 +89,150 @@ export default function SiteNav() {
         </ul>
 
         <div className="flex shrink-0 items-center gap-2">
+          {/* Language toggle — sliding gold indicator pill */}
           <button
             type="button"
             onClick={toggle}
             aria-label="Switch language"
-            className="inline-flex items-center gap-1.5 rounded-full border border-primary/40 px-3 py-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-primary transition-all hover:bg-primary/10"
+            className="relative flex h-9 items-center rounded-full border border-primary/40 bg-secondary/40 p-1 transition-all hover:border-primary/70"
           >
-            <Languages className="h-3.5 w-3.5" />
-            <span className="keep-latin">{isAr ? "EN" : "AR"}</span>
+            <span
+              aria-hidden="true"
+              className="absolute top-1 h-7 w-9 rounded-full transition-all duration-300 ease-out"
+              style={{
+                backgroundImage: "var(--gradient-gold)",
+                boxShadow: "var(--shadow-gold)",
+                left: isAr ? "calc(100% - 2.5rem)" : "0.25rem",
+              }}
+            />
+            <span
+              className={`keep-latin relative z-10 w-9 text-center text-[11px] font-bold tracking-widest transition-colors duration-300 ${
+                isAr ? "text-primary" : "text-primary-foreground"
+              }`}
+            >
+              EN
+            </span>
+            <span
+              className={`keep-latin relative z-10 w-9 text-center text-[11px] font-bold tracking-widest transition-colors duration-300 ${
+                isAr ? "text-primary-foreground" : "text-primary"
+              }`}
+            >
+              AR
+            </span>
           </button>
+
           <a
             href={`mailto:${PROFILE.email}`}
-            className="hidden rounded-full border border-primary/40 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary transition-all hover:bg-primary hover:text-primary-foreground sm:inline-block"
+            className="group hidden items-center gap-2 overflow-hidden rounded-full border border-primary/40 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary transition-all duration-500 hover:text-primary-foreground sm:inline-flex"
           >
-            {t(COPY.hire.en, COPY.hire.ar)}
+            <span
+              className="absolute"
+              aria-hidden="true"
+              style={{ display: "none" }}
+            />
+            <span className="relative z-10">{t(COPY.hire.en, COPY.hire.ar)}</span>
+            <span
+              aria-hidden="true"
+              className="absolute inset-0 -translate-x-full transition-transform duration-500 group-hover:translate-x-0"
+              style={{ backgroundImage: "var(--gradient-gold)" }}
+            />
+            <Mail className="relative z-10 h-3.5 w-3.5 transition-colors group-hover:text-primary-foreground" />
           </a>
+
+          {/* Animated hamburger — morphs into a gold X */}
           <button
             type="button"
             aria-label="Toggle menu"
+            aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="rounded-full border border-border p-2 text-foreground lg:hidden"
+            className="relative flex h-10 w-10 flex-col items-center justify-center gap-[5px] rounded-full border border-border transition-colors hover:border-primary/60 lg:hidden"
           >
-            {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            <span
+              className="block h-[1.5px] w-4 rounded-full transition-all duration-300 ease-out"
+              style={{
+                background: "var(--gradient-gold)",
+                transform: open ? "translateY(3.25px) rotate(45deg)" : "none",
+                width: open ? "1rem" : "1rem",
+              }}
+            />
+            <span
+              className="block h-[1.5px] w-4 rounded-full transition-all duration-300 ease-out"
+              style={{
+                background: "var(--gradient-gold)",
+                transform: open ? "translateY(-3.25px) rotate(-45deg)" : "none",
+              }}
+            />
           </button>
         </div>
       </nav>
 
-      {open && (
-        <ul className="border-t border-border/60 bg-background/95 px-6 py-3 backdrop-blur-xl lg:hidden">
-          {NAV.map((n) => (
-            <li key={n.id}>
+      {/* Full-screen sovereign overlay menu (mobile) */}
+      <div
+        className={`fixed inset-0 top-[64px] z-40 flex flex-col overflow-y-auto border-t border-border/60 bg-background/97 px-6 pb-10 pt-6 backdrop-blur-2xl transition-all duration-500 lg:hidden ${
+          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
+        }`}
+        aria-hidden={!open}
+      >
+        <div className="gold-rule mb-6" aria-hidden="true" />
+        <ul className="flex flex-col gap-1">
+          {NAV.map((n, i) => (
+            <li
+              key={n.id}
+              className="transition-all duration-500"
+              style={{
+                transitionDelay: `${60 + i * 45}ms`,
+                opacity: open ? 1 : 0,
+                transform: open ? "none" : "translateY(14px)",
+              }}
+            >
               <a
                 href={`#${n.id}`}
                 onClick={() => setOpen(false)}
-                className="block py-3 text-xs uppercase tracking-[0.22em] text-muted-foreground"
+                className="group flex items-baseline gap-4 py-3"
               >
-                {label(n)}
+                <span className="keep-mono font-mono text-[10px] tracking-[0.3em] text-primary/60">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span
+                  className={`text-lg font-medium uppercase transition-colors duration-300 ${
+                    active === n.id
+                      ? "text-gilded"
+                      : "text-foreground group-hover:text-gilded"
+                  }`}
+                >
+                  {label(n)}
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="ms-auto h-px flex-1 bg-border opacity-40 transition-opacity group-hover:opacity-90"
+                  style={{
+                    background:
+                      "linear-gradient(to left, transparent, var(--color-border), transparent)",
+                  }}
+                />
               </a>
             </li>
           ))}
-          <li>
-            <a
-              href={`mailto:${PROFILE.email}`}
-              className="mt-2 block rounded-full border border-primary/40 py-3 text-center text-xs font-semibold uppercase tracking-[0.22em] text-primary"
-            >
-              {t(COPY.hire.en, COPY.hire.ar)}
-            </a>
-          </li>
         </ul>
-      )}
+        <div className="gold-rule my-7" aria-hidden="true" />
+        <a
+          href={`mailto:${PROFILE.email}`}
+          onClick={() => setOpen(false)}
+          className="relative overflow-hidden rounded-full py-4 text-center text-xs font-semibold uppercase tracking-[0.26em] text-primary-foreground transition-transform hover:-translate-y-0.5"
+          style={{ backgroundImage: "var(--gradient-gold)", backgroundSize: "200% auto" }}
+        >
+          {t(COPY.hire.en, COPY.hire.ar)}
+        </a>
+        <a
+          href="https://github.com/EslaM-X"
+          target="_blank"
+          rel="noreferrer noopener"
+          onClick={() => setOpen(false)}
+          className="mt-3 rounded-full border border-primary/40 py-4 text-center text-xs font-semibold uppercase tracking-[0.26em] text-primary transition-colors hover:bg-primary/10"
+        >
+          {t(COPY.ctaGithub.en, COPY.ctaGithub.ar)}
+        </a>
+      </div>
     </header>
   );
 }
