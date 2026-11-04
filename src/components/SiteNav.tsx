@@ -230,7 +230,7 @@ export default function SiteNav() {
         >
           {t(COPY.ctaGithub.en, COPY.ctaGithub.ar)}
         </a>
-      </div>
-    </header>
+    </div>
+    </>
   );
 }
