@@ -49,6 +49,7 @@ export default function SiteNav() {
   const label = (n: { id: string; label: string }) => (isAr ? (NAV_AR[n.id] ?? n.label) : n.label);
 
   return (
+    <>
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled || open
@@ -160,14 +161,16 @@ export default function SiteNav() {
           </button>
         </div>
       </nav>
+    </header>
 
-      {/* Full-screen sovereign overlay menu (mobile) */}
-      <div
-        className={`fixed inset-0 top-[64px] z-40 flex flex-col overflow-y-auto border-t border-border/60 bg-background/97 px-6 pb-10 pt-6 backdrop-blur-2xl transition-all duration-500 lg:hidden ${
-          open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
-        }`}
-        aria-hidden={!open}
-      >
+    {/* Full-screen sovereign overlay menu (mobile) — sits outside <header> so the
+        header's backdrop-filter doesn't become its containing block and clip it. */}
+    <div
+      className={`fixed inset-0 z-40 flex flex-col overflow-y-auto bg-background/97 px-6 pb-10 pt-28 backdrop-blur-2xl transition-all duration-500 lg:hidden ${
+        open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0 -translate-y-3"
+      }`}
+      aria-hidden={!open}
+    >
         <div className="gold-rule mb-6" aria-hidden="true" />
         <ul className="flex flex-col gap-1">
           {NAV.map((n, i) => (
