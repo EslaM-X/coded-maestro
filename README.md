@@ -43,13 +43,16 @@
 
 ```ts
 const eslam = {
-  alias:     "MR-X",
-  role:      "Technical Architect & Business Operations Manager",
-  focus:     ["Web3 protocols", "AI systems", "Cyber security", "Digital forensics", "Enterprise ops", "Robotics & the machine economy"],
-  stack:     ["Next.js", "React", "TypeScript", "Node.js", "MongoDB", "PostgreSQL", "Supabase", "Docker", "Go", "Python"],
-  building:  ["ProofX v0.4", "PiProof v1.0", "Atlas Shelf Inspection", "Steinheim AI Launchpad", "Pi Local AI Agent", "MapCap IPO", "Maplypi", "Spin4Pi", "Map of Pi v2.0", "Steinheim ERP & Invoicing", "RoboPay Tier-1", "PiRC1 Standards"],
-  contributing: ["Pi Network", "Stellar", "Fabric Foundation", "rhysd/actionlint", "buildpacks/pack", "Map of Pi", "S.I.G"],
-  creed:     "Evidence over claims.",
+  alias:        "MR-X",
+  title:        "Lead Technical Architect · Business Operations Manager",
+  mission:      "Engineer the systems other companies call impossible — then prove they work.",
+  domains:      ["Web3 protocols", "Governed AI agents", "Machine-payable robotics", "Cyber security", "Enterprise operations"],
+  stack:        ["Next.js", "React", "TypeScript", "Node.js", "MongoDB", "PostgreSQL", "Supabase", "Docker", "Go", "Python"],
+  building:     ["ProofX v0.4", "PiProof v1.0", "Atlas Shelf Inspection", "Steinheim AI Launchpad", "Pi Local AI Agent", "MapCap IPO", "Maplypi", "Spin4Pi", "Map of Pi v2.0", "Steinheim ERP & Invoicing", "RoboPay Tier-1", "PiRC1 Standards"],
+  endorsed_by:  ["Pi Network (PiRC1 — Dr. Nicolas Kokkalis)", "Stellar", "Fabric Foundation"],
+  law:          "Excellence without compromise. My code is my law.",
+  creed:        "Evidence over claims.",
+  status:       "open_to_elite_engagements",
 };
 ```
 
@@ -123,12 +126,22 @@ Decades of sustained research across chains, contracts, adversaries and ciphers.
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=EslaM-X&show_icons=true&count_private=true&include_all_commits=true&title_color=FFB627&text_color=e6e6e6&icon_color=FF6A00&bg_color=0a0a0a&border_color=FFB62755&cache_seconds=86400" alt="stats" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=EslaM-X&layout=compact&langs_count=8&title_color=FFB627&text_color=e6e6e6&bg_color=0a0a0a&border_color=FFB62755&cache_seconds=86400" alt="languages" />
+<img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=24&duration=2800&pause=800&color=FFB627&center=true&vCenter=true&width=760&lines=Rare.+Unseen.+Unstoppable.;Evidence+over+claims.;44%2C000%2B+contributions+this+year.;60%2B+repositories.+5+global+organizations." alt="Rare. Unseen. Unstoppable." />
 
-<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=EslaM-X&background=0a0a0a&border=FFB62755&stroke=FFB62755&ring=FFB627&fire=FF6A00&currStreakLabel=FFB627&sideLabels=e6e6e6&dates=8a8a8a&currStreakNum=FFB627&sideNums=e6e6e6&cache_seconds=86400" alt="streak" />
+<a href="https://github.com/EslaM-X">
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=EslaM-X&show_icons=true&count_private=true&include_all_commits=true&title_color=FFB627&text_color=e6e6e6&icon_color=FF6A00&bg_color=0a0a0a&border_color=FFB62755&cache_seconds=86400" alt="stats" />
+</a>
+<a href="https://github.com/EslaM-X">
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=EslaM-X&layout=compact&langs_count=8&title_color=FFB627&text_color=e6e6e6&bg_color=0a0a0a&border_color=FFB62755&cache_seconds=86400" alt="languages" />
+</a>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=EslaM-X&bg_color=0a0a0a&color=FFB627&line=FF6A00&point=FFB627&area=true&hide_border=false&border_color=FFB62755&cache_seconds=86400" alt="activity graph" />
+<a href="https://github.com/EslaM-X">
+  <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=EslaM-X&background=0a0a0a&border=FFB62755&stroke=FFB62755&ring=FFB627&fire=FF6A00&currStreakLabel=FFB627&sideLabels=e6e6e6&dates=8a8a8a&currStreakNum=FFB627&sideNums=e6e6e6&cache_seconds=86400" alt="streak" />
+</a>
+
+<a href="https://github.com/EslaM-X">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=EslaM-X&bg_color=0a0a0a&color=FFB627&line=FF6A00&point=FFB627&area=true&hide_border=false&border_color=FFB62755&cache_seconds=86400" alt="activity graph" />
+</a>
 
 </div>
 
