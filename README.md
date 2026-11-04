@@ -43,13 +43,16 @@
 
 ```ts
 const eslam = {
-  alias:     "MR-X",
-  role:      "Technical Architect & Business Operations Manager",
-  focus:     ["Web3 protocols", "AI systems", "Cyber security", "Digital forensics", "Enterprise ops", "Robotics & the machine economy"],
-  stack:     ["Next.js", "React", "TypeScript", "Node.js", "MongoDB", "PostgreSQL", "Supabase", "Docker", "Go", "Python"],
-  building:  ["ProofX v0.4", "PiProof v1.0", "Atlas Shelf Inspection", "Steinheim AI Launchpad", "Pi Local AI Agent", "MapCap IPO", "Maplypi", "Spin4Pi", "Map of Pi v2.0", "Steinheim ERP & Invoicing", "RoboPay Tier-1", "PiRC1 Standards"],
-  contributing: ["Pi Network", "Stellar", "Fabric Foundation", "rhysd/actionlint", "buildpacks/pack", "Map of Pi", "S.I.G"],
-  creed:     "Evidence over claims.",
+  alias:        "MR-X",
+  title:        "Lead Technical Architect · Business Operations Manager",
+  mission:      "Engineer the systems other companies call impossible — then prove they work.",
+  domains:      ["Web3 protocols", "Governed AI agents", "Machine-payable robotics", "Cyber security", "Enterprise operations"],
+  stack:        ["Next.js", "React", "TypeScript", "Node.js", "MongoDB", "PostgreSQL", "Supabase", "Docker", "Go", "Python"],
+  building:     ["ProofX v0.4", "PiProof v1.0", "Atlas Shelf Inspection", "Steinheim AI Launchpad", "Pi Local AI Agent", "MapCap IPO", "Maplypi", "Spin4Pi", "Map of Pi v2.0", "Steinheim ERP & Invoicing", "RoboPay Tier-1", "PiRC1 Standards"],
+  endorsed_by:  ["Pi Network (PiRC1 — Dr. Nicolas Kokkalis)", "Stellar", "Fabric Foundation"],
+  law:          "Excellence without compromise. My code is my law.",
+  creed:        "Evidence over claims.",
+  status:       "open_to_elite_engagements",
 };
 ```
 
