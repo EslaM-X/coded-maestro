@@ -123,13 +123,8 @@ export default function SiteNav() {
 
           <a
             href={`mailto:${PROFILE.email}`}
-            className="group hidden items-center gap-2 overflow-hidden rounded-full border border-primary/40 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary transition-all duration-500 hover:text-primary-foreground sm:inline-flex"
+            className="group relative hidden items-center gap-2 overflow-hidden rounded-full border border-primary/40 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary transition-colors duration-500 hover:text-primary-foreground sm:inline-flex"
           >
-            <span
-              className="absolute"
-              aria-hidden="true"
-              style={{ display: "none" }}
-            />
             <span className="relative z-10">{t(COPY.hire.en, COPY.hire.ar)}</span>
             <span
               aria-hidden="true"

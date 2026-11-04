@@ -50,12 +50,16 @@
 
 ```ts
 const eslam = {
-  role:      "Technical Architect & Business Operations Manager",
-  focus:     ["Web3 protocols", "AI systems", "Cyber security", "Digital forensics", "Enterprise ops"],
-  stack:     ["Next.js", "React", "TypeScript", "Node.js", "MongoDB", "PostgreSQL", "Supabase", "Docker"],
-  building:  ["Map of Pi v2.0", "Steinheim ERP", "RoboPay Spot Tier-1"],
-  contributing: ["Pi Network", "Stellar", "Fabric Foundation", "Map of Pi", "S.I.G"],
-  creed:     "Evidence over claims.",
+  alias:        "MR-X",
+  title:        "Lead Technical Architect · Business Operations Manager",
+  mission:      "Engineer the systems other companies call impossible — then prove they work.",
+  domains:      ["Web3 protocols", "Governed AI agents", "Machine-payable robotics", "Cyber security", "Enterprise operations"],
+  stack:        ["Next.js", "React", "TypeScript", "Node.js", "MongoDB", "PostgreSQL", "Supabase", "Docker", "Go", "Python"],
+  building:     ["Map of Pi v2.0", "Steinheim ERP", "RoboPay Spot Tier-1"],
+  endorsed_by:  ["Pi Network (PiRC1 — Dr. Nicolas Kokkalis)", "Stellar", "Fabric Foundation"],
+  law:          "Excellence without compromise. My code is my law.",
+  creed:        "Evidence over claims.",
+  status:       "open_to_elite_engagements",
 };
 ```
 
