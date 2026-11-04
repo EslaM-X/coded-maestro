@@ -126,12 +126,22 @@ Decades of sustained research across chains, contracts, adversaries and ciphers.
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=EslaM-X&show_icons=true&count_private=true&include_all_commits=true&title_color=FFB627&text_color=e6e6e6&icon_color=FF6A00&bg_color=0a0a0a&border_color=FFB62755&cache_seconds=86400" alt="stats" />
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=EslaM-X&layout=compact&langs_count=8&title_color=FFB627&text_color=e6e6e6&bg_color=0a0a0a&border_color=FFB62755&cache_seconds=86400" alt="languages" />
+<img src="https://readme-typing-svg.demolab.com?font=Cinzel&weight=700&size=24&duration=2800&pause=800&color=FFB627&center=true&vCenter=true&width=760&lines=Rare.+Unseen.+Unstoppable.;Evidence+over+claims.;44%2C000%2B+contributions+this+year.;60%2B+repositories.+5+global+organizations." alt="Rare. Unseen. Unstoppable." />
 
-<img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=EslaM-X&background=0a0a0a&border=FFB62755&stroke=FFB62755&ring=FFB627&fire=FF6A00&currStreakLabel=FFB627&sideLabels=e6e6e6&dates=8a8a8a&currStreakNum=FFB627&sideNums=e6e6e6&cache_seconds=86400" alt="streak" />
+<a href="https://github.com/EslaM-X">
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=EslaM-X&show_icons=true&count_private=true&include_all_commits=true&title_color=FFB627&text_color=e6e6e6&icon_color=FF6A00&bg_color=0a0a0a&border_color=FFB62755&cache_seconds=86400" alt="stats" />
+</a>
+<a href="https://github.com/EslaM-X">
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=EslaM-X&layout=compact&langs_count=8&title_color=FFB627&text_color=e6e6e6&bg_color=0a0a0a&border_color=FFB62755&cache_seconds=86400" alt="languages" />
+</a>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=EslaM-X&bg_color=0a0a0a&color=FFB627&line=FF6A00&point=FFB627&area=true&hide_border=false&border_color=FFB62755&cache_seconds=86400" alt="activity graph" />
+<a href="https://github.com/EslaM-X">
+  <img height="170" src="https://github-readme-streak-stats.herokuapp.com/?user=EslaM-X&background=0a0a0a&border=FFB62755&stroke=FFB62755&ring=FFB627&fire=FF6A00&currStreakLabel=FFB627&sideLabels=e6e6e6&dates=8a8a8a&currStreakNum=FFB627&sideNums=e6e6e6&cache_seconds=86400" alt="streak" />
+</a>
+
+<a href="https://github.com/EslaM-X">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=EslaM-X&bg_color=0a0a0a&color=FFB627&line=FF6A00&point=FFB627&area=true&hide_border=false&border_color=FFB62755&cache_seconds=86400" alt="activity graph" />
+</a>
 
 </div>
 
