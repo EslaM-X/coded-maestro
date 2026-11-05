@@ -57,7 +57,7 @@ export default function SiteNav() {
           : "border-b border-transparent"
       }`}
     >
-      <nav className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3 sm:px-8 lg:flex lg:justify-between">
+      <nav className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-3 px-4 py-3 sm:px-6 lg:flex lg:justify-between">
         <a href="#top" className="group flex shrink-0 items-center gap-2.5 whitespace-nowrap">
           <span className="relative h-9 w-9 shrink-0 overflow-hidden rounded-full ring-1 ring-primary/40 transition-transform duration-500 group-hover:rotate-12 sm:h-10 sm:w-10">
             <img
@@ -76,7 +76,7 @@ export default function SiteNav() {
             <li key={n.id}>
               <a
                 href={`#${n.id}`}
-                className={`relative rounded-full px-3 py-2 text-[11px] font-medium uppercase tracking-[0.18em] transition-colors ${
+                className={`relative rounded-full px-2.5 py-2 text-[11px] font-medium uppercase tracking-[0.15em] transition-colors ${
                   active === n.id ? "text-primary" : "text-muted-foreground hover:text-foreground"
                 }`}
               >
@@ -89,7 +89,7 @@ export default function SiteNav() {
           ))}
         </ul>
 
-        <div className="flex shrink-0 items-center gap-2">
+        <div className="flex shrink-0 items-center gap-1.5">
           {/* Language toggle — sliding gold indicator pill */}
           <button
             type="button"
@@ -99,22 +99,22 @@ export default function SiteNav() {
           >
             <span
               aria-hidden="true"
-              className="absolute top-1 h-7 w-9 rounded-full transition-all duration-300 ease-out"
+              className="absolute top-1 h-7 w-8 rounded-full transition-all duration-300 ease-out"
               style={{
                 backgroundImage: "var(--gradient-gold)",
                 boxShadow: "var(--shadow-gold)",
-                left: isAr ? "calc(100% - 2.5rem)" : "0.25rem",
+                left: isAr ? "calc(100% - 2.25rem)" : "0.25rem",
               }}
             />
             <span
-              className={`keep-latin relative z-10 w-9 text-center text-[11px] font-bold tracking-widest transition-colors duration-300 ${
+              className={`keep-latin relative z-10 w-8 text-center text-[11px] font-bold tracking-widest transition-colors duration-300 ${
                 isAr ? "text-primary" : "text-primary-foreground"
               }`}
             >
               EN
             </span>
             <span
-              className={`keep-latin relative z-10 w-9 text-center text-[11px] font-bold tracking-widest transition-colors duration-300 ${
+              className={`keep-latin relative z-10 w-8 text-center text-[11px] font-bold tracking-widest transition-colors duration-300 ${
                 isAr ? "text-primary-foreground" : "text-primary"
               }`}
             >
@@ -124,7 +124,7 @@ export default function SiteNav() {
 
           <a
             href={`mailto:${PROFILE.email}`}
-            className="group relative hidden items-center gap-2 overflow-hidden rounded-full border border-primary/40 px-5 py-2 text-[11px] font-semibold uppercase tracking-[0.2em] text-primary transition-colors duration-500 hover:text-primary-foreground sm:inline-flex"
+            className="group relative hidden items-center gap-2 overflow-hidden rounded-full border border-primary/40 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary transition-colors duration-500 hover:text-primary-foreground sm:inline-flex"
           >
             <span className="relative z-10">{t(COPY.hire.en, COPY.hire.ar)}</span>
             <span
