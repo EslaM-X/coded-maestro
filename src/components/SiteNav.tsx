@@ -66,7 +66,7 @@ export default function SiteNav() {
               className="h-full w-full scale-110 object-cover"
             />
           </span>
-          <span className="keep-latin shrink-0 whitespace-nowrap font-display text-[11px] tracking-[0.42em] text-gilded sm:text-sm">
+          <span className="keep-latin shrink-0 whitespace-nowrap font-display text-[11px] tracking-[0.3em] text-gilded sm:text-sm">
             ESLAM-X
           </span>
         </a>
@@ -89,7 +89,7 @@ export default function SiteNav() {
           ))}
         </ul>
 
-        <div className="flex shrink-0 items-center gap-1.5">
+        <div className="flex shrink-0 items-center gap-1">
           {/* Language toggle — sliding gold indicator pill */}
           <button
             type="button"
@@ -124,7 +124,7 @@ export default function SiteNav() {
 
           <a
             href={`mailto:${PROFILE.email}`}
-            className="group relative hidden items-center gap-2 overflow-hidden rounded-full border border-primary/40 px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary transition-colors duration-500 hover:text-primary-foreground sm:inline-flex"
+            className="group relative hidden items-center gap-2 overflow-hidden rounded-full border border-primary/40 px-3.5 py-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-primary transition-colors duration-500 hover:text-primary-foreground sm:inline-flex"
           >
             <span className="relative z-10">{t(COPY.hire.en, COPY.hire.ar)}</span>
             <span
