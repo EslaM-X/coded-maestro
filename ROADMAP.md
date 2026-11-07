@@ -7,12 +7,13 @@
 
 ## Sequenced next
 
-1. **Reflect the real work** — keep projects and links in sync with the
-   current flagship repos and their READMEs.
-2. **Run in the browser** — the site itself stays fast, deployable, and
-   verifiable via the existing deploy docs.
-3. **Measure** — site visits vs. GitHub repo clicks, so effort follows what
-   actually converts.
+1. [ ] **Opportunity fit** — add a bilingual AI Gateway assessment for employer
+   and partner job/project descriptions.
+2. [ ] **Project details** — add shareable, bilingual project pages with real
+   problem/role/solution/outcome content and confirmed visuals/demo links.
+3. [ ] **Contact brief** — add a short collaboration/budget/timing form that
+   prepares a ready-to-send email draft without claiming to send it.
+4. [ ] **Run in the browser** — verify the new public flows on desktop and mobile.
 
 ## Explicitly out of scope (for now)
 
